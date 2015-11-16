@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  16 NOV 2015 14:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  16 NOV 2015 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -314,16 +314,16 @@ Here is how much of TeX's memory you used:
  4782 multiletter control sequences out of 15000+600000
  10990 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 23i,4n,23p,365b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,5n,23p,365b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
  </com
-ptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </comptes/
-E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </comptes/E15A4
-88L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </comptes/E15A488L/.
-texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </comptes/E15A488L/.texmf
+ptes/E15A413E/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </comptes/
+E15A413E/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </comptes/E15A4
+13E/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </comptes/E15A413E/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </comptes/E15A413E/.texmf
 -var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on Manuel.pdf (2 pages, 36893 bytes).
+Output written on Manuel.pdf (2 pages, 37310 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 146 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
