@@ -1,0 +1,46 @@
+\documentclass[a4paper 12pts]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\title{Projet}
+\date{Lundi 9 Novembre 2015}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Le projet a pour objectif la création d'un robot autonome réalisant une tâche particulière. Pour cela nous avons imaginé un scénario sous forme de mini jeu dont le personnage principal est notre robot.
+
+\section{But du jeu}
+L'objectif du jeu est de ramasser tous les trésors présents sur le terrain. Cependant certains coffres seront cachés derrière des obstacles que le robot x devra trouver. Des ennemis seront également injectés dans le jeu afin d'ajouter une difficulté supplémentaire au robot.
+
+\subsection{Gestion des coffres}
+Un certain nombre de coffres seront présents sur la carte, ceux-ci ne peuvent s'ouvrir qu'à l'aide d'une clef préalablement obtenue. Les clefs sont obtenue en cherchant sur le terrain ou alors en éliminant des ennemis, s'ils possèdent une clef sur eux.
+
+Le robot ne peut ouvrir un coffre que s'il possède une clef et qu'il se trouve sur la même case que le coffre. Une fois le coffre ouvert, la clef est perdue et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
+
+Pour récupérer une clef, il faut que le robot se trouve sur la même case qu'elle. Cependant, un maximum de deux clefs portées par le robot est autorisé. Donc si le robot possède déjà deux clef et qu'il se trouve sur la même case qu'une clef, il la laisse à sa place et ne pourra la prendre uniquement s'il ouvre un coffre entre temps.
+
+\subsection{Gestion des ennemis}
+Certains ennemis seront présent sur le terrain qui sont là pour mettre le robot en difficulté. Le robot devra combattre ces ennemis s'il les rencontrent pendant le jeu.
+
+Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi, ce qui entrainera la fin du jeu. Une fois l'ennemi vaincu, celui-ci disparait du terrain.
+
+\subsection{Gestion de l'environnement}
+Le terrain de jeu dans lequel le robot devra jouer possède des obstacles. Ceux-ci sont infranchissables. Dans le cas où le robot se trouve face à un obstacle (mur, arbre, cours d'eau\ldots) celui ci devra trouver un moyen de le contourner. Il peut donc tourner à droite, à gauche ou encore faire demi-tour.
+
+
+\section{Fonctionnement}
+
+\subsection{Les déplacements du robot}
+Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. Il ne pourra se déplacer que d'une case en une case.
+
+Parfois le robot aura le choix du déplacement, dans ce cas il prendra la meilleure solution selon ce qu'il connait du terrain. S'il n'y a qu'un seul chemin possible, le robot devra l'emprunter et le poursuivre jusqu'au bout jusqu'à ce qu'il y ait plusieurs chemins possibles.
+
+
+\end{document}
+
+
