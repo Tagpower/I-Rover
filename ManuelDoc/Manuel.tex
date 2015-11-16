@@ -12,15 +12,33 @@
 \maketitle
 
 \section{Introduction}
-Le projet a pour objectif la création d'un robot autonome réalisant une tâche particulière. Pour cela nous avons imaginé un scénario sous forme de mini jeu dont le personnage principal est notre robot.
+Le projet a pour objectif la création d'un robot autonome réalisant une tâche particulière.
+Pour cela nous avons imaginé un scénario sous forme de mini jeu dont le personnage principal est notre robot.
 
 \section{But du jeu}
-L'objectif du jeu est de ramasser tous les trésors présents sur le terrain. Cependant certains coffres seront cachés derrière des obstacles que le robot x devra trouver. Des ennemis seront également injectés dans le jeu afin d'ajouter une difficulté supplémentaire au robot.
+
+
+L'objectif du jeu est de ramasser tous les trésors présents sur le terrain.
+
+%Pour le moment : 3 coffres (augmentation de la difficulter au fur et à mesure)
+
+Cependant certains coffres seront cachés derrière des obstacles que le robot x devra trouver. Des ennemis seront également présent dans le jeu afin d'ajouter une difficulté supplémentaire au robot.
+Une fois les coffres ramasser, le jeu s'arrete.
+Si le robot meurt au combat, le jeu s'arrête également.
+
 
 \subsection{Gestion des coffres}
-Un certain nombre de coffres seront présents sur la carte, ceux-ci ne peuvent s'ouvrir qu'à l'aide d'une clef préalablement obtenue. Les clefs sont obtenue en cherchant sur le terrain ou alors en éliminant des ennemis, s'ils possèdent une clef sur eux.
 
-Le robot ne peut ouvrir un coffre que s'il possède une clef et qu'il se trouve sur la même case que le coffre. Une fois le coffre ouvert, la clef est perdue et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
+Un certain nombre de coffres seront présents ceux-ci ne peuvent s'ouvrir qu'à l'aide d'une clef préalablement obtenue.
+Le robot ne peut ouvrir un coffre que s'il possède une clef et qu'il se trouve sur la même case que le coffre.
+
+%Le coffre possedera deux sprites, un ouvert un fermer.
+
+\subsection{Gestion des clés}
+
+Un certain nombre de clé seront présents sur la carte ou peuvent être obtenus en tuant des ennemies.
+chaque ouverture de 
+Une fois le coffre ouvert, la clef est perdue et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
 
 Pour récupérer une clef, il faut que le robot se trouve sur la même case qu'elle. Cependant, un maximum de deux clefs portées par le robot est autorisé. Donc si le robot possède déjà deux clef et qu'il se trouve sur la même case qu'une clef, il la laisse à sa place et ne pourra la prendre uniquement s'il ouvre un coffre entre temps.
 
