@@ -3,19 +3,6 @@
 #include <robot.hpp>
 
 
-class Robot:Personnage
-{
-private:
-	std::vector <Clef> inventaire;
-public:
-	Robot();
-	std::vector <Clef> getInventaire;
-	void setInventaire;
-	void ouvrir(Coffre coffre);
-	void ramasser(Clef clef);
-
-}
-
 /*!
  * Constructeur du robot.
  * @param[out] Robot le robot créé.
@@ -38,9 +25,8 @@ std::vector<Clef>::getInventaire(){
  */
 void ouvrir(Coffre coffre){
 	//On ouvre le coffre seulement si le robot et le coffre sont sur la même case
-	if(this.positionX == coffre.positionX && this.positiony == coffre.positionY){
-		//Ouverture du coffre
-		
+	if(this.positionX == coffre.getPositionX() && this.positionY == coffre.getPositionY()){
+		coffre.setOuvert(true);
 	}
 }
 
