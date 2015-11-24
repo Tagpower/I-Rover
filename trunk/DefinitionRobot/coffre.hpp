@@ -9,13 +9,13 @@ class Coffre
 private:
 	int positionX;
 	int positionY;
-	bool statut;
+	bool ouvert;
 public:
 	Coffre();
 	int getPositionX;
 	int getPositionY;
-	bool getStatut;
+	bool getOuvert;
 	void setPositionX;
 	void setPositionY;
-	void setStatut;
+	void setOuvert;
 }

@@ -20,17 +20,36 @@ Personnage::Personnage(void){
 
 }
 
+/*!
+ * Le getter de la position en x du personnage.
+ * Retourne la position courante du personnage en x.
+ */
 int::getPositionX(){
 	return positionX;
 }
 
+/*!
+ * Le setter de la position en x du personnage.
+ * Modifie la position du personnage en x.
+ * @param[in] x la nouvelle position en x du personnage.
+ */
 void Personnage::setPositionX(int x){
 	this->positionX = x;
 }
+
+/*!
+ * Le getter de la position en y du personnage.
+ * Retourne la position courante du personnage en y.
+ */
 int::getPositionY(){
 	return positionY;
 }
 
+/*!
+ * Le setter de la position en x du personnage.
+ * Modifie la position du personnage en y.
+ * @param[in] y la nouvelle position en y du personnage.
+ */
 void Personnage::setPositionY(int y){
 	this->positionY = y;
 }
@@ -39,10 +58,19 @@ void Personnage::setPositionY(int y){
  * Deplace le personnage d'une case a droite, gauche, haut ou bas.
  * @param[in] x la position actuelle du personnage en x.
  * @param[in] y la position actuelle du personnage en y.
+ * @param[out] x la position du personnage en x après le déplacement.
+ * @param[out] y la position du personnage en y après le déplacement.
  * @return rien
  */
 void deplacer(int x, int y){
-	
+	//Déplacement horizontal
+	if(x == 0){
+		this.positionY = this.positionY + y;
+	}
+	//Déplacement vertical
+	else if(y == 0){
+		this.positionX = this.positionX + x;
+	}
 }
 
 /*! 
