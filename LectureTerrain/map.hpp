@@ -16,17 +16,20 @@
 #include <cmath>
 #include <vector>
 
+using namespace std;
+
 class Map {
 public:
-    Map(int height, int width);
+    Map(int height, int width, int tile_size);
     Map(const Map& orig);
     virtual ~Map();
     
     int getHeight();
     int getWidth();
-    std::vector<int> getTiles();
+    vector<vector<int>> getTiles();
     int getTileAt(int x, int y);
     void setTileAt(int x, int y, int tile);
+    int getTileSize();
     
     void readTmxFile(std::string file);
     void drawMap();
@@ -36,8 +39,8 @@ private:
     int height;
     //! Largeur de la carte en cases
     int width;
-    //! Tableau contenant les cases de la carte et leur type
-    std::vector<int> tiles;
+    //! Matrice contenant les cases de la carte et leur type
+    vector<vector<int>> tiles;
     //! Taille d'une case en pixels
     int tile_size;
     //! Image où récupérer les textures des cases
