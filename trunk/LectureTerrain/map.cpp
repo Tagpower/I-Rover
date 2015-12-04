@@ -62,14 +62,21 @@ void Map::setTileAt(int x, int y, int tile) {
 void Map::readTmxFile(std::string file) {
     //TODO parser le fichier .tmx pour remplir la matrice de tiles.
       clan::File mapTmx(file);
-      //clan::DomDocument doc;
-      //doc.load(mapTmx);
-      
-//    
-//    clan::DomElement map_node(doc.get_document_element());
-//    
-//    std::cout << map_node.get_attribute_int("width") << std::endl;
+      clan::DomDocument doc;
+      doc.load(mapTmx);
     
+      clan::DomElement map_node(doc.get_document_element());
+      clan::DomNode layer_data_node(map_node.get_child_nodes().item(1).get_first_child());
+      clan::DomNodeList all_tiles(layer_data_node.get_child_nodes());
+      
+      for(int i=0; i < this->height; i++) {
+          for(int j=0; j < this->width; j++) {
+              //setTileAt(j, i, all_tiles.item(i*this->height+j).get_attributes().get_named_item("gid").get_node_value().);
+          }
+      }
+    
+      //std::cout << map_node.get_attribute_int("width") << std::endl;
+        
     
    
 }
