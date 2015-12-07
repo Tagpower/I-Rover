@@ -67,6 +67,18 @@ Le robot se déplace uniquement horizontalement et verticalement, il ne peut don
 
 Parfois le robot aura le choix du déplacement, dans ce cas il prendra la meilleure solution selon ce qu'il connait du terrain. S'il n'y a qu'un seul chemin possible, le robot devra l'emprunter et le poursuivre jusqu'au bout jusqu'à ce qu'il y ait plusieurs chemins possibles.
 
+Le robot se sert d'un algorithme de recherche pour avancer de la façon la plus optimale possible. Il peut voir les parties de la carte qui se trouvent autour de lui. Lorsque le robot avance, il découvre donc une nouvelle partie de la carte et conserve également la carte déjà parcourue.
+
+\subsection{L'environnement}
+La carte sur laquelle le robot se déplace est construite à l'aide de tiled. La carte modélisée, on distingue deux types de cases:
+
+\begin{enumerate}
+	\item les cases accessibles par le robot
+	\item les cases qui bloquent le robot
+\end{enumerate}
+
+La carte est sous forme d'un fichier XML que le programme interprête pour renvoyer une carte exploitable par le robot.
+
 
 \end{document}
 
