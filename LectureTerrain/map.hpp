@@ -8,19 +8,16 @@
 #ifndef MAP_HPP
 #define	MAP_HPP
 
-#include <ClanLib/core.h>
-#include <ClanLib/application.h>
-#include <ClanLib/display.h>
-#include <ClanLib/xml.h>
-#include <ClanLib/gl.h>
-#include <cmath>
+#include "precomp.hpp"
+#include "tileset.hpp"
 #include <vector>
 
 using namespace std;
 
 class Map {
 public:
-    Map(int height, int width, int tile_size);
+    Map();
+    Map(int height, int width, Tileset tileset);
     Map(const Map& orig);
     virtual ~Map();
     
@@ -32,7 +29,8 @@ public:
     int getTileSize();
     
     void readTmxFile(std::string file);
-    void drawMap();
+    void drawMap(clan::Canvas c);
+    void drawMap(clan::Canvas c, int x, int y);
     
 private:
     //! Hauteur de la carte en cases     
@@ -43,8 +41,8 @@ private:
     vector<vector<int>> tiles;
     //! Taille d'une case en pixels
     int tile_size;
-    //! Image où récupérer les textures des cases
-    clan::Image tileset;
+    //! Tileset comprenant l'image où récupérer les textures des cases et ses informations
+    Tileset tileset;
 };
 
 #endif	/* MAP_HPP */
