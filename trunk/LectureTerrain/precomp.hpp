@@ -18,7 +18,6 @@
 #include <ClanLib/d3d.h>
 #endif
 #include <ClanLib/gl.h>
-#include "map.hpp"
 #include <cmath>
 
 
