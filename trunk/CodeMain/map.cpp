@@ -41,16 +41,18 @@ Map::Map(std::string tmxFile, Tileset tileset) { //Buggé. Trouver un moyen de t
       clan::DomDocument doc;
       doc.load(mapTmx);
     
-      clan::DomElement map_node(doc.get_document_element());
+      clan::DomElement map_node(doc.get_document_element());      
+      clan::DomNode layer_data_node(map_node.get_child_nodes().item(1).get_first_child());
+      clan::DomNodeList all_tiles(layer_data_node.get_child_nodes());
+        
       this->height = map_node.get_attribute_int("height") ;
       this->width = map_node.get_attribute_int("width") ;
       
       this->tileset = tileset;
       this->tile_size = tileset.getTile_height();
       
-      clan::DomNode layer_data_node(map_node.get_child_nodes().item(1).get_first_child());
-      clan::DomNodeList all_tiles(layer_data_node.get_child_nodes());
-              
+      this->tiles = vector<vector<int>>(height, vector<int>(width));
+      
       //Remplissage de la matrice de tiles
       int id;
       for(int i=0; i < this->height; i++) {
@@ -63,6 +65,9 @@ Map::Map(std::string tmxFile, Tileset tileset) { //Buggé. Trouver un moyen de t
           }
           cout << endl;
       }
+      
+      
+      
 }
 
 Map::~Map() {
