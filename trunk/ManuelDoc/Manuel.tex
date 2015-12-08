@@ -3,43 +3,63 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 
-\title{Manuel du projet "faut trouver un nom"}
+\title{Manuel du projet irover}
 \date{Lundi 9 Novembre 2015}
+
 \author{}
 
 \begin{document}
 
 \maketitle
 
+Manuel du project irover.
+
+
+\newpage
+
 \section{Introduction}
 
-Le projet a pour objectif la création d'un robot autonome réalisant une tâche particulière.
-Pour cela nous avons imaginé un scénario sous forme de mini jeu dont le personnage principal est notre robot.
-Le manuel suivant vous aidera à comprendre le but du jeu et les règle de celui ci et vous proposeras une description détaillés de son infrastructure logicielle réserver aux developpeur et utilisateurs confirmé mais aussi une section tutoriel qui reprendra un exemple d'utilisation de notre petite application.
-
-(à faire On doit segmenter le manuel en plusieur partie, une partie destiné à tout le monde avec les regles du jeux etc, une un peu plus technique ou on parlera du code et des differente techno, et une autre ou on décrit ce qui se passe.
-On pourra aussi imaginé des scénario ou des options possible pour permettre de meublé ou donné plus de contenu à notre projet meme si ce sont des choses qu'on ne fait pas concraitement)
-
-\section{But du jeu}
 
 
-L'objectif du jeu est de ramasser tous les trésors présents sur le terrain.
+Le projet a pour objectif la création d'une application graphique où un petit petit personnage (robot) réaliserait une tache particulière.
+Pour cela nous avons imaginé un scénario de mini jeu en deux dimention où notre robot prendrait la forme d'un héros sans peur et sans reproche.
+Le manuel suivant se composera de plusieurs partie :
+La premiere vous aidera à comprendre le but du jeu ses règles et l'histoire de notre petit monde.
+La seconde décrira comment installer l'application et les différentes options d'installation possible. 
+La troisième partie sera dédié à la description détaillés de l'infrastructure logicielle sur la forme d'une documentation logicielle. 
+et enfin nous vous proposerons un tutoriel retrassant une simulation que nous avons effectué.
 
-%Pour le moment : 1 coffre (augmentation de la difficulter au fur et à mesure)
 
-Cependant certains coffres seront cachés derrière des obstacles que le robot devra trouver. Des ennemis seront également présent dans le jeu afin d'ajouter une difficulté supplémentaire au robot.
-Une fois tous les coffres ramassés, le jeu s'arrete.
-Si le robot meurt au combat, le jeu s'arrête également.
+\section{iRover, l'histoire d'un héros}
 
 
-\subsection{Gestion des coffres}
+Dans la vallé perdu du Vertou, là où nul aventurier n'a plus mit les pieds depuis des années. On raconte qu'il y a d'ici
+plusieurs siècle, un grand pirate du nom de Stevy J. y aurait caché un trésors :"le chamalo magique".
+Notre héros, jeune et intrépide aventurier du nom de Rover est à la recherche de cet artefact et se voit donc lancer 
+dans cette grande aventure afin de retrouver cette sucrerie antique.
+Cependant, la vallé est habité par d'étranges créatures, des chou-kêtes. Cette horde de créature est farouchement attaché à leurs territoire
+et n'hésiteront pas à attaquer quiconque qui y posera le pied.
 
-%Pour le moment, le coffre s''ouvre sans clef
+But du jeu :
 
-Un certain nombre de coffres seront présents ceux-ci ne peuvent s'ouvrir qu'à l'aide d'une clef préalablement obtenue.
-Le robot ne peut ouvrir un coffre que s'il possède une clef et qu'il se trouve sur la même case que le coffre.
+L'objectif  principal du jeu (ou plutot de notre jeune amis) est de ramasser tous les trésors présents 
+sur le terrain afin d'atteindre gloire et richesse et surtout un jour trouver le chamalo magique.
 
-%Le coffre possedera deux sprites, un ouvert un fermer.
+Ces coffres seront disséminés sur la carte, souvent derrière des obstacles que le héros devra contourner. 
+Des ennemis (les chou-kêtes) pourront également attaquer notre héros.
+
+Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peut plus continuer son aventure.
+
+
+\subsection{Gestion de notre héros}
+
+Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
+Il pourra se déplacer sur la carte case par case et rencontrera des obstacles et pourra interagir avec d'autre élément du monde.
+
+N'ayant pas appris à nagé, il ne pourra pas se déplacer sur l'eau et ayant un vertige incontrolabe, il aura du mal à grimper sur les rochers,
+les arbres et même les buissons !
+
+Il pourra cependant ramasser des objets au sol, 
 
 \subsection{Gestion des clés}
 
