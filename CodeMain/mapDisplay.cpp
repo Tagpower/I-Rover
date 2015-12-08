@@ -30,13 +30,14 @@ MapDisplay::MapDisplay()
 	font = clan::Font("tahoma", 24);
         
         //Lecture et affichage de la carte
-        //Tileset myTileset(tilesheet, 31, 57, 16, 16, 1); //TODO: Paramètres à récupérer depuis le fichier .tmx
-        Tileset myTileset(tilesheet, "map3.tmx");
-        Map terrain(12,36, myTileset); //Création de la carte. TODO: récupérer les dimensions depuis le fichier .tmx
-        //Map terrain("map1.tmx", myTileset);
+        std::string fichierTmx = "map1.tmx"; //Fichier de carte à utiliser
+        Tileset myTileset(tilesheet, fichierTmx); //Création du tileset à utiliser, en récupérant ses paramètres dans le fichier 
+        
+        Map terrain(fichierTmx, myTileset); //Création de la carte par lecture du fichier .tmx
+        
         this->tileset = myTileset;
         this->map = terrain;
-        this->map.readTmxFile("map3.tmx"); //Génération de la carte par lecture du fichier .tmx
+        //this->map.readTmxFile("map1.tmx"); //Génération de la carte par lecture du fichier .tmx
         
 	game_time.reset();
 }
@@ -45,14 +46,15 @@ bool MapDisplay::update()
 {
 	game_time.update();
 
-	// Clear the display
+	//Tout redessiner
 	canvas.clear(clan::Colorf(0.2f, 0.2f, 0.2f));
 
+        //Affichage d'un texte
 	std::string text("Map Display");
 	clan::Sizef text_size = font.measure_text(canvas, text).bbox_size;
 	font.draw_text(canvas, ((canvas.get_width() - text_size.width) / 2), 32, text, clan::Colorf::white);
 
-        //this->map.drawMap(canvas); //TODO: Dessiner la carte au centre de la fenêtre
+        //Dessin de la carte au centre de la fenêtre
         this->map.drawMap(canvas, canvas.get_width()/2 - map.getWidth() * map.getTileSize() /2 ,
                                   canvas.get_height()/2 - map.getHeight() * map.getTileSize() /2);
         
