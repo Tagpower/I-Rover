@@ -5,6 +5,7 @@
  * Created on 7 décembre 2015, 11:04
  */
 
+#include <sstream>
 #include "tileset.hpp"
 
 Tileset::Tileset() {
@@ -18,6 +19,26 @@ Tileset::Tileset(clan::Image tilesheet, int h, int w, int tile_h, int tile_w, in
     this->tile_height = tile_h;
     this->tile_width = tile_w;
     this->spacing = spacing;
+    
+}
+
+Tileset::Tileset(clan::Image tilesheet, std::string tmxFile) { //Buggé. Trouver un moyen de transformer std::string en int
+    clan::File mapTmx(tmxFile);
+    clan::DomDocument doc;
+    doc.load(mapTmx);
+
+    clan::DomElement map_node(doc.get_document_element());
+    clan::DomNode tileset_data_node(map_node.get_elements_by_tag_name("tileset").item(0));
+    clan::DomNamedNodeMap tileset_attributes(tileset_data_node.get_attributes());
+    
+    this->tilesheet = tilesheet;
+    this->tile_height = stoi(tileset_attributes.get_named_item("tileheight").get_node_value());
+    this->tile_width = stoi(tileset_attributes.get_named_item("tilewidth").get_node_value());
+    this->spacing = stoi(tileset_attributes.get_named_item("spacing").get_node_value());
+    
+    this->height = (int)tilesheet.get_height()/(tile_height+spacing)+1;
+    this->width = (int)tilesheet.get_width()/(tile_width+spacing) +1;
+    
     
 }
 

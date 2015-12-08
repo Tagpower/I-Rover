@@ -19,10 +19,10 @@ MapDisplay::MapDisplay()
 	window = clan::DisplayWindow(desc);
 	canvas = clan::Canvas(window);
 
-	// Connect the Window close event
+	// Acriver la fermeture de la fenêtre
 	sc.connect(window.sig_window_close(), [&](){quit = true; });
 
-	// Connect a keyboard handler to on_key_up()
+	// Détection du clavier
 	sc.connect(window.get_keyboard().sig_key_up(), clan::bind_member(this, &MapDisplay::on_input_up));
 
 	// Load a sprite from a png-file
@@ -30,11 +30,13 @@ MapDisplay::MapDisplay()
 	font = clan::Font("tahoma", 24);
         
         //Lecture et affichage de la carte
-        Tileset myTileset(tilesheet, 31, 57, 16, 16, 1); //TODO: Paramètres à récupérer depuis le fichier .tmx
-        Map terrain(16,16, myTileset); //Création de la carte
+        //Tileset myTileset(tilesheet, 31, 57, 16, 16, 1); //TODO: Paramètres à récupérer depuis le fichier .tmx
+        Tileset myTileset(tilesheet, "map3.tmx");
+        Map terrain(12,36, myTileset); //Création de la carte. TODO: récupérer les dimensions depuis le fichier .tmx
+        //Map terrain("map1.tmx", myTileset);
         this->tileset = myTileset;
         this->map = terrain;
-        this->map.readTmxFile("map1.tmx"); //Génération de la carte par lecture du fichier .tmx
+        this->map.readTmxFile("map3.tmx"); //Génération de la carte par lecture du fichier .tmx
         
 	game_time.reset();
 }

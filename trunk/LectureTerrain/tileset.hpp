@@ -10,10 +10,13 @@
 #ifndef TILESET_HPP
 #define	TILESET_HPP
 
+using namespace std;
+
 class Tileset {
 public:
     Tileset();
     Tileset(clan::Image tilesheet, int h, int w, int tile_h, int tile_w, int spacing);
+    Tileset(clan::Image tilesheet, std::string tmxFile);
     Tileset(const Tileset& orig);
     virtual ~Tileset();
     
