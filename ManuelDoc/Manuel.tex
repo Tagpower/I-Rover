@@ -17,12 +17,14 @@ Manuel du project irover.
 
 \newpage
 
+\tableofcontents
+
 \section{Introduction}
 
 
 
 Le projet a pour objectif la création d'une application graphique où un petit petit personnage (robot) réaliserait une tache particulière.
-Pour cela nous avons imaginé un scénario de mini jeu en deux dimention où notre robot prendrait la forme d'un héros sans peur et sans reproche.
+Pour cela nous avons imaginé un scénario de mini jeu en deux dimension où notre robot prendrait la forme d'un héros sans peur et sans reproche.
 Le manuel suivant se composera de plusieurs partie :
 La premiere vous aidera à comprendre le but du jeu ses règles et l'histoire de notre petit monde.
 La seconde décrira comment installer l'application et les différentes options d'installation possible. 
@@ -54,51 +56,66 @@ Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peu
 \subsection{Gestion de notre héros}
 
 Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
-Il pourra se déplacer sur la carte case par case et rencontrera des obstacles et pourra interagir avec d'autre élément du monde.
+Il pourra se déplacer sur la carte, case par case et rencontrera des obstacles et pourra interagir avec d'autre élément du monde.
 
 N'ayant pas appris à nagé, il ne pourra pas se déplacer sur l'eau et ayant un vertige incontrolabe, il aura du mal à grimper sur les rochers,
-les arbres et même les buissons !
+les arbres, les murs et même les buissons !
 
-Il pourra cependant ramasser des objets au sol, 
+Il pourra cependant ramasser des objets au sol, se battre contre les enemis et ouvrir les coffres. 
 
 \subsection{Gestion des clés}
 
 %Aucune clef sur le terrain pour l'instant
 
 Un certain nombre de clé seront présents sur la carte ou peuvent être obtenus en tuant des ennemies.
-chaque ouverture de 
+Pour certains coffre, il peut etre necessaire d'avoir une clé. 
 Une fois le coffre ouvert, la clef est perdue et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
 
-Pour récupérer une clef, il faut que le robot se trouve sur la même case qu'elle. Cependant, un maximum de deux clefs portées par le robot est autorisé. Donc si le robot possède déjà deux clef et qu'il se trouve sur la même case qu'une clef, il la laisse à sa place et ne pourra la prendre uniquement s'il ouvre un coffre entre temps.
+Pour récupérer une clef, il faut que le robot se trouve sur la même case que celle ci.
 
 \subsection{Gestion des ennemis}
-Certains ennemis seront présent sur le terrain qui sont là pour mettre le robot en difficulté. Le robot devra combattre ces ennemis s'il les rencontrent pendant le jeu.
 
-Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi, ce qui entrainera la fin du jeu. Une fois l'ennemi vaincu, celui-ci disparait du terrain.
+Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté. 
+Le robot devra alors combattre ces ennemis s'il les rencontrent pendant le jeu afin de rester en vie.
 
-\subsection{Gestion de l'environnement}
-Le terrain de jeu dans lequel le robot devra jouer possède des obstacles. Ceux-ci sont infranchissables. Dans le cas où le robot se trouve face à un obstacle (mur, arbre, cours d'eau\ldots) celui ci devra trouver un moyen de le contourner. Il peut donc tourner à droite, à gauche ou encore faire demi-tour.
+Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi. Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
 
 
-\section{Fonctionnement}
+
+\section{Manuel d'installation}
+
+\subsection{makefile}
+
+\subsubsection{gestion des systeme d'exploitation}
+\subsection{}
+
+
+
+\section{Documentation utilisateur}
 
 \subsection{Les déplacements du robot}
-Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. Il ne pourra se déplacer que d'une case en une case.
+Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. Il ne pourra se déplacer que d'une case par case.
 
-Parfois le robot aura le choix du déplacement, dans ce cas il prendra la meilleure solution selon ce qu'il connait du terrain. S'il n'y a qu'un seul chemin possible, le robot devra l'emprunter et le poursuivre jusqu'au bout jusqu'à ce qu'il y ait plusieurs chemins possibles.
+Parfois le robot aura le choix du déplacement, dans ce cas il prendra la meilleure solution selon sa connaissance du terrain. S'il n'y a qu'un seul chemin possible, le robot devra l'emprunter et le suivre jusqu'au bout, jusqu'à ce qu'il y ait plusieurs chemins possibles.
 
-Le robot se sert d'un algorithme de recherche pour avancer de la façon la plus optimale possible. Il peut voir les parties de la carte qui se trouvent autour de lui. Lorsque le robot avance, il découvre donc une nouvelle partie de la carte et conserve également la carte déjà parcourue.
+Le robot se sert d'un algorithme de recherche pour avancer de la façon la plus optimale possible. Il peut voir les parties de la carte qui se trouvent autour de lui. 
+Lorsque le robot avance, il découvre donc une nouvelle partie de la carte et conserve également la carte déjà parcourue.
 
 \subsection{L'environnement}
 La carte sur laquelle le robot se déplace est construite à l'aide de tiled. La carte modélisée, on distingue deux types de cases:
 
 \begin{enumerate}
-	\item les cases accessibles par le robot
-	\item les cases qui bloquent le robot
+	\item les cases ou le robot peut se déplacer
+	\item les cases ou le robot ne peut pas se déplacer
 \end{enumerate}
 
 La carte est sous forme d'un fichier XML que le programme interprête pour renvoyer une carte exploitable par le robot.
 
+
+
+\section{Documentation logicielle}
+
+\section{tutoriel}
 
 \end{document}
 
