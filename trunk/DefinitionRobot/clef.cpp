@@ -1,4 +1,4 @@
-#include <clef.hpp>
+#include "clef.hpp"
 
 /*!
  * Constructeur d'une clef.
@@ -15,19 +15,19 @@ Clef::Clef(int x, int y){
  * Le constructeur d'une clef par défaut.
  * @param[out] Clef la clef créée.
  */
-Clef::Clef(void){
+Clef::Clef(){
 
 }
 
-int::getPositionX(){
-	return positionX;
+int Clef::getPositionX(){
+	return this->positionX;
 }
 
 void Clef::setPositionX(int x){
 	this->positionX = x;
 }
-int::getPositionY(){
-	return positionY;
+int Clef::getPositionY(){
+	return this->positionY;
 }
 
 void Clef::setPositionY(int y){

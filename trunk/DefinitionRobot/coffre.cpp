@@ -1,4 +1,4 @@
-#include <coffre.hpp>
+#include "coffre.hpp"
 
 /*!
  * Constructeur d'un coffre.
@@ -16,27 +16,27 @@ Coffre::Coffre(int x, int y){
  * Le constructeur d'un coffre par défaut.
  * @param[out] Coffre le coffre créé.
  */
-Coffre::Coffre(void){
+Coffre::Coffre(){
 
 }
 
-int::getPositionX(){
-	return positionX;
+int Coffre::getPositionX(){
+	return this->positionX;
 }
 
-void Clef::setPositionX(int x){
+void Coffre::setPositionX(int x){
 	this->positionX = x;
 }
-int::getPositionY(){
-	return positionY;
+int Coffre::getPositionY(){
+	return this->positionY;
 }
 
-void Clef::setPositionY(int y){
+void Coffre::setPositionY(int y){
 	this->positionY = y;
 }
 
-bool::getOuvert(){
-	return ouvert;
+bool Coffre::isOuvert(){
+	return this->ouvert;
 }
 
 void Coffre::setOuvert(bool ouv){
