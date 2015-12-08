@@ -18,6 +18,7 @@ class Map {
 public:
     Map();
     Map(int height, int width, Tileset tileset);
+    Map(std::string tmxFile, Tileset tileset);
     Map(const Map& orig);
     virtual ~Map();
     

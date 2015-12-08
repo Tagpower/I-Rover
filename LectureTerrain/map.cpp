@@ -19,7 +19,7 @@ Map::Map() {
 Map::Map(int height, int width, Tileset tileset) {
     this->height = height;
     this->width = width;
-    this->tiles = vector<vector<int>>(width, vector<int>(height));
+    this->tiles = vector<vector<int>>(height, vector<int>(width));
     this->tileset = tileset;
     this->tile_size = tileset.getTile_height();
 }
@@ -33,6 +33,36 @@ Map::Map(const Map& orig) {
     this->tiles = orig.tiles;
     this->tileset = orig.tileset;
     this->tile_size = orig.tile_size;
+}
+
+Map::Map(std::string tmxFile, Tileset tileset) { //Buggé. Trouver un moyen de transformer std::string en int
+    
+      clan::File mapTmx(tmxFile);
+      clan::DomDocument doc;
+      doc.load(mapTmx);
+    
+      clan::DomElement map_node(doc.get_document_element());
+      this->height = map_node.get_attribute_int("height") ;
+      this->width = map_node.get_attribute_int("width") ;
+      
+      this->tileset = tileset;
+      this->tile_size = tileset.getTile_height();
+      
+      clan::DomNode layer_data_node(map_node.get_child_nodes().item(1).get_first_child());
+      clan::DomNodeList all_tiles(layer_data_node.get_child_nodes());
+              
+      //Remplissage de la matrice de tiles
+      int id;
+      for(int i=0; i < this->height; i++) {
+          for(int j=0; j < this->width; j++) {
+              clan::DomString tile_id = all_tiles.item(i*this->width+j).get_attributes().get_named_item("gid").get_node_value();
+              cout << tile_id << " ";
+              //istringstream (tile_id) >> id;
+              id = stoi(tile_id);
+              setTileAt(i, j, id);
+          }
+          cout << endl;
+      }
 }
 
 Map::~Map() {
@@ -55,18 +85,17 @@ int Map::getTileSize() {
     return this->tile_size;
 }
 
-int Map::getTileAt(int x, int y) {
+int Map::getTileAt(int row, int col) {
     //return this->tiles[x*this->width + y - 1];
-    return this->tiles[x][y];
+    return this->tiles[row][col];
 }
 
-void Map::setTileAt(int x, int y, int tile) {
+void Map::setTileAt(int row, int col, int tile) {
     //this->tiles[x*this->width + y - 1] = tile;
-    this->tiles[x][y] = tile;
+    this->tiles[row][col] = tile;
 }
 
 void Map::readTmxFile(std::string file) {
-    //TODO parser le fichier .tmx pour remplir la matrice de tiles.
       clan::File mapTmx(file);
       clan::DomDocument doc;
       doc.load(mapTmx);
@@ -79,9 +108,10 @@ void Map::readTmxFile(std::string file) {
       int id;
       for(int i=0; i < this->height; i++) {
           for(int j=0; j < this->width; j++) {
-              clan::DomString tile_id = all_tiles.item(i*this->height+j).get_attributes().get_named_item("gid").get_node_value();
+              clan::DomString tile_id = all_tiles.item(i*this->width+j).get_attributes().get_named_item("gid").get_node_value();
               cout << tile_id << " ";
-              istringstream (tile_id) >> id;
+              //istringstream (tile_id) >> id;
+              id = stoi(tile_id);
               setTileAt(i, j, id);
           }
           cout << endl;
@@ -99,7 +129,7 @@ void Map::drawMap(clan::Canvas c) {
     }
 }
 
-//Dessiner la carte dans le à une position donnée
+//Dessiner la carte dans le canvas à une position donnée
 void Map::drawMap(clan::Canvas c, int x, int y) {
     
     for(int i=0; i < this->height; i++) {
