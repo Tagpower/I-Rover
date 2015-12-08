@@ -12,10 +12,12 @@ private:
 	bool ouvert;
 public:
 	Coffre();
-	int getPositionX;
-	int getPositionY;
-	bool getOuvert;
-	void setPositionX;
-	void setPositionY;
-	void setOuvert;
-}
+	Coffre(int positionX, int positionY);
+	int getPositionX();
+	int getPositionY();
+	bool isOuvert();
+	void setPositionX(int x);
+	void setPositionY(int y);
+	void setOuvert(bool status);
+
+};

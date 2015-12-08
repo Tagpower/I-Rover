@@ -11,8 +11,9 @@ private:
 	int positionY;
 public:
 	Clef();
-	int getPositionX;
-	int getPositionY;
-	void setPositionX;
-	void setPositionY;
-}
+	Clef(int positionX, int positionY);
+	int getPositionX();
+	int getPositionY();
+	void setPositionX(int x);
+	void setPositionY(int y);
+};

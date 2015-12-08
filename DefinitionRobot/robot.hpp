@@ -3,18 +3,20 @@
 #include <stdio.h>
 #include <vector>
 #include <iostream>
-#include <personnage.hpp>
+#include "personnage.hpp"
+#include "coffre.hpp"
 
 
-class Robot:Personnage
+class Robot : public Personnage
 {
 private:
-	std::vector <Clef> inventaire;
+	std::vector <Clef*> inventaire;
 public:
 	Robot();
-	std::vector <Clef> getInventaire;
-	void setInventaire;
-	void ouvrir(Coffre coffre);
-	void ramasser(Clef clef);
+	Robot(int positionX,int positionY);
+	std::vector <Clef*> getInventaire;
+	void setInventaire(std::vector <Clef*> inventaire);
+	void ouvrir(Coffre* coffre);
+	void ramasser(Clef* clef);
 
-}
+};

@@ -2,19 +2,21 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
+#include "clef.hpp"
 
 
 class Personnage
 {
-private:
+protected:
 	int positionX;
 	int positionY;
 public:
 	Personnage();
-	int getPositionX;
-	int getPositionY;
-	void setPositionX;
-	void setPositionY;
+	Personnage(int positionX, int positionY);
+	int getPositionX();
+	int getPositionY();
+	void setPositionX(int x);
+	void setPositionY(int y);
 	void deplacer(int x, int y);
-	void Combattre();
-}
+	bool Combattre(Personnage* adversaire);
+};
