@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  9 DEC 2015 15:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  9 DEC 2015 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,34 +307,39 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-No file Manuel.toc.
+(./Manuel.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+)
 \tf@toc=\write3
 \openout3 = `Manuel.toc'.
 
-[2]
-Overfull \hbox (8.11188pt too wide) in paragraph at lines 88--90
+ [2] [3]
+Overfull \hbox (8.11188pt too wide) in paragraph at lines 96--98
 []\T1/cmr/m/n/10 Une fois l'en-nemi vaincu, celui-ci dis-pa-rait du ter-rain ma
 is dans le cas contraire,
  []
 
-[3] [4] [5] (./Manuel.aux) ) 
+[4] [5] (./Manuel.aux) ) 
 Here is how much of TeX's memory you used:
- 1540 strings out of 494999
- 18439 string characters out of 6180228
- 78483 words of memory out of 5000000
- 4788 multiletter control sequences out of 15000+600000
+ 1544 strings out of 494999
+ 18489 string characters out of 6180228
+ 80483 words of memory out of 5000000
+ 4790 multiletter control sequences out of 15000+600000
  11766 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 23i,5n,23p,317b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
- </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecbx1000.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecbx1200.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ec
-bx1440.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm100
-0.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600
-pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on Manuel.pdf (5 pages, 62311 bytes).
+ 23i,4n,23p,317b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen
+/ec/ecbx1200.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cbx1000.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx14
+40.600pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.60
+0pk> </comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> 
+</comptes/E15A488L/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on Manuel.pdf (5 pages, 70892 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
+ 255 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
