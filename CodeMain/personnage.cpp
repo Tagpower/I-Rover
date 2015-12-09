@@ -60,9 +60,21 @@ void Personnage::setPositionY(int y){
  * @param[in] y la valeur de déplacement en y.
  * @param[out] x la position du personnage en x après le déplacement.
  * @param[out] y la position du personnage en y après le déplacement.
+ * @exception si x et y en entrée ne sont pas entre -1 et 1.
+ * @exception s'il n'y a aucun déplacement.
+ * @exception si x et y sont différents de 0.
  * @return rien
  */
 void Personnage::deplacer(int x, int y){
+	if( x > 1 || x < -1 || y > 1 || y < -1){
+		throw std::string("trop gros nombre de déplacement."); 
+	}
+	if( x == 0 && y ==0){
+		throw std::string("déplacement null."); 
+	}
+	if((x == 1 && y == 1) || (x == 1 && y == -1) || (x == -1 && y == 1) || (x == -1 && y == -1)){
+		throw std::string("le déplacement ne doit pas dépasser une case");
+	}
 	//Déplacement horizontal
 	if(x == 0){
 		this->positionY = this->positionY + y;
