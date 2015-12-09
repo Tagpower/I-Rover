@@ -5,41 +5,67 @@
  * Constructeur du robot.
  * @param[out] Robot le robot créé.
  */
- 
 Robot::Robot() : Personnage(){
 
 }
-    
+  
+/*!
+ * Constructeur du robot.
+ * @param[in] x La position en x du robot sur la carte.
+ * @param[in] y La position en y du robot sur la carte.
+ * @param[out] Robot le robot créé.
+ */  
 Robot::Robot(int x, int y) : Personnage(x, y){
 
 }
 
-void Robot::setInventaire(std::vector <Clef*> inventaire){
+/*!
+ * Methode servant à modifier l'inventaire du robot.
+ * L'inventaire correspond au nombre de clef que possède le robot.
+ */
+void Robot::setInventaire(int inventaire){
 	this->inventaire = inventaire;
 }
 
-std::vector<Clef*> Robot::getInventaire(){
+/*!
+ * Methode servant à retourner l'inventaire du robot.
+ * L'inventaire correspond au nombre de clef que possède le robot.
+ * */
+int Robot::getInventaire(){
 	return this->inventaire;
 }
 	
 /*! 
- * Methode servant a ouvrir un coffre.
+ * Methode servant a ouvrir un coffre. 
+ * Il faut que le robot ai la même position que le coffre.
+ * Le coffre disparait après ouverture et le robot perd une clef.
  * @param[in] coffre Le coffre à ouvrir.
+ * @param[out] inventaire L'inventaire du robot avec une clef en moins.
+ * @exception si le robot ne possède aucune clef.
  */
 void Robot::ouvrir(Coffre* coffre){
 	//On ouvre le coffre seulement si le robot et le coffre sont sur la même case
 	if(this->positionX == coffre->getPositionX() && this->positionY == coffre->getPositionY()){
-		coffre->setOuvert(true);
+		if(this->inventaire > 0 && !coffre->isOuvert()){
+			coffre->setOuvert(true);
+			inventaire --;
+		}
+		else{
+			throw std::string("inventaire vide.");
+		}
 	}
 }
 
 /*! 
- * Methode servant a ramasser une clef.
+ * Methode servant a ramasser une clef. 
+ * Incrémente l'inventaire de 1 quand on ramasse la clef et fait disparaitre la clef de la carte.
+ * Il faut que le robot ai la même position que la clef pour la ramasser.
  * @param[in] clef La clef à ramasser.
+ * @param[out] inventaire l'inventaire incrémenté de 1.
  */
 void Robot::ramasser(Clef* clef){
 	//On ramasse la clef seulement si le robot et la clef sont sur la même case
 	if(this->positionX == clef->getPositionX() && this->positionY == clef->getPositionY()){
-		this->inventaire.insert(1, *clef);
+		this->inventaire++;
 	}
 }

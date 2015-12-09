@@ -2,15 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
-#include <personnage.hpp>
-#include <personnage.cpp>
+#include "personnage.hpp"
 
 
-class Ennemi
+class Ennemi : public Personnage
 {
 private:
 
 public:
 	Ennemi();
-	void attaquer();
-}
+	Ennemi(int positionX, int positionY);
+};
