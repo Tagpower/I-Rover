@@ -35,7 +35,13 @@ Map::Map(const Map& orig) {
     this->tile_size = orig.tile_size;
 }
 
-Map::Map(std::string tmxFile, Tileset tileset) { //Buggé. Trouver un moyen de transformer std::string en int
+/**
+ * Création d'une carte à partir du seul fichier .tmx
+ * 
+ * @param tmxFile le fichier au format .tmx contenant les données de la carte
+ * @param tileset le tileset contenant les tiles à dessiner
+ */
+Map::Map(std::string tmxFile, Tileset tileset) {
     
       clan::File mapTmx(tmxFile);
       clan::DomDocument doc;
@@ -91,20 +97,20 @@ int Map::getTileSize() {
 }
 
 int Map::getTileAt(int row, int col) {
-    //return this->tiles[x*this->width + y - 1];
     return this->tiles[row][col];
 }
 
 void Map::setTileAt(int row, int col, int tile) {
-    //this->tiles[x*this->width + y - 1] = tile;
     this->tiles[row][col] = tile;
 }
 
 void Map::readTmxFile(std::string file) {
+      //Création d'un document DOM pour lire les données au format XML
       clan::File mapTmx(file);
       clan::DomDocument doc;
       doc.load(mapTmx);
     
+      //Récupération des balises XML contenant les données
       clan::DomElement map_node(doc.get_document_element());
       clan::DomNode layer_data_node(map_node.get_child_nodes().item(1).get_first_child());
       clan::DomNodeList all_tiles(layer_data_node.get_child_nodes());

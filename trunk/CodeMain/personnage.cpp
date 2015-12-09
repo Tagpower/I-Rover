@@ -9,9 +9,10 @@
  * @param[out] positionY la nouvelle position en y du personnage créé.
  * @return Personnage le personnage créé.
  */
-Personnage::Personnage(int x, int y){
+Personnage::Personnage(int x, int y, clan::Image sprite){
 	positionX = x;
 	positionY = y;
+        this->sprite = sprite;
 }
 
 /*!
@@ -109,5 +110,8 @@ bool Personnage::Combattre(Personnage* adversaire){
     return victoire;    
 }
 
+void Personnage::draw(clan::Canvas c, int x, int y) {
+    this->sprite.draw(c, x, y);
+}
 
 

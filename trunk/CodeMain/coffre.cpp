@@ -9,10 +9,11 @@
  * @param[out] ouvert Le statut du coffre, false par défaut.
  * @return Coffre le coffre créé.
  */
-Coffre::Coffre(int x, int y){
+Coffre::Coffre(int x, int y, clan::Image sprite){
 	positionX = x;
 	positionY = y;
 	ouvert = false;
+        this->sprite = sprite;
 }
 
 /*!
@@ -72,4 +73,8 @@ bool Coffre::isOuvert(){
  */ 
 void Coffre::setOuvert(bool ouv){
 	this->ouvert = ouv;
+}
+
+void Coffre::draw(clan::Canvas c, int x, int y) {
+    this->sprite.draw(c, x, y);
 }

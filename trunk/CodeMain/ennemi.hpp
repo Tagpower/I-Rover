@@ -11,5 +11,5 @@ private:
 
 public:
 	Ennemi();
-	Ennemi(int positionX, int positionY);
+	Ennemi(int positionX, int positionY, clan::Image sprite);
 };
