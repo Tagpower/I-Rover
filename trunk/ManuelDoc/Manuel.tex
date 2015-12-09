@@ -14,7 +14,7 @@
 
 Manuel du project irover.
 
-%mettre une image jolie
+%mettre une image jolie de jeu rpg super cute wayyyyy
 
 \newpage
 
@@ -22,6 +22,7 @@ Manuel du project irover.
 
 \section{Introduction}
 
+%Intro
 
 
 Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.
@@ -35,6 +36,8 @@ La quatrième quand a elle sera dédié à la description détaillés de l'infra
 
 \section{iRover, l'histoire d'un héros}
 
+%background, histoire, scénario
+
 
 Dans la vallé perdu du Vertou, là où nul aventurier n'a plus mit les pieds depuis des années. On raconte qu'il y a 
 plusieurs siècle, un grand pirate du nom de Stevy J. y aurait caché un trésors :"le chamalo magique".
@@ -43,6 +46,8 @@ dans cette grande quete afin de retrouver cette sucrerie antique.
 Cependant, la cette mistérieuse vallé est habité par d'étranges créatures, des chou-kêtes. 
 Cette horde de créature est farouchement attaché à leur territoire et n'hésiteront pas à attaquer quiconque y pénetrera.
 
+
+%regle du jeu
 
 But du jeu :
 
@@ -55,7 +60,10 @@ Des ennemis (les chou-kêtes) pourront également attaquer notre héros et donc 
 Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peut plus continuer son aventure.
 
 
-\subsection{Gestion de notre héros}
+\subsection{Rover, un héros pas comme les autres}
+
+%y a des chance que toute cette partie la je la mette dans la doc utilisateur
+
 
 Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
 Il pourra se déplacer sur la carte, case par case et rencontrera des obstacles. 
@@ -66,7 +74,7 @@ les arbres, les murs et même les buissons !
 
 Il pourra cependant ramasser des objets au sol (des clefs), se battre contre les enemis et ouvrir les coffres. 
 
-\subsection{Gestion des clés}
+\subsection{Les iClef}
 
 %Aucune clef sur le terrain pour l'instant
 
@@ -77,7 +85,7 @@ Une fois le coffre ouvert, la clef est consomé et le robot devra en récupérer
 Pour récupérer une clef, il faut que le robot se trouve sur la même case que celle ci, elle disparait alors de la carte et 
 viens s'ajouter à son inventaire de clef.
 
-\subsection{Gestion des ennemis}
+\subsection{Les Chou-kêtes}
 
 Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté. 
 Le robot devra alors combattre ces ennemis s'il les rencontre afin de rester en vie.
@@ -94,22 +102,33 @@ notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
 
 \subsection{makefile}
 
+%expliquer l'installation
+
+%expliquer les librairies à utiliser
+%parler de l'option pour que ça compile avec tout les systemes d'exploitation
+
 \subsubsection{gestion des systeme d'exploitation}
 
 \subsection{.config ????????}
 %a virer si on utilise pas
+%les options du makefile
 %a ambélir si on a des idées (rappelle que meme si c'est pas implémenté, ça peut nous donner des points)
 
 
 \section{Documentation utilisateur}
 
+%documentation utilisateur : donner des informations à des utilisateurs lambda sans grande connaissance informatique, avec des mots simple sur le fonctionnement de l'application.
+%donner egalement une description simple de comment est faite ou est géré les partie de l'application.
+
 \subsection{Le robot}
 Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. 
 Il ne pourra se déplacer que d'une case à la foi.
-Le robot disposera d'un algorithme de déplacement qu'on appelera de son petit nom : le path finding.
-Il lui arrivera de temps en temps d'avoir plusieur choix de déplacement, et cet algorithme lui permettra de choisir ou aller pour atteindre son objectif.
 
-Il peut également avoir conscience de son environement. 
+\subsection{les ennemis}
+
+\subsection{les coffres}
+
+\subsection{les clé}
 
 \subsection{L'environnement}
 La carte sur laquelle le robot se déplace est construite à l'aide de Tiled, il s'agit d'un logicielle permettant de créer des cartes case par case. 
@@ -125,6 +144,7 @@ La carte est sous forme d'un fichier XML que le programme interprête pour renvo
 L'environement servira de base également pour la disposition des autres entités présente, coffre, clef ennemie.
 Ceux ci sont disposé aléatoirement sur la carte à des endroits accessibles par le héros mais ils ne peuvent pas se déplacer.
 La rencontre avec un de ces éléments entraine la gestion des évênements.
+
 
 \subsection{La gestion des évênements}
 
@@ -149,6 +169,19 @@ Une clé et notre héros n'ont pas la même importance physique : le héros devr
 
 %mettre un schéma
  
+\subsection{l'interface utilisateur}
+
+\subsection{IA}
+
+\subsubsection{path finding}
+
+\subsubsection{découvert de la carte}
+
+\subsection{condition fin de jeu}
+
+
+
+
 
 \section{Documentation logicielle}
 
