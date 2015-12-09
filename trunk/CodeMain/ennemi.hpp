@@ -4,6 +4,7 @@
 #include <iostream>
 #include "personnage.hpp"
 
+#pragma once
 
 class Ennemi : public Personnage
 {

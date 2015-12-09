@@ -1,7 +1,6 @@
 #include "precomp.hpp"
 #include "robot.hpp"
-//#include "ennemi.hpp"
-//#include "coffre.hpp"
+#include "ennemi.hpp"
 #include "tileset.hpp"
 #include "map.hpp"
 
@@ -21,6 +20,10 @@ private:
         Tileset tileset;
         Map map;
         Robot robot;
+        vector<Ennemi> liste_ennemis;
+        vector<Coffre> liste_coffres;
+        vector<Clef> liste_clefs;
+        
 	clan::SlotContainer sc;
 	clan::DisplayWindow window;
 	clan::Canvas canvas;
