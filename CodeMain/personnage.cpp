@@ -5,7 +5,9 @@
  * Constructeur d'un personnage.
  * @param[in] x la position en x où le personnage sera créé.
  * @param[in] y la position en y où le personnage sera créé.
- * @param[out] Personnage le personnage créé.
+ * @param[out] positionX la nouvelle position en x du personnage créé.
+ * @param[out] positionY la nouvelle position en y du personnage créé.
+ * @return Personnage le personnage créé.
  */
 Personnage::Personnage(int x, int y){
 	positionX = x;
@@ -14,7 +16,7 @@ Personnage::Personnage(int x, int y){
 
 /*!
  * Le constructeur d'un personnage par défaut.
- * @param[out] Personnage le personnage créé.
+ * @return Personnage le personnage créé.
  */
 Personnage::Personnage(){
 
@@ -22,7 +24,7 @@ Personnage::Personnage(){
 
 /*!
  * Le getter de la position en x du personnage.
- * Retourne la position courante du personnage en x.
+ * @return la position courante du personnage en x.
  */
 int Personnage::getPositionX(){
 	return this->positionX;
@@ -31,7 +33,8 @@ int Personnage::getPositionX(){
 /*!
  * Le setter de la position en x du personnage.
  * Modifie la position du personnage en x.
- * @param[in] x la nouvelle position en x du personnage.
+ * @param[in] x la position en x à affecter.
+ * @param[out] positionX La nouvelle position en x du personnage.
  */
 void Personnage::setPositionX(int x){
 	this->positionX = x;
@@ -49,6 +52,7 @@ int Personnage::getPositionY(){
  * Le setter de la position en x du personnage.
  * Modifie la position du personnage en y.
  * @param[in] y la nouvelle position en y du personnage.
+ * @param[out] positionY La nouvelle position en y du personnage.
  */
 void Personnage::setPositionY(int y){
 	this->positionY = y;

@@ -3,7 +3,7 @@
 
 /*!
  * Constructeur du robot.
- * @param[out] Robot le robot créé.
+ * @return Robot le robot créé.
  */
 Robot::Robot() : Personnage(){
 
@@ -13,15 +13,18 @@ Robot::Robot() : Personnage(){
  * Constructeur du robot.
  * @param[in] x La position en x du robot sur la carte.
  * @param[in] y La position en y du robot sur la carte.
- * @param[out] Robot le robot créé.
+ * @param[out] inventaire La taille de l'inventaire du robot, 0 par défaut.
+ * @return Robot le robot créé.
  */  
 Robot::Robot(int x, int y) : Personnage(x, y){
-
+	this->inventaire = 0;
 }
 
 /*!
  * Methode servant à modifier l'inventaire du robot.
  * L'inventaire correspond au nombre de clef que possède le robot.
+ * @param[in] inventaire La valeur à affecter à l'inventaire.
+ * @param[out] inventaire La nouvelle valeur de l'inventaire.
  */
 void Robot::setInventaire(int inventaire){
 	this->inventaire = inventaire;
@@ -30,6 +33,7 @@ void Robot::setInventaire(int inventaire){
 /*!
  * Methode servant à retourner l'inventaire du robot.
  * L'inventaire correspond au nombre de clef que possède le robot.
+ * @return inventaire L'inventaire du robot.
  * */
 int Robot::getInventaire(){
 	return this->inventaire;
@@ -41,6 +45,7 @@ int Robot::getInventaire(){
  * Le coffre disparait après ouverture et le robot perd une clef.
  * @param[in] coffre Le coffre à ouvrir.
  * @param[out] inventaire L'inventaire du robot avec une clef en moins.
+ * @param[out] ouvert Le statut du coffre à ouvrir après ouverture.
  * @exception si le robot ne possède aucune clef.
  */
 void Robot::ouvrir(Coffre* coffre){
@@ -64,7 +69,6 @@ void Robot::ouvrir(Coffre* coffre){
  * @param[out] inventaire l'inventaire incrémenté de 1.
  */
 void Robot::ramasser(Clef* clef){
-	//On ramasse la clef seulement si le robot et la clef sont sur la même case
 	if(this->positionX == clef->getPositionX() && this->positionY == clef->getPositionY()){
 		this->inventaire++;
 	}
