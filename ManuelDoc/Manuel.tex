@@ -14,6 +14,7 @@
 
 Manuel du project irover.
 
+%mettre une image jolie
 
 \newpage
 
@@ -23,24 +24,25 @@ Manuel du project irover.
 
 
 
-Le projet a pour objectif la création d'une application graphique où un petit petit personnage (robot) réaliserait une tache particulière.
-Pour cela nous avons imaginé un scénario de mini jeu en deux dimension où notre robot prendrait la forme d'un héros sans peur et sans reproche.
+Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.
+Pour cela nous avons imaginé un scénario de mini jeu semblable au jeux en deux dimensions où notre robot prendrait la forme d'un héros sans peur et sans reproche.
 Le manuel suivant se composera de plusieurs partie :
 La premiere vous aidera à comprendre le but du jeu ses règles et l'histoire de notre petit monde.
-La seconde décrira comment installer l'application et les différentes options d'installation possible. 
-La troisième partie sera dédié à la description détaillés de l'infrastructure logicielle sur la forme d'une documentation logicielle. 
-et enfin nous vous proposerons un tutoriel retrassant une simulation que nous avons effectué.
+La seconde décrira comment installer l'application et les différentes options d'installation.
+La troisième partie constitura la documentation utilisateur.
+La quatrième quand a elle sera dédié à la description détaillés de l'infrastructure logicielle sur la forme d'une documentation dédier aux développeurs ou utilisateurs confirmé et enfin nous vous proposerons un tutoriel retrassant une simulation pour illustré le rendement de notre jeu.
 
 
 \section{iRover, l'histoire d'un héros}
 
 
-Dans la vallé perdu du Vertou, là où nul aventurier n'a plus mit les pieds depuis des années. On raconte qu'il y a d'ici
+Dans la vallé perdu du Vertou, là où nul aventurier n'a plus mit les pieds depuis des années. On raconte qu'il y a 
 plusieurs siècle, un grand pirate du nom de Stevy J. y aurait caché un trésors :"le chamalo magique".
 Notre héros, jeune et intrépide aventurier du nom de Rover est à la recherche de cet artefact et se voit donc lancer 
-dans cette grande aventure afin de retrouver cette sucrerie antique.
-Cependant, la vallé est habité par d'étranges créatures, des chou-kêtes. Cette horde de créature est farouchement attaché à leurs territoire
-et n'hésiteront pas à attaquer quiconque qui y posera le pied.
+dans cette grande quete afin de retrouver cette sucrerie antique.
+Cependant, la cette mistérieuse vallé est habité par d'étranges créatures, des chou-kêtes. 
+Cette horde de créature est farouchement attaché à leur territoire et n'hésiteront pas à attaquer quiconque y pénetrera.
+
 
 But du jeu :
 
@@ -48,7 +50,7 @@ L'objectif  principal du jeu (ou plutot de notre jeune amis) est de ramasser tou
 sur le terrain afin d'atteindre gloire et richesse et surtout un jour trouver le chamalo magique.
 
 Ces coffres seront disséminés sur la carte, souvent derrière des obstacles que le héros devra contourner. 
-Des ennemis (les chou-kêtes) pourront également attaquer notre héros.
+Des ennemis (les chou-kêtes) pourront également attaquer notre héros et donc un combat sans merci s'enclanchera entre héros et monstre.
 
 Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peut plus continuer son aventure.
 
@@ -56,12 +58,13 @@ Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peu
 \subsection{Gestion de notre héros}
 
 Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
-Il pourra se déplacer sur la carte, case par case et rencontrera des obstacles et pourra interagir avec d'autre élément du monde.
+Il pourra se déplacer sur la carte, case par case et rencontrera des obstacles. 
+Il pourra interagir avec d'autre éléments du monde. 
 
-N'ayant pas appris à nagé, il ne pourra pas se déplacer sur l'eau et ayant un vertige incontrolabe, il aura du mal à grimper sur les rochers,
+N'ayant pas appris à nagé et du à des crises de vertiges récurente, il ne pourra ni se déplacer sur l'eau ni grimper sur les rochers,
 les arbres, les murs et même les buissons !
 
-Il pourra cependant ramasser des objets au sol, se battre contre les enemis et ouvrir les coffres. 
+Il pourra cependant ramasser des objets au sol (des clefs), se battre contre les enemis et ouvrir les coffres. 
 
 \subsection{Gestion des clés}
 
@@ -69,16 +72,21 @@ Il pourra cependant ramasser des objets au sol, se battre contre les enemis et o
 
 Un certain nombre de clé seront présents sur la carte ou peuvent être obtenus en tuant des ennemies.
 Pour certains coffre, il peut etre necessaire d'avoir une clé. 
-Une fois le coffre ouvert, la clef est perdue et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
+Une fois le coffre ouvert, la clef est consomé et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
 
-Pour récupérer une clef, il faut que le robot se trouve sur la même case que celle ci.
+Pour récupérer une clef, il faut que le robot se trouve sur la même case que celle ci, elle disparait alors de la carte et 
+viens s'ajouter à son inventaire de clef.
 
 \subsection{Gestion des ennemis}
 
 Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté. 
-Le robot devra alors combattre ces ennemis s'il les rencontrent pendant le jeu afin de rester en vie.
+Le robot devra alors combattre ces ennemis s'il les rencontre afin de rester en vie.
 
-Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi. Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
+Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. 
+Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi. 
+
+Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, 
+notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
 
 
 
@@ -96,15 +104,16 @@ Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre
 \section{Documentation utilisateur}
 
 \subsection{Le robot}
-Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. Il ne pourra se déplacer que d'une case par case.
+Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. 
+Il ne pourra se déplacer que d'une case à la foi.
+Le robot disposera d'un algorithme de déplacement qu'on appelera de son petit nom : le path finding.
+Il lui arrivera de temps en temps d'avoir plusieur choix de déplacement, et cet algorithme lui permettra de choisir ou aller pour atteindre son objectif.
 
-Parfois le robot aura le choix du déplacement, dans ce cas il prendra la meilleure solution selon sa connaissance du terrain. S'il n'y a qu'un seul chemin possible, le robot devra l'emprunter et le suivre jusqu'au bout, jusqu'à ce qu'il y ait plusieurs chemins possibles.
-
-Le robot se sert d'un algorithme de recherche pour avancer de la façon la plus optimale possible. Il peut voir les parties de la carte qui se trouvent autour de lui. 
-Lorsque le robot avance, il découvre donc une nouvelle partie de la carte et conserve également la carte déjà parcourue.
+Il peut également avoir conscience de son environement. 
 
 \subsection{L'environnement}
-La carte sur laquelle le robot se déplace est construite à l'aide de tiled. La carte modélisée, on distingue deux types de cases:
+La carte sur laquelle le robot se déplace est construite à l'aide de Tiled, il s'agit d'un logicielle permettant de créer des cartes case par case. 
+Pour les cartes modélisées, on distingue deux types de cases:
 
 \begin{enumerate}
 	\item les cases ou le robot peut se déplacer
@@ -113,9 +122,36 @@ La carte sur laquelle le robot se déplace est construite à l'aide de tiled. La
 
 La carte est sous forme d'un fichier XML que le programme interprête pour renvoyer une carte exploitable par le robot.
 
+L'environement servira de base également pour la disposition des autres entités présente, coffre, clef ennemie.
+Ceux ci sont disposé aléatoirement sur la carte à des endroits accessibles par le héros mais ils ne peuvent pas se déplacer.
+La rencontre avec un de ces éléments entraine la gestion des évênements.
 
+\subsection{La gestion des évênements}
+
+Le robot, notre amis rover, devra faire face à beaucoup d'évênements, ouvrir un coffre, se battre contre un ennemi, ramasser une clef, se cogner contre un mur etc..
+Tout ceci est géré par le comportement de chaque objets mais aussi pour sa hierarchi sur la carte.
+
+\subsubsection {Rencontre avec un ennemi} 
+Un ennemis et notre héros devront avoir la même importance physique : il ne peuvent pas se supperposer.
+Un ennemis et notre héros n'auront besoin que d'un regard pour enclanché le combat ! 1 case de différence.
+
+%mettre un schéma
+
+\subsubsection {Ouvertude d'un coffre}
+Un coffre et notre héros n'ont pas la même importance physique : le héros devra pouvoir "marcher" sur le coffre.
+Un coffre et notre héros devront impérativement être sur la même case pour que le coffre puisse s'ouvrir et ce dernier, 
+le héros, devra avoir une clé pour que cela soit possible.
+
+%mettre un schéma
+
+\subsubsection {Ramasser une clé}
+Une clé et notre héros n'ont pas la même importance physique : le héros devra pouvoir "marcher" sur la clé.
+
+%mettre un schéma
+ 
 
 \section{Documentation logicielle}
+
 
 
 \subsection{Le robot}
