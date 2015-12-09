@@ -187,9 +187,30 @@ Une clé et notre héros n'ont pas la même importance physique : le héros devr
 
 
 
-\subsection{Le robot}
-\subsection{L'environnement}
+\subsection{Les personnages}
+Le jeu possède deux type de personnages: le robot et les ennemis. Une classe nommée Personnage permet de réaliser les actions de ces deux types de personnages, soit:
+\begin{enumerate}
+	\item se déplacer
+	\item combattre
+\end{enumerate}
+Chaque personnage possède des attributs positionX et positionY qui sont respectivements les position du personnage en X et en Y.
 
+\subsubsection{Le robot}
+Le robot, en plus de pouvoir se déplacer sur le terrain, peut aussi ramasser des clefs et ouvrir des coffres.
+Pour celà, le robot possède un entier nommé "inventaire" qui représente le nombre de clefs que possède le robot à un instant.
+Lorsque la fonction ramasser(Clef* clef) est appelée, l'inventaire du robot va s'incrémenter de 1 et lorsque la méthode ouvrir(Coffre* coffre)
+est appelée, l'inventaire va se décrémenter de 1.
+
+\subsubsection{Les ennemis}
+Les ennemis ont les mêmes propriétés que la classe Personnage, c'est juste leur manière de se déplacer qui change par rapport au robot. 
+Un ennemi peut se déplacer sur toute la carte de manière aléatoire grâce à un algorithme qui génère un déplacement aléatoire.
+Lorsqu'un ennemi est proche du robot, un combat se lance entre les deux personnages.
+
+
+\subsection{L'environnement}
+L'environnement comprend la gestion des coffres et des clefs.
+Une clef possède des attributs positionX et positionY qui sont ses positions en X et en Y sur la carte. 
+Un coffre possède les mêmes attributs mais un statut en plus qui est simplement une valeur booléenne qui dit si le coffre est ouvert ou fermé.
 
 
 \section{tutoriel}
