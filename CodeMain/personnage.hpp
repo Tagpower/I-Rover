@@ -11,7 +11,7 @@ class Personnage
 protected:
 	int positionX;
 	int positionY;
-        clan::Image sprite;
+    clan::Image sprite;
 public:
 	Personnage();
 	Personnage(int positionX, int positionY, clan::Image sprite);
@@ -21,5 +21,5 @@ public:
 	void setPositionY(int y);
 	void deplacer(int x, int y);
 	bool Combattre(Personnage* adversaire);
-        void draw(clan::Canvas c, int x, int y);
+    void draw(clan::Canvas c, int x, int y);
 };

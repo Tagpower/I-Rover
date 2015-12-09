@@ -3,9 +3,9 @@
 
 /*!
  * Constructeur d'un personnage.
- * @param[in] x la position en x où le personnage sera créé.
- * @param[in] y la position en y où le personnage sera créé.
- * @param[out] Personnage le personnage créé.
+ * @param [in] x la position en x où le personnage sera créé.
+ * @param [in] y la position en y où le personnage sera créé.
+ * @param [out] Personnage le personnage créé.
  */
 Personnage::Personnage(int x, int y){
 	positionX = x;

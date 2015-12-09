@@ -1,17 +1,33 @@
-/* 
- * File:   tileset.cpp
- * Author: clement
- * 
- * Created on 7 décembre 2015, 11:04
+/*! 
+ * \brief 
+ * \details 
+ * \author Clément Bauchet
+ * \version 1
+ * \date 20 novembre 2015, 19:22
  */
 
 #include <sstream>
 #include "tileset.hpp"
 
+/*!
+ * Constructeur par défaut de la classe Tileset.
+ * @return Tileset un objet Tileset vide.
+ */ 
 Tileset::Tileset() {
     
 }
 
+/*!
+ * Constructeur de l'objet Tileset.
+ * @param [in] tilesheet
+ * @param [in] h
+ * @param [in] w
+ * @param [in] tile_h
+ * @param [in] tile_w
+ * @param [in] spacing
+ * @return Tileset un objet Tileset avec les propriétés des valeurs e nentrée.
+ * 
+ */ 
 Tileset::Tileset(clan::Image tilesheet, int h, int w, int tile_h, int tile_w, int spacing) {
     this->tilesheet = tilesheet;
     this->height = h;
@@ -22,7 +38,11 @@ Tileset::Tileset(clan::Image tilesheet, int h, int w, int tile_h, int tile_w, in
     
 }
 
-Tileset::Tileset(clan::Image tilesheet, std::string tmxFile) { //Buggé. Trouver un moyen de transformer std::string en int
+/*!
+ * Constructeur de l'objet Tileset.
+ * 
+ */ 
+Tileset::Tileset(clan::Image tilesheet, std::string tmxFile) {
     clan::File mapTmx(tmxFile);
     clan::DomDocument doc;
     doc.load(mapTmx);
@@ -42,6 +62,10 @@ Tileset::Tileset(clan::Image tilesheet, std::string tmxFile) { //Buggé. Trouver
     
 }
 
+/*!
+ * 
+ * 
+ */ 
 Tileset::Tileset(const Tileset& orig) {
     this->tilesheet = orig.tilesheet;
     this->height = orig.height;
@@ -51,9 +75,15 @@ Tileset::Tileset(const Tileset& orig) {
     this->spacing = orig.spacing;
 }
 
+/*!
+ * 
+ */ 
 Tileset::~Tileset() {
 }
 
+/*!
+ * 
+ */ 
 void Tileset::drawTile(clan::Canvas c, int id, int x, int y) {
     clan::Point coords_src( (id-1) % width * (tile_width  + spacing),
                             (id-1) / width * (tile_height + spacing)); //Récupération dans le tileset des coordonnées du tile à dessiner     

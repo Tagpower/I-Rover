@@ -1,10 +1,18 @@
+/*! 
+ * \brief Objet clef.
+ * \details POJO de la classe Clef avec getter et setter.
+ * \author Geoffrey DESBROSSES
+ * \version 1
+ * \date 2015-12-09
+ */
+
 #include "clef.hpp"
 
 /*!
  * Constructeur d'une clef.
- * @param[in] x la position en x où la clef sera créée.
- * @param[in] y la position en y où la clef sera créée.
- * @param[out] Clef la clef créée.
+ * @param [in] x la position en x où la clef sera créée.
+ * @param [in] y la position en y où la clef sera créée.
+ * @param [out] Clef la clef créée.
  */
 Clef::Clef(int x, int y){
 	positionX = x;
@@ -13,7 +21,7 @@ Clef::Clef(int x, int y){
 
 /*!
  * Le constructeur d'une clef par défaut.
- * @param[out] Clef la clef créée.
+ * @param [out] Clef la clef créée.
  */
 Clef::Clef(){
 
