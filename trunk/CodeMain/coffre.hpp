@@ -11,7 +11,7 @@ private:
 	int positionX;
 	int positionY;
 	bool ouvert;
-        clan::Image sprite;
+    clan::Image sprite;
 public:
 	Coffre();
 	Coffre(int positionX, int positionY, clan::Image sprite);
@@ -21,6 +21,6 @@ public:
 	void setPositionX(int x);
 	void setPositionY(int y);
 	void setOuvert(bool status);
-        void draw(clan::Canvas c, int x, int y);
+    void draw(clan::Canvas c, int x, int y);
 
 };

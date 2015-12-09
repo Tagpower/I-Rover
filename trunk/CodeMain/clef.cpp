@@ -1,3 +1,11 @@
+/*! 
+ * \brief Classe Clef.
+ * \details Implémentation de la classe Clef et de ses méthodes.
+ * \author Geoffrey DESBROSSES
+ * \version 1
+ * \date 2015-12-09
+ */
+
 #include "clef.hpp"
 
 /*!
@@ -31,7 +39,7 @@ int Clef::getPositionX(){
 /*!
  * Le setter de la position en x de la clef.
  * Modifie la position de la clef en x.
- * @param[in] x la nouvelle position en x de la clef.
+ * @param [in] x la nouvelle position en x de la clef.
  */
 void Clef::setPositionX(int x){
 	this->positionX = x;
@@ -48,12 +56,19 @@ int Clef::getPositionY(){
 /*!
  * Le setter de la position en y de la clef.
  * Modifie la position de la clef en y.
- * @param[in] x la nouvelle position en y de la clef.
+ * @param [in] x la nouvelle position en y de la clef.
  */
 void Clef::setPositionY(int y){
 	this->positionY = y;
 }
 
+/*!
+ * Méthode servant à dessiner une clef sur la map.
+ * @param [in] c L'image à dessiner.
+ * @param [in] x la position en x de la clef à dessiner.
+ * @param [in] y la position en y de la clef à dessiner.
+ * @param [out] sprite L'image de l'objet aux coordonnées (x,y).
+ */ 
 void Clef::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }

@@ -1,9 +1,17 @@
-
+/*! 
+ * \brief 
+ * \details 
+ * \author Clément Bauchet
+ * \version 1
+ * \date 20 novembre 2015, 19:22
+ */
+ 
 #include "mapDisplay.hpp"
 
 clan::ApplicationInstance<MapDisplay> clanapp;
 
-/*! Classe gérant l'affichage graphique du terrain et des éléments présents dessus.
+/*! 
+ * Classe gérant l'affichage graphique du terrain et des éléments présents dessus.
  * 
  * 
  * 
@@ -82,7 +90,12 @@ bool MapDisplay::update()
 	return !quit;
 }
 
-//Quitter en pressant Echap
+
+/*!
+ * Méthode servant à quitter le programme.
+ * @param [in] key La touche à presser pour quitter le programme.
+ * @param [out] quit Valeur booléenne qui permet de savoir si le programem doit continuer ou pas.
+ */ 
 void MapDisplay::on_input_up(const clan::InputEvent &key)
 {
 	if(key.id == clan::keycode_escape)
