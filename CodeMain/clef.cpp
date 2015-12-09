@@ -6,9 +6,10 @@
  * @param[in] y la position en y où la clef sera créée.
  * @param[out] Clef la clef créée.
  */
-Clef::Clef(int x, int y){
+Clef::Clef(int x, int y, clan::Image sprite){
 	positionX = x;
 	positionY = y;
+        this->sprite = sprite;
 }
 
 /*!
@@ -51,4 +52,8 @@ int Clef::getPositionY(){
  */
 void Clef::setPositionY(int y){
 	this->positionY = y;
+}
+
+void Clef::draw(clan::Canvas c, int x, int y) {
+    this->sprite.draw(c, x, y);
 }

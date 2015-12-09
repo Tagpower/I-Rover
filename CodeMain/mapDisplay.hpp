@@ -1,4 +1,7 @@
 #include "precomp.hpp"
+#include "robot.hpp"
+//#include "ennemi.hpp"
+//#include "coffre.hpp"
 #include "tileset.hpp"
 #include "map.hpp"
 
@@ -17,6 +20,7 @@ private:
 	bool quit = false;
         Tileset tileset;
         Map map;
+        Robot robot;
 	clan::SlotContainer sc;
 	clan::DisplayWindow window;
 	clan::Canvas canvas;

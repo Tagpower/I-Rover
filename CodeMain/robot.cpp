@@ -16,7 +16,7 @@ Robot::Robot() : Personnage(){
  * @param[out] inventaire La taille de l'inventaire du robot, 0 par défaut.
  * @return Robot le robot créé.
  */  
-Robot::Robot(int x, int y) : Personnage(x, y){
+Robot::Robot(int x, int y, clan::Image sprite) : Personnage(x, y, sprite){
 	this->inventaire = 0;
 }
 
