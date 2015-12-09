@@ -41,6 +41,9 @@ MapDisplay::MapDisplay()
 	//Charger l'image contenant les sprites des tiles
         tilesheet = clan::Image(canvas, "roguelikeSheet.png");
         clan::Image sprite_robot(canvas, "robot.png");
+        //clan::Image sprite_ennemi(canvas, "ennemi.png"); //TODO: faire un/des sprite(s) ennemi
+        clan::Image sprite_coffreF(canvas, "coffre_ferme.png");
+        clan::Image sprite_clef(canvas, "clef.png");
         
 	font = clan::Font("tahoma", 24);
         
@@ -57,6 +60,7 @@ MapDisplay::MapDisplay()
         this->map = terrain;
         
         this->robot = Robot(0,0, sprite_robot);
+        
         
 	game_time.reset();
 }
@@ -83,23 +87,34 @@ bool MapDisplay::update()
         this->robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
         
-        this->robot.deplacer(0,0);
+        //this->robot.deplacer(0,0);
+        
          //Afficher les changements du canvas
 	window.flip(1);
         
 	return !quit;
 }
 
-
-/*!
- * Méthode servant à quitter le programme.
- * @param [in] key La touche à presser pour quitter le programme.
- * @param [out] quit Valeur booléenne qui permet de savoir si le programem doit continuer ou pas.
- */ 
+//Gestion des évènements du clavier
 void MapDisplay::on_input_up(const clan::InputEvent &key)
 {
 	if(key.id == clan::keycode_escape)
 	{
 		quit = true;
 	}
+        
+        switch (key.id) {
+            case clan::keycode_up :
+                this->robot.deplacer(0,-1);
+                break;
+            case clan::keycode_down :
+                this->robot.deplacer(0,1);
+                break;
+            case clan::keycode_left :
+                this->robot.deplacer(-1,0);
+                break;           
+            case clan::keycode_right :
+                this->robot.deplacer(1,0);
+                break;
+        }
 }

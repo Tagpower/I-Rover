@@ -5,6 +5,7 @@
 #include "personnage.hpp"
 #include "coffre.hpp"
 
+#pragma once
 
 class Robot : public Personnage
 {

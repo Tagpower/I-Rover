@@ -5,6 +5,7 @@
 #include <iostream>
 #include "clef.hpp"
 
+#pragma once
 
 class Personnage
 {
