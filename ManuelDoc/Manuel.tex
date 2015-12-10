@@ -27,7 +27,7 @@ Manuel du project irover.
 
 Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.
 Pour cela nous avons imaginé un scénario de mini jeu semblable au jeux en deux dimensions où notre robot prendrait la forme d'un héros sans peur et sans reproche.
-Le manuel suivant se composera de plusieurs partie :
+Le manuel suivant se composera de plusieurs parties :
 La premiere vous aidera à comprendre le but du jeu ses règles et l'histoire de notre petit monde.
 La seconde décrira comment installer l'application et les différentes options d'installation.
 La troisième partie constitura la documentation utilisateur.
@@ -62,7 +62,6 @@ Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peu
 
 \subsection{Rover, un héros pas comme les autres}
 
-%y a des chance que toute cette partie la je la mette dans la doc utilisateur
 
 
 Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
@@ -72,14 +71,14 @@ Il pourra interagir avec d'autre éléments du monde.
 N'ayant pas appris à nagé et du à des crises de vertiges récurente, il ne pourra ni se déplacer sur l'eau ni grimper sur les rochers,
 les arbres, les murs et même les buissons !
 
-Il pourra cependant ramasser des objets au sol (des clefs), se battre contre les enemis et ouvrir les coffres. 
+Il pourra cependant ramasser des objets au sol (des clefs), se battre contre les ennemis et ouvrir les coffres. 
 
 \subsection{Les iClef}
 
 %Aucune clef sur le terrain pour l'instant
 
 Un certain nombre de clé seront présents sur la carte ou peuvent être obtenus en tuant des ennemies.
-Pour certains coffre, il peut etre necessaire d'avoir une clé. 
+Pour certains coffre, il peut etre necessaire d'avoir une clef. 
 Une fois le coffre ouvert, la clef est consomé et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
 
 Pour récupérer une clef, il faut que le robot se trouve sur la même case que celle ci, elle disparait alors de la carte et 
@@ -120,11 +119,31 @@ notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
 %documentation utilisateur : donner des informations à des utilisateurs lambda sans grande connaissance informatique, avec des mots simple sur le fonctionnement de l'application.
 %donner egalement une description simple de comment est faite ou est géré les partie de l'application.
 
-\subsection{Le robot}
+\subsection{Les personnages}
+Le jeu possède deux type de personnages: le robot et les ennemis. Une classe nommée Personnage permet de réaliser les actions de ces deux types de personnages, soit:
+\begin{enumerate}
+	\item se déplacer
+	\item combattre
+\end{enumerate}
+Chaque personnage possède des attributs positionX et positionY qui sont respectivements les position du personnage en X et en Y.
+
+\subsubsection{Le robot}
 Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. 
 Il ne pourra se déplacer que d'une case à la foi.
 
-\subsection{les ennemis}
+
+Le robot, en plus de pouvoir se déplacer sur le terrain, peut aussi ramasser des clefs et ouvrir des coffres.
+Pour celà, le robot possède un entier nommé "inventaire" qui représente le nombre de clefs que possède le robot à un instant.
+Lorsque la fonction ramasser(Clef* clef) est appelée, l'inventaire du robot va s'incrémenter de 1 et lorsque la méthode ouvrir(Coffre* coffre)
+est appelée, l'inventaire va se décrémenter de 1.
+
+
+
+\subsubsection{les ennemis}
+
+Les ennemis ont les mêmes propriétés que la classe Personnage, c'est juste leur manière de se déplacer qui change par rapport au robot. 
+Un ennemi peut se déplacer sur toute la carte de manière aléatoire grâce à un algorithme qui génère un déplacement aléatoire.
+Lorsqu'un ennemi est proche du robot, un combat se lance entre les deux personnages.
 
 \subsection{les coffres}
 
@@ -133,6 +152,11 @@ Il ne pourra se déplacer que d'une case à la foi.
 \subsection{L'environnement}
 La carte sur laquelle le robot se déplace est construite à l'aide de Tiled, il s'agit d'un logicielle permettant de créer des cartes case par case. 
 Pour les cartes modélisées, on distingue deux types de cases:
+
+L'environnement comprend la gestion des coffres et des clefs.
+Une clef possède des attributs positionX et positionY qui sont ses positions en X et en Y sur la carte. 
+Un coffre possède les mêmes attributs mais un statut en plus qui est simplement une valeur booléenne qui dit si le coffre est ouvert ou fermé.
+
 
 \begin{enumerate}
 	\item les cases ou le robot peut se déplacer
@@ -144,6 +168,9 @@ La carte est sous forme d'un fichier XML que le programme interprête pour renvo
 L'environement servira de base également pour la disposition des autres entités présente, coffre, clef ennemie.
 Ceux ci sont disposé aléatoirement sur la carte à des endroits accessibles par le héros mais ils ne peuvent pas se déplacer.
 La rencontre avec un de ces éléments entraine la gestion des évênements.
+
+
+
 
 
 \subsection{La gestion des évênements}
@@ -183,34 +210,17 @@ Une clé et notre héros n'ont pas la même importance physique : le héros devr
 
 
 
-\section{Documentation logicielle}
 
 
 
-\subsection{Les personnages}
-Le jeu possède deux type de personnages: le robot et les ennemis. Une classe nommée Personnage permet de réaliser les actions de ces deux types de personnages, soit:
-\begin{enumerate}
-	\item se déplacer
-	\item combattre
-\end{enumerate}
-Chaque personnage possède des attributs positionX et positionY qui sont respectivements les position du personnage en X et en Y.
-
-\subsubsection{Le robot}
-Le robot, en plus de pouvoir se déplacer sur le terrain, peut aussi ramasser des clefs et ouvrir des coffres.
-Pour celà, le robot possède un entier nommé "inventaire" qui représente le nombre de clefs que possède le robot à un instant.
-Lorsque la fonction ramasser(Clef* clef) est appelée, l'inventaire du robot va s'incrémenter de 1 et lorsque la méthode ouvrir(Coffre* coffre)
-est appelée, l'inventaire va se décrémenter de 1.
-
-\subsubsection{Les ennemis}
-Les ennemis ont les mêmes propriétés que la classe Personnage, c'est juste leur manière de se déplacer qui change par rapport au robot. 
-Un ennemi peut se déplacer sur toute la carte de manière aléatoire grâce à un algorithme qui génère un déplacement aléatoire.
-Lorsqu'un ennemi est proche du robot, un combat se lance entre les deux personnages.
 
 
-\subsection{L'environnement}
-L'environnement comprend la gestion des coffres et des clefs.
-Une clef possède des attributs positionX et positionY qui sont ses positions en X et en Y sur la carte. 
-Un coffre possède les mêmes attributs mais un statut en plus qui est simplement une valeur booléenne qui dit si le coffre est ouvert ou fermé.
+
+
+
+
+
+
 
 
 \section{tutoriel}
