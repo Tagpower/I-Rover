@@ -14,6 +14,7 @@ class Personnage
 protected:
 	int positionX;
 	int positionY;
+	bool isActive;
     clan::Image sprite;
     vector<vector<int>> collision_map;
 public:
@@ -29,4 +30,7 @@ public:
 	void deplacer(int x, int y);
 	bool Combattre(Personnage* adversaire);
     void draw(clan::Canvas c, int x, int y);
+    void setActive();
+	void setInactive();
+	bool getIsActive();
 };
