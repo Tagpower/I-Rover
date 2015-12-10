@@ -11,7 +11,7 @@ class Clef
 private:
 	int positionX;
 	int positionY;
-        clan::Image sprite;
+    clan::Image sprite;
 public:
 	Clef();
 	Clef(int positionX, int positionY, clan::Image sprite);
@@ -19,5 +19,5 @@ public:
 	int getPositionY();
 	void setPositionX(int x);
 	void setPositionY(int y);
-        void draw(clan::Canvas c, int x, int y);
+    void draw(clan::Canvas c, int x, int y);
 };

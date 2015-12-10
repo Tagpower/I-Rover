@@ -4,9 +4,9 @@
 clan::ApplicationInstance<MapDisplay> clanapp;
 
 /*! Classe gérant l'affichage graphique du terrain et des éléments présents dessus.
- * 
- * 
- * 
+ *
+ *
+ *
  */
 MapDisplay::MapDisplay()
 {
@@ -36,41 +36,42 @@ MapDisplay::MapDisplay()
         clan::Image sprite_ennemi_1(canvas, "ennemi1.png");
         clan::Image sprite_coffreF(canvas, "coffre_ferme.png");
         clan::Image sprite_clef(canvas, "clef.png");
-        
+        clan::Image sprite_mine(canvas, "mine.png");
+
 	font = clan::Font("tahoma", 24);
-        
+
         //Lecture et affichage de la carte
         std::string fichierTmx = "map1.tmx"; //Fichier de carte à utiliser
-        
-        //Création du tileset à utiliser, en récupérant ses paramètres dans le fichier 
-        Tileset myTileset(tilesheet, fichierTmx); 
-        
+
+        //Création du tileset à utiliser, en récupérant ses paramètres dans le fichier
+        Tileset myTileset(tilesheet, fichierTmx);
+
          //Création de la carte par lecture du fichier .tmx
         Map terrain(fichierTmx, myTileset);
-        
+
         this->tileset = myTileset;
         this->map = terrain;
         this->map.setCollisionMap(vector<int>({6,1005})); //A changer en fonction de la map
-        
+
         this->robot = Robot(0,0, sprite_robot);
         this->robot.setCollisionMap(this->map.getCollisionMap());
-        
+
         this->liste_coffres = vector<Coffre>();
         this->liste_coffres.push_back(Coffre(5,5,sprite_coffreF));
         this->liste_coffres.push_back(Coffre(7,7,sprite_coffreF));
-        
-        
+
+
         this->liste_clefs = vector<Clef>();
         this->liste_clefs.push_back(Clef(2,8,sprite_clef));
         this->liste_clefs.push_back(Clef(12,6,sprite_clef));
-        
-        
+
+
         this->liste_ennemis = vector<Ennemi>();
         this->liste_ennemis.push_back(Ennemi(14,10,sprite_ennemi_1));
         this->liste_ennemis.push_back(Ennemi(8,14,sprite_ennemi_1));
-        
-        
-        
+
+
+
 	game_time.reset();
 }
 
@@ -89,32 +90,32 @@ bool MapDisplay::update()
         //Dessin de la carte au centre de la fenêtre
         clan::Point map_origin(canvas.get_width()/2 - map.getWidth() * map.getTileSize() /2 ,
                                canvas.get_height()/2 - map.getHeight() * map.getTileSize() /2);
-        
+
         this->map.drawMap(canvas, map_origin.x, map_origin.y);
-                                  
-        //Dessiner les objets et personnages à la bonne position        
+
+        //Dessiner les objets et personnages à la bonne position
         for(auto &coffre : this->liste_coffres) {
             coffre.draw(canvas,map_origin.x + (coffre.getPositionX()*tileset.getTile_width()) ,
                                map_origin.y + (coffre.getPositionY()*tileset.getTile_height()));
-        } 
+        }
         for(auto &clef : this->liste_clefs) {
             clef.draw(canvas,map_origin.x + (clef.getPositionX()*tileset.getTile_width()) ,
                              map_origin.y + (clef.getPositionY()*tileset.getTile_height()));
-        } 
+        }
         for(auto &ennemi : this->liste_ennemis) {
             ennemi.draw(canvas,map_origin.x + (ennemi.getPositionX()*tileset.getTile_width()) ,
                                map_origin.y + (ennemi.getPositionY()*tileset.getTile_height()));
-        } 
-        
+        }
+
         this->robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
 
-        
+
         //this->robot.deplacer(0,0);
-        
+
          //Afficher les changements du canvas
 	window.flip(1);
-        
+
 	return !quit;
 }
 
@@ -125,7 +126,7 @@ void MapDisplay::on_input_up(const clan::InputEvent &key)
 	{
 		quit = true;
 	}
-        
+
         switch (key.id) {
             case clan::keycode_up :
                 this->robot.deplacer(0,-1);
@@ -135,7 +136,7 @@ void MapDisplay::on_input_up(const clan::InputEvent &key)
                 break;
             case clan::keycode_left :
                 this->robot.deplacer(-1,0);
-                break;           
+                break;
             case clan::keycode_right :
                 this->robot.deplacer(1,0);
                 break;
