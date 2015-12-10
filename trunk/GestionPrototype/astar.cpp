@@ -7,11 +7,16 @@
 #include <cstdlib> 
 #include <cstdio>
 #include "astar.hpp"
+//#include "map.hpp"
+
 using namespace std;
 
 const int n=60; // horizontal size of the map
 const int m=60; // vertical size size of the map
-static int map[n][m];
+static int map[n][m];// map: tableau à double entrées contenant toutes les cases de la carte,
+					 // pour un couple de coordonnées vaut 1 si le robot peut passer et 0 sinon	
+
+
 static int closed_nodes_map[n][m]; // map of closed (tried-out) nodes
 static int open_nodes_map[n][m]; // map of open (not-yet-tried) nodes
 static int dir_map[n][m]; // map of directions
@@ -44,10 +49,10 @@ static int dy[dir]={0, 1, 0, -1};
         }
 
         // give better priority to going strait instead of diagonally
-        void node::nextLevel(const int & i) // i: direction
-        {
-             level+=(dir==8?(i%2==0?10:14):10);
-        }
+       // void node::nextLevel(const int & i) // i: direction
+       //{
+       //      level+=(dir==8?(i%2==0?10:14):10);
+       // }
         
         // Estimation function for the remaining distance to the goal.
         const int & node::estimate(const int & xDest, const int & yDest) const
@@ -154,7 +159,7 @@ string pathFind( const int & xStart, const int & yStart,
                 // generate a child node
                 m0=new node( xdx, ydy, n0->getLevel(), 
                              n0->getPriority());
-                m0->nextLevel(i);
+                //m0->nextLevel(i);
                 m0->updatePriority(xFinish, yFinish);
 
                 // if it is not in the open list then add into that
@@ -204,6 +209,7 @@ string pathFind( const int & xStart, const int & yStart,
     return ""; // no route found
 }
 
+    					 
 int main()
 {
     srand(time(NULL));
@@ -225,7 +231,7 @@ int main()
     }
     
     // randomly select start and finish locations
-    int xA, yA, xB, yB;
+	int xA, yA, xB, yB;
     switch(rand()%8)
     {
         case 0: xA=0;yA=0;xB=n-1;yB=m-1; break;
@@ -243,7 +249,7 @@ int main()
     cout<<"Finish: "<<xB<<","<<yB<<endl;
     // get the route
     clock_t start = clock();
-    string route=pathFind(xA, yA, xB, yB);
+    std::string route=pathFind(xA, yA, xB, yB);
     if(route=="") cout<<"An empty route generated!"<<endl;
     clock_t end = clock();
     double time_elapsed = double(end - start);
