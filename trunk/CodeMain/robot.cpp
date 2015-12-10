@@ -1,4 +1,4 @@
-/*! 
+/*!
  * \brief Classe Robot.
  * \details Implémentation de la classe Robot et de ses méthodes.
  * \author Geoffrey DESBROSSES
@@ -16,15 +16,18 @@
 Robot::Robot() : Personnage(){
 
 }
-  
+
 /*!
  * Constructeur du robot.
  * @param [in] x La position en x du robot sur la carte.
  * @param [in] y La position en y du robot sur la carte.
+ * @param [in] arme L'arme du robot.
+ * @param [in] armure L'armure du robot.
+ * @param [in] sprite L'image du robot.
  * @param [out] inventaire La taille de l'inventaire du robot, 0 par défaut.
  * @return Robot le robot créé.
- */  
-Robot::Robot(int x, int y, int puissance, clan::Image sprite) : Personnage(x, y, puissance, sprite){
+ */
+Robot::Robot(int x, int y, Armue* arme, Armure* armure, clan::Image sprite) : Personnage(x, y, arme, armure, puissance, sprite){
 	this->inventaire = 0;
 }
 
@@ -46,9 +49,9 @@ void Robot::setInventaire(int inventaire){
 int Robot::getInventaire(){
 	return this->inventaire;
 }
-	
-/*! 
- * Methode servant a ouvrir un coffre. 
+
+/*!
+ * Methode servant a ouvrir un coffre.
  * Il faut que le robot ai la même position que le coffre.
  * Le coffre disparait après ouverture et le robot perd une clef.
  * @param [in] coffre Le coffre à ouvrir.
@@ -69,8 +72,8 @@ void Robot::ouvrir(Coffre* coffre){
 	}
 }
 
-/*! 
- * Methode servant a ramasser une clef. 
+/*!
+ * Methode servant a ramasser une clef.
  * Incrémente l'inventaire de 1 quand on ramasse la clef et fait disparaitre la clef de la carte.
  * Il faut que le robot ai la même position que la clef pour la ramasser.
  * @param [in] clef La clef à ramasser.

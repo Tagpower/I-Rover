@@ -5,12 +5,17 @@
  * Constructeur d'un personnage.
  * @param[in] x la position en x où le personnage sera créé.
  * @param[in] y la position en y où le personnage sera créé.
+ * @param[in] arme L'arme que possède le personnage.
+ * @param[in] armure L'armure que possède le personnage.
  * @param[out] Personnage le personnage créé.
  */
-Personnage::Personnage(int x, int y, int puissance, clan::Image sprite){
+Personnage::Personnage(int x, int y, Arme* arme, Armure* armure, clan::Image sprite){
 	this->positionX = x;
 	this->positionY = y;
-	this->puissance = puissance;
+	this->arme = arme;
+	this->armure = armure;
+	this->puissance = arme->getPuissance();
+	this->robustesse = armure->getRobustesse();
     this->sprite = sprite;
     this->isActive=true;
 }
@@ -62,7 +67,7 @@ void Personnage::setPositionY(int y){
  * Donne une map au personnage pour savoir là où il peut passer.
  * @param [in] map Le vector représentant la map.
  * @param [out] map Le vector donné au personnage représentant la map courante.
- */ 
+ */
 void Personnage::setCollisionMap(vector<vector<int> > map) {
     this->collision_map = map;
 }
@@ -86,6 +91,60 @@ void Personnage::setPuissance(int puissance){
 }
 
 /*!
+ * Le getter de la robustesse du personnage.
+ * @return la robustesse du personnage.
+ */
+int Personnage::getRobustesse(){
+	return this->robustesse;
+}
+
+/*!
+ * Le setter de la robustesse du personnage.
+ * Modifie la robustesse du personnage.
+ * @param [in] robustesse la nouvelle robustesse du personnage.
+ * @param [out] robustesse La nouvelle robustesse du personnage.
+ */
+void Personnage::setRobustesse(int robustesse){
+	this->robustesse = robustesse;
+}
+
+/*!
+ * Le getter de l'arme du personnage.
+ * @return l'arme du personnage.
+ */
+int Personnage::getArme(){
+	return this->arme;
+}
+
+/*!
+ * Le setter de l'arme du personnage.
+ * Modifie l'arme du personnage.
+ * @param [in] arme la nouvelle arme du personnage.
+ * @param [out] arme La nouvelle arme du personnage.
+ */
+void Personnage::setArme(Arme* arme){
+	this->arme = arme;
+}
+
+/*!
+ * Le getter de l'armure du personnage.
+ * @return l'armure du personnage.
+ */
+int Personnage::getArmure(){
+	return this->armure;
+}
+
+/*!
+ * Le setter de l'armure du personnage.
+ * Modifie l'armure du personnage.
+ * @param [in] armure la nouvelle armure du personnage.
+ * @param [out] armure La nouvelle armure du personnage.
+ */
+void Personnage::setArmure(Armure* armure){
+	this->armure = armure;
+}
+
+/*!
  * Deplace le personnage d'une case a droite, gauche, haut ou bas.
  * @param[in] x la valeur de déplacement en x.
  * @param[in] y la valeur de déplacement en y.
@@ -98,10 +157,10 @@ void Personnage::setPuissance(int puissance){
  */
 void Personnage::deplacer(int x, int y){
 	if( x > 1 || x < -1 || y > 1 || y < -1){
-		throw std::string("trop gros nombre de déplacement."); 
+		throw std::string("trop gros nombre de déplacement.");
 	}
 	if( x == 0 && y ==0){
-		throw std::string("déplacement null."); 
+		throw std::string("déplacement null.");
 	}
 	if((x == 1 && y == 1) || (x == 1 && y == -1) || (x == -1 && y == 1) || (x == -1 && y == -1)){
 		throw std::string("le déplacement ne doit pas dépasser une case");
@@ -138,7 +197,7 @@ void Personnage::deplacer(int x, int y){
 
 }
 
-/*! 
+/*!
  * Methode servant a faire affronter deux personnages du jeu.
  * Calcul aléatoirement la force des deux adversaires et compare ces deux forces à partir de leur puissance.
  * @param[in] adversaire Le personnage a combattre.
@@ -146,22 +205,22 @@ void Personnage::deplacer(int x, int y){
  */
 bool Personnage::Combattre(Personnage* adversaire){
 	bool victoire;
-	int force_hero = rand() * this->puissance;
-	int force_adversaire = rand() * adversaire->puissance;
-	
+	int force_hero = rand() * this->puissance * this->robustesse;
+	int force_adversaire = rand() * adversaire->puissance * adversaire->robustesse;
+
 	if(force_hero >= force_adversaire){
 		victoire = true;
 	}
 	else{
 		victoire = false;
 	}
-    return victoire;    
+    return victoire;
 }
 
 /*!
  * Desinne un personnage sur la map.
- * 
- */ 
+ *
+ */
 void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }
