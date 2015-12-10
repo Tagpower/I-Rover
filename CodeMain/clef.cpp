@@ -64,7 +64,7 @@ void Clef::setPositionY(int y){
 
 /*!
  * Méthode servant à dessiner une clef sur la map.
- * @param [in] c L'image à dessiner.
+ * @param [in] c Le contexte où dessiner.
  * @param [in] x la position en x de la clef à dessiner.
  * @param [in] y la position en y de la clef à dessiner.
  * @param [out] sprite L'image de l'objet aux coordonnées (x,y).

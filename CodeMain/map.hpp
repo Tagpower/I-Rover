@@ -29,6 +29,9 @@ public:
     void setTileAt(int x, int y, int tile);
     int getTileSize();
     
+    vector<vector<int>> getCollisionMap();
+    void setCollisionMap(vector<int> passable_tiles);
+    
     void readTmxFile(std::string file);
     void drawMap(clan::Canvas c);
     void drawMap(clan::Canvas c, int x, int y);
@@ -40,10 +43,14 @@ private:
     int width;
     //! Matrice contenant les cases de la carte et leur type
     vector<vector<int>> tiles;
+    //! Matrice contenant les informations sur la praticabilité des cases de la carte
+    vector<vector<int>> collision_map;
     //! Taille d'une case en pixels
     int tile_size;
     //! Tileset comprenant l'image où récupérer les textures des cases et ses informations
     Tileset tileset;
+    
+    
 };
 
 #endif	/* MAP_HPP */
