@@ -46,5 +46,5 @@ bool operator<(const node & a, const node & b);
 // A-star algorithm.
 // The route returned is a string of direction digits.
 std::string  pathFind( const int & xStart, const int & yStart, 
-                 const int & xFinish, const int & yFinish );
+                 const int & xFinish, const int & yFinish, vector<vector<int> > collision_map );
 

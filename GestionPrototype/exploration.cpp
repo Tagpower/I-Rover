@@ -16,19 +16,19 @@ int nb_coffres;//todo récupérer le nombre de coffres sur la map
 void explorationEnnemi(Ennemi ennemi){
 	while(ennemi->isActive){
 		//random coord x et y
-		//std::string path= astar::pathfind(ennemi.positionX, ennemi.positionY, positionCibleX, positionCibleY);
+		//std::string path= astar::pathfind(ennemi.positionX, ennemi.positionY, positionCibleX, positionCibleY, ennemi->collision_map);
 		//goTo(robot, path);
 	}
 }
 void exploration(Robot robot){
 	while((robot.inventaire==0){
 		Clef cibleClef= findNearestKey();
-		std::string path= astar::pathfind(robot.positionX, robot.positionY, cibleClef.positionX, cibleClef.positionY);
+		std::string path= astar::pathfind(robot->positionX, robot->positionY, cibleClef->positionX, cibleClef->positionY, robot->collision_map);
 		goTo(robot, path);
 		}
 	if(robot.inventaire>0){
 		Coffre cibleCoffre = findNearestCrest();
-		std::string path= astar::pathfind(robot.positionX, robot.positionY, cibleCoffre.positionX, cibleCoffre.positionY);
+		std::string path= astar::pathfind(robot->positionX, robot->positionY, cibleCoffre->positionX, cibleCoffre->positionY, robot->collision_map);
 		goTo(robot, path);
 	}	
 }
