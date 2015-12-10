@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "clef.hpp"
+#include "arme.hpp"
+#include "armure.hpp"
 
 #pragma once
 
@@ -14,19 +16,27 @@ class Personnage
 protected:
 	int positionX;
 	int positionY;
+	int puissance;
+	int robustesse;
 	bool isActive;
     clan::Image sprite;
     vector<vector<int> > collision_map;
+    Arme* arme;
+    Armure* armure;
 public:
 	Personnage();
-	Personnage(int positionX, int positionY, int puissance, clan::Image sprite);
+	Personnage(int positionX, int positionY, Arme* arme, Armure* armure, clan::Image sprite);
 	int getPositionX();
 	int getPositionY();
 	int getPuissance();
+	int getRobustesse();
 	void setPositionX(int x);
 	void setPositionY(int y);
 	void setPuissance(int puissance);
+	void setRobustesse(int robustesse);
     void setCollisionMap(vector<vector<int> > map);
+    void setArme(Arme* arme);
+    void setArmure(Armure* armure);
 	void deplacer(int x, int y);
 	bool Combattre(Personnage* adversaire);
     void draw(clan::Canvas c, int x, int y);

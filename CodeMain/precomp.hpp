@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   precomp.hpp
  * Author: clement
  *
