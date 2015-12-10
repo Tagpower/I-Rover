@@ -7,13 +7,13 @@
 #include <cstdlib> 
 #include <cstdio>
 #include "astar.hpp"
-//#include "map.hpp"
+
 
 using namespace std;
 
 const int n=60; // horizontal size of the map
 const int m=60; // vertical size size of the map
-static int map[n][m];// map: tableau à double entrées contenant toutes les cases de la carte,
+vector<vector<int> > collision_map(n, vector<int>(m));// map: tableau à double entrées contenant toutes les cases de la carte,
 					 // pour un couple de coordonnées vaut 1 si le robot peut passer et 0 sinon	
 
 
@@ -83,7 +83,7 @@ bool operator<(const node & a, const node & b)
 // A-star algorithm.
 // The route returned is a string of direction digits.
 string pathFind( const int & xStart, const int & yStart, 
-                 const int & xFinish, const int & yFinish )
+                 const int & xFinish, const int & yFinish, vector<vector<int> > collision_map )
 {
     static priority_queue<node> pq[2]; // list of open (not-yet-tried) nodes
     static int pqi; // pq index
@@ -153,7 +153,7 @@ string pathFind( const int & xStart, const int & yStart,
         {
             xdx=x+dx[i]; ydy=y+dy[i];
 
-            if(!(xdx<0 || xdx>n-1 || ydy<0 || ydy>m-1 || map[xdx][ydy]==0 
+            if(!(xdx<0 || xdx>n-1 || ydy<0 || ydy>m-1 || collision_map[xdx][ydy]==0 
                 || closed_nodes_map[xdx][ydy]==1))
             {
                 // generate a child node
@@ -217,17 +217,17 @@ int main()
     // create empty map
     for(int y=0;y<m;y++)
     {
-        for(int x=0;x<n;x++) map[x][y]=1;
+        for(int x=0;x<n;x++) collision_map[x][y]=1;
     }
 
     // fillout the map matrix with a '+' pattern
     for(int x=n/8;x<n*7/8;x++)
     {
-        map[x][m/2]=0;
+        collision_map[x][m/2]=0;
     }
     for(int y=m/8;y<m*7/8;y++)
     {
-        map[n/2][y]=0;
+        collision_map[n/2][y]=0;
     }
     
     // randomly select start and finish locations
@@ -249,7 +249,7 @@ int main()
     cout<<"Finish: "<<xB<<","<<yB<<endl;
     // get the route
     clock_t start = clock();
-    std::string route=pathFind(xA, yA, xB, yB);
+    std::string route=pathFind(xA, yA, xB, yB, collision_map);
     if(route=="") cout<<"An empty route generated!"<<endl;
     clock_t end = clock();
     double time_elapsed = double(end - start);
@@ -263,30 +263,30 @@ int main()
         int j; char c;
         int x=xA;
         int y=yA;
-        map[x][y]=2;
+        collision_map[x][y]=2;
         for(unsigned int i=0;i<route.length();i++)
         {
             c =route.at(i);
              j=c-'0';
             x=x+dx[j];
             y=y+dy[j];
-            map[x][y]=3;
+            collision_map[x][y]=3;
         }
-        map[x][y]=4;
+        collision_map[x][y]=4;
     
         // display the map with the route
         for(int y=0;y<m;y++)
         {
             for(int x=0;x<n;x++)
-                if(map[x][y]==1)
+                if(collision_map[x][y]==1)
                     cout<<".";
-                else if(map[x][y]==0)
+                else if(collision_map[x][y]==0)
                     cout<<"O"; //obstacle
-                else if(map[x][y]==2)
+                else if(collision_map[x][y]==2)
                     cout<<"S"; //start
-                else if(map[x][y]==3)
+                else if(collision_map[x][y]==3)
                     cout<<"R"; //route
-                else if(map[x][y]==4)
+                else if(collision_map[x][y]==4)
                     cout<<"F"; //finish
             cout<<endl;
         }
