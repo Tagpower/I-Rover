@@ -10,7 +10,7 @@
 
 /*!
  * Constructeur de l'ennemi.
- * @param [out] Ennemi l'ennemi créé.
+ * @return Ennemi l'ennemi créé.
  */
 Ennemi::Ennemi() : Personnage(){
 
@@ -23,7 +23,7 @@ Ennemi::Ennemi() : Personnage(){
  * @param [in] arme L'arme de l'ennemi.
  * @param [in] armure L'armure de l'ennemi.
  * @param [in] sprite L'image de l'ennemi.
- * @param [out] Ennemi l'ennemi créé.
+ * @return Ennemi l'ennemi créé.
  */
 Ennemi::Ennemi(int x, int y, Arme* arme, Armure* armure, clan::Image sprite) : Personnage(x, y, arme, armure, sprite){
 

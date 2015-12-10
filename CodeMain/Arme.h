@@ -1,5 +1,4 @@
-#include <string.h>
-using namespace std ;
+#include <string>
 
 class Arme
 {
@@ -13,4 +12,5 @@ public:
 	std::string getNom();
 	void setPuissance(int puissance);
 	void setNom(std::string nom);
+
 };

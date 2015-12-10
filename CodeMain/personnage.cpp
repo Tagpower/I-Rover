@@ -3,11 +3,20 @@
 
 /*!
  * Constructeur d'un personnage.
- * @param[in] x la position en x où le personnage sera créé.
- * @param[in] y la position en y où le personnage sera créé.
- * @param[in] arme L'arme que possède le personnage.
- * @param[in] armure L'armure que possède le personnage.
- * @param[out] Personnage le personnage créé.
+ * @param [in] x la position en x où le personnage sera créé.
+ * @param [in] y la position en y où le personnage sera créé.
+ * @param [in] arme L'arme que possède le personnage.
+ * @param [in] armure L'armure que possède le personnage.
+ * @param [in] sprite L'image du personnage.
+ * @param [out] positionX la position en x du personnage sur la map.
+ * @param [out] positionY la position en y du personnage sur la map.
+ * @param [out] arme l'arme du personnage.
+ * @param [out] armure l'armure du personnage.
+ * @param [out] puissance La puissance du personnage, calculée à partir de son arme.
+ * @param [out] robustesse La robustesse du personnage, calculée à partir de son armure.
+ * @param [out] sprite L'image du personnage.
+ * @param [out] isActive true par défaut pour que le personnage soit actif.
+ * @return Personnage le personnage créé.
  */
 Personnage::Personnage(int x, int y, Arme* arme, Armure* armure, clan::Image sprite){
 	this->positionX = x;
@@ -22,7 +31,8 @@ Personnage::Personnage(int x, int y, Arme* arme, Armure* armure, clan::Image spr
 
 /*!
  * Le constructeur d'un personnage par défaut.
- * @param[out] Personnage le personnage créé.
+ * @param [out] isActive true par défaut pour que le personnage soit actif.
+ * @return Personnage le personnage créé.
  */
 Personnage::Personnage(){
 	this->isActive=true;
@@ -30,7 +40,7 @@ Personnage::Personnage(){
 
 /*!
  * Le getter de la position en x du personnage.
- * Retourne la position courante du personnage en x.
+ * @return la position courante du personnage en x.
  */
 int Personnage::getPositionX(){
 	return this->positionX;
@@ -39,7 +49,8 @@ int Personnage::getPositionX(){
 /*!
  * Le setter de la position en x du personnage.
  * Modifie la position du personnage en x.
- * @param[in] x la nouvelle position en x du personnage.
+ * @param [in] x la position à affecter au personnage en x.
+ * @param [out] positionX la nouvelle position en x du personnage.
  */
 void Personnage::setPositionX(int x){
 	this->positionX = x;
@@ -47,7 +58,7 @@ void Personnage::setPositionX(int x){
 
 /*!
  * Le getter de la position en y du personnage.
- * Retourne la position courante du personnage en y.
+ * @return la position courante du personnage en y.
  */
 int Personnage::getPositionY(){
 	return this->positionY;
@@ -56,7 +67,8 @@ int Personnage::getPositionY(){
 /*!
  * Le setter de la position en x du personnage.
  * Modifie la position du personnage en y.
- * @param [in] y la nouvelle position en y du personnage.
+ * @param [in] y la position à affecter au personnage en y.
+ * @param [out] positionY la nouvelle position en y du personnage.
  */
 void Personnage::setPositionY(int y){
 	this->positionY = y;
@@ -145,11 +157,35 @@ void Personnage::setArmure(Armure* armure){
 }
 
 /*!
+ * passe la valeur à true de l'attribut isActive du personnage.
+ * @param [out] isActive = true. Le personnage n'est plus actif dans le jeu.
+ */
+void setActive(){
+	this->isActive=true;
+}
+
+/*!
+ * passe la valeur à false de l'attribut isActive du personnage.
+ * @param [out] isActive = false. Le personnage est actif dans le jeu.
+ */
+void setInactive(){
+	this->isActive=false;
+}
+
+/*!
+ * Getter de l'attribut isActivre d'un personnage.
+ * @return si le personnage est actif ou non.
+ */
+bool getIsActive(){
+	return this->isActive;
+}
+
+/*!
  * Deplace le personnage d'une case a droite, gauche, haut ou bas.
- * @param[in] x la valeur de déplacement en x.
- * @param[in] y la valeur de déplacement en y.
- * @param[out] x la position du personnage en x après le déplacement.
- * @param[out] y la position du personnage en y après le déplacement.
+ * @param [in] x la valeur de déplacement en x.
+ * @param [in] y la valeur de déplacement en y.
+ * @param [out] x la position du personnage en x après le déplacement.
+ * @param [out] y la position du personnage en y après le déplacement.
  * @exception si x et y en entrée ne sont pas entre -1 et 1.
  * @exception s'il n'y a aucun déplacement.
  * @exception si x et y sont différents de 0.
@@ -164,6 +200,10 @@ void Personnage::deplacer(int x, int y){
 	}
 	if((x == 1 && y == 1) || (x == 1 && y == -1) || (x == -1 && y == 1) || (x == -1 && y == -1)){
 		throw std::string("le déplacement ne doit pas dépasser une case");
+	}
+	//Pose une mine avant de se déplacer
+	if(this->arme->getNom().compare("mine") == 0 && this->positionX%2 == 0 && this->positionY%2 == 1){
+        Mine mine = new Mine(this->positionX, this->positionY);
 	}
 	//Déplacement horizontal
 	if(x == 1 && y == 0){
@@ -199,8 +239,8 @@ void Personnage::deplacer(int x, int y){
 
 /*!
  * Methode servant a faire affronter deux personnages du jeu.
- * Calcul aléatoirement la force des deux adversaires et compare ces deux forces à partir de leur puissance.
- * @param[in] adversaire Le personnage a combattre.
+ * Calcul aléatoirement la force des deux adversaires et compare ces deux forces à partir de leur puissance et de leur robustesse.
+ * @param [in] adversaire Le personnage a combattre.
  * @return victoire true si le combat est gagné, false sinon.
  */
 bool Personnage::Combattre(Personnage* adversaire){
@@ -219,18 +259,13 @@ bool Personnage::Combattre(Personnage* adversaire){
 
 /*!
  * Desinne un personnage sur la map.
- *
+ * @param [in] c L'image du personnage.
+ * @param [in] x la position en x où dessiner le personnage.
+ * @param [in] y la position en y où dessiner le personnage.
+ * @param [out] sprite l'image dessinée.
  */
 void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }
-void setActive(){
-	this->isActive=true;
-}
-void setInactive(){
-	this->isActive=false;
-}
 
-bool getIsActive(){
-	return this->isActive;
-}
+

@@ -6,16 +6,19 @@
  * \date 2015-12-10
  */
 
-#include "Arme.h"
+#include "arme.h"
+using namespace std;
 
 
 /*!
  * Constructeur d'une arme.
- * @param[in] puissance La puissance de l'arme.
- * @param[in] nom Le nom de l'arme.
- * @param[out] Arme L'arme créée.
+ * @param [in] puissance La puissance de l'arme.
+ * @param [in] nom Le nom de l'arme.
+ * @param [out] puissance La puissance de l'arme.
+ * @param [out] nom Le nom de l'arme.
+ * @return Arme L'arme créée.
  */
-Arme::Arme(int puissance, std::string nom){
+Arme::Arme(int puissance, string nom){
 	this->puissance = puissance;
     this->nom = nom;
 }
@@ -23,25 +26,26 @@ Arme::Arme(int puissance, std::string nom){
 
 /*!
  * Le constructeur d'une arme par défaut.
- * @param[out] Arme l'arme créée.
+ * @param [out] Arme l'arme créée.
  */
 Arme::Arme(){
 }
 
 /*!
  * Le getter du nom de l'arme.
- * Retourne le nom de l'arme.
+ * @return le nom de l'arme.
  */
-int Arme::getNom(){
+string Arme::getNom(){
 	return this->nom;
 }
 
 /*!
  * Le setter du nom de l'arme.
  * Modifie le nom de l'arme.
- * @param[in] nom le nouvea uno mde l'arme.
+ * @param [in] la valeur à affecter au nom de l'arme.
+ * @param [out] nom le nouveau nom de l'arme.
  */
-void Arme::setNom(std::string nom){
+void Arme::setNom(string nom){
 	this->nom = nom;
 }
 

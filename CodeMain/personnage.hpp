@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "clef.hpp"
-#include "arme.hpp"
-#include "armure.hpp"
+#include "arme.h"
+#include "armure.h"
 
 #pragma once
 

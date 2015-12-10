@@ -11,7 +11,6 @@ class Ennemi : public Personnage
 private:
 
 public:
-
 	Ennemi();
 	Ennemi(int positionX, int positionY, Arme* arme, Armure* armure, clan::Image sprite);
 
