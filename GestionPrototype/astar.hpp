@@ -48,4 +48,3 @@ bool operator<(const node & a, const node & b);
 std::string  pathFind( const int & xStart, const int & yStart, 
                  const int & xFinish, const int & yFinish );
 
-int main();

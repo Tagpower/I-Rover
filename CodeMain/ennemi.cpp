@@ -13,7 +13,7 @@
  * @param [out] Ennemi l'ennemi créé.
  */
 Ennemi::Ennemi() : Personnage(){
-
+	this->isActive=true;
 }
     
  /*!
@@ -23,5 +23,5 @@ Ennemi::Ennemi() : Personnage(){
  * @param [out] Ennemi l'ennemi créé.
  */
 Ennemi::Ennemi(int x, int y, clan::Image sprite) : Personnage(x, y, sprite){
-
+	this->isActive=true;
 }
