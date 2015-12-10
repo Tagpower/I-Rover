@@ -22,6 +22,6 @@ Ennemi::Ennemi() : Personnage(){
  * @param [in] y la position en y de l'ennemi à créer.
  * @param [out] Ennemi l'ennemi créé.
  */
-Ennemi::Ennemi(int x, int y, clan::Image sprite) : Personnage(x, y, sprite){
+Ennemi::Ennemi(int x, int y, int puissance, clan::Image sprite) : Personnage(x, y, puissance, sprite){
 	this->isActive=true;
 }
