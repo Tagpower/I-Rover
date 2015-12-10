@@ -7,10 +7,11 @@
  * @param[in] y la position en y où le personnage sera créé.
  * @param[out] Personnage le personnage créé.
  */
-Personnage::Personnage(int x, int y, clan::Image sprite){
-	positionX = x;
-	positionY = y;
-        this->sprite = sprite;
+Personnage::Personnage(int x, int y, int puissance, clan::Image sprite){
+	this->positionX = x;
+	this->positionY = y;
+	this->puissance = puissance;
+    this->sprite = sprite;
 }
 
 /*!
@@ -49,14 +50,38 @@ int Personnage::getPositionY(){
 /*!
  * Le setter de la position en x du personnage.
  * Modifie la position du personnage en y.
- * @param[in] y la nouvelle position en y du personnage.
+ * @param [in] y la nouvelle position en y du personnage.
  */
 void Personnage::setPositionY(int y){
 	this->positionY = y;
 }
 
+/*!
+ * Le setter pour collisionMap.
+ * Donne une map au personnage pour savoir là où il peut passer.
+ * @param [in] map Le vector représentant la map.
+ * @param [out] map Le vector donné au personnage représentant la map courante.
+ */ 
 void Personnage::setCollisionMap(vector<vector<int> > map) {
     this->collision_map = map;
+}
+
+/*!
+ * Le getter de la puissance du personnage.
+ * @return la puissance du personnage.
+ */
+int Personnage::getPuissance(){
+	return this->puissance;
+}
+
+/*!
+ * Le setter de la puissance du personnage.
+ * Modifie la puissance du personnage.
+ * @param [in] puissance la nouvelle puissance du personnage.
+ * @param [out] puissance La nouvelle puissance du personnage.
+ */
+void Personnage::setPuissance(int puissance){
+	this->puissance = puissance;
 }
 
 /*!
@@ -114,14 +139,14 @@ void Personnage::deplacer(int x, int y){
 
 /*! 
  * Methode servant a faire affronter deux personnages du jeu.
- * Calcul aléatoirement la force des deux adversaires et compare ces deux forces.
+ * Calcul aléatoirement la force des deux adversaires et compare ces deux forces à partir de leur puissance.
  * @param[in] adversaire Le personnage a combattre.
  * @return victoire true si le combat est gagné, false sinon.
  */
 bool Personnage::Combattre(Personnage* adversaire){
 	bool victoire;
-	int force_hero = rand() * 10;
-	int force_adversaire = rand() * 10;
+	int force_hero = rand() * this->puissance;
+	int force_adversaire = rand() * adversaire->puissance;
 	
 	if(force_hero >= force_adversaire){
 		victoire = true;
@@ -132,8 +157,10 @@ bool Personnage::Combattre(Personnage* adversaire){
     return victoire;    
 }
 
+/*!
+ * Desinne un personnage sur la map.
+ * 
+ */ 
 void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }
-
-

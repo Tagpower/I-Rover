@@ -14,17 +14,19 @@ class Personnage
 protected:
 	int positionX;
 	int positionY;
-        clan::Image sprite;
-        vector<vector<int>> collision_map;
+    clan::Image sprite;
+    vector<vector<int>> collision_map;
 public:
 	Personnage();
-	Personnage(int positionX, int positionY, clan::Image sprite);
+	Personnage(int positionX, int positionY, int puissance, clan::Image sprite);
 	int getPositionX();
 	int getPositionY();
+	int getPuissance();
 	void setPositionX(int x);
 	void setPositionY(int y);
-        void setCollisionMap(vector<vector<int>> map);
+	void setPuissance(int puissance);
+    void setCollisionMap(vector<vector<int>> map);
 	void deplacer(int x, int y);
 	bool Combattre(Personnage* adversaire);
-        void draw(clan::Canvas c, int x, int y);
+    void draw(clan::Canvas c, int x, int y);
 };
