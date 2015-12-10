@@ -12,6 +12,7 @@ Personnage::Personnage(int x, int y, int puissance, clan::Image sprite){
 	this->positionY = y;
 	this->puissance = puissance;
     this->sprite = sprite;
+    this->isActive=true;
 }
 
 /*!
@@ -19,7 +20,7 @@ Personnage::Personnage(int x, int y, int puissance, clan::Image sprite){
  * @param[out] Personnage le personnage créé.
  */
 Personnage::Personnage(){
-
+	this->isActive=true;
 }
 
 /*!
@@ -163,4 +164,14 @@ bool Personnage::Combattre(Personnage* adversaire){
  */ 
 void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
+}
+void setActive(){
+	this->isActive=true;
+}
+void setInactive(){
+	this->isActive=false;
+}
+
+bool getIsActive(){
+	return this->isActive;
 }
