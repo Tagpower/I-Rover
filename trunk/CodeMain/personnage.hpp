@@ -7,12 +7,15 @@
 
 #pragma once
 
+using namespace std;
+
 class Personnage
 {
 protected:
 	int positionX;
 	int positionY;
-    clan::Image sprite;
+        clan::Image sprite;
+        vector<vector<int>> collision_map;
 public:
 	Personnage();
 	Personnage(int positionX, int positionY, clan::Image sprite);
@@ -20,7 +23,8 @@ public:
 	int getPositionY();
 	void setPositionX(int x);
 	void setPositionY(int y);
+        void setCollisionMap(vector<vector<int>> map);
 	void deplacer(int x, int y);
 	bool Combattre(Personnage* adversaire);
-    void draw(clan::Canvas c, int x, int y);
+        void draw(clan::Canvas c, int x, int y);
 };

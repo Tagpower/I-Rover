@@ -1,17 +1,9 @@
-/*! 
- * \brief 
- * \details 
- * \author Clément Bauchet
- * \version 1
- * \date 20 novembre 2015, 19:22
- */
- 
+
 #include "mapDisplay.hpp"
 
 clan::ApplicationInstance<MapDisplay> clanapp;
 
-/*! 
- * Classe gérant l'affichage graphique du terrain et des éléments présents dessus.
+/*! Classe gérant l'affichage graphique du terrain et des éléments présents dessus.
  * 
  * 
  * 
@@ -41,7 +33,7 @@ MapDisplay::MapDisplay()
 	//Charger l'image contenant les sprites des tiles
         tilesheet = clan::Image(canvas, "roguelikeSheet.png");
         clan::Image sprite_robot(canvas, "robot.png");
-        //clan::Image sprite_ennemi(canvas, "ennemi.png"); //TODO: faire un/des sprite(s) ennemi
+        clan::Image sprite_ennemi_1(canvas, "ennemi1.png");
         clan::Image sprite_coffreF(canvas, "coffre_ferme.png");
         clan::Image sprite_clef(canvas, "clef.png");
         
@@ -58,8 +50,25 @@ MapDisplay::MapDisplay()
         
         this->tileset = myTileset;
         this->map = terrain;
+        this->map.setCollisionMap(vector<int>({6,1005})); //A changer en fonction de la map
         
         this->robot = Robot(0,0, sprite_robot);
+        this->robot.setCollisionMap(this->map.getCollisionMap());
+        
+        this->liste_coffres = vector<Coffre>();
+        this->liste_coffres.push_back(Coffre(5,5,sprite_coffreF));
+        this->liste_coffres.push_back(Coffre(7,7,sprite_coffreF));
+        
+        
+        this->liste_clefs = vector<Clef>();
+        this->liste_clefs.push_back(Clef(2,8,sprite_clef));
+        this->liste_clefs.push_back(Clef(12,6,sprite_clef));
+        
+        
+        this->liste_ennemis = vector<Ennemi>();
+        this->liste_ennemis.push_back(Ennemi(14,10,sprite_ennemi_1));
+        this->liste_ennemis.push_back(Ennemi(8,14,sprite_ennemi_1));
+        
         
         
 	game_time.reset();
@@ -83,9 +92,23 @@ bool MapDisplay::update()
         
         this->map.drawMap(canvas, map_origin.x, map_origin.y);
                                   
-        //Dessiner les objets et personnages à la bonne position
+        //Dessiner les objets et personnages à la bonne position        
+        for(auto &coffre : this->liste_coffres) {
+            coffre.draw(canvas,map_origin.x + (coffre.getPositionX()*tileset.getTile_width()) ,
+                               map_origin.y + (coffre.getPositionY()*tileset.getTile_height()));
+        } 
+        for(auto &clef : this->liste_clefs) {
+            clef.draw(canvas,map_origin.x + (clef.getPositionX()*tileset.getTile_width()) ,
+                             map_origin.y + (clef.getPositionY()*tileset.getTile_height()));
+        } 
+        for(auto &ennemi : this->liste_ennemis) {
+            ennemi.draw(canvas,map_origin.x + (ennemi.getPositionX()*tileset.getTile_width()) ,
+                               map_origin.y + (ennemi.getPositionY()*tileset.getTile_height()));
+        } 
+        
         this->robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
+
         
         //this->robot.deplacer(0,0);
         

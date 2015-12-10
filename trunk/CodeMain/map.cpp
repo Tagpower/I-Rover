@@ -7,6 +7,7 @@
  */
 
 #include <sstream>
+#include <algorithm>
 #include "map.hpp"
 
 /*!
@@ -33,6 +34,7 @@ Map::Map(int height, int width, Tileset tileset) {
     this->height = height;
     this->width = width;
     this->tiles = vector<vector<int>>(height, vector<int>(width));
+    this->collision_map = vector<vector<int>>(height, vector<int>(width));
     this->tileset = tileset;
     this->tile_size = tileset.getTile_height();
 }
@@ -52,6 +54,7 @@ Map::Map(const Map& orig) {
     this->height = orig.height;
     this->width = orig.width;
     this->tiles = orig.tiles;
+    this->collision_map = orig.collision_map;
     this->tileset = orig.tileset;
     this->tile_size = orig.tile_size;
 }
@@ -190,6 +193,26 @@ void Map::readTmxFile(std::string file) {
           cout << endl;
       }
    
+}
+
+vector<vector<int>> Map::getCollisionMap() {
+    return this->collision_map;
+}
+
+void Map::setCollisionMap(vector<int> passable_tiles) {
+    
+    for(int i=0; i < height; i++) {
+        for (int j=0; j < width; j++) {
+            
+            if (std::find(passable_tiles.begin(), passable_tiles.end(), tiles[i][j]) != passable_tiles.end()) {
+                this->collision_map[i][j] = 1;
+            } else {
+                this->collision_map[i][j] = 0;
+            }
+            cout << this->collision_map[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
 
 /*!

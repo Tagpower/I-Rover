@@ -19,6 +19,7 @@
 #endif
 #include <ClanLib/gl.h>
 #include <cmath>
+#include <vector>
 
 
 #endif	/* PRECOMP_HPP */
