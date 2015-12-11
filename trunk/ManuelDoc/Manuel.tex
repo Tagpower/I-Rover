@@ -2,100 +2,136 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
+\usepackage{graphicx}
 
-\title{Manuel du projet irover}
-\date{Lundi 9 Novembre 2015}
 
-\author{}
+
+%macro
+
+
+\title{Manuel Utilisateur iRover}
+
+\author{R. Joachim CLAYTON}
 
 \begin{document}
 
 \maketitle
 
-Manuel du project irover.
 
-%mettre une image jolie de jeu rpg super cute wayyyyy
+\begin{figure}[h]
+   \includegraphics[width=350pt]{Illustration/proj_irover.jpg}
+	\caption{iRover, l'histoire d'un héros qu'on appellait robot}
+\end{figure}
+
+
 
 \newpage
 
+
+\renewcommand{\contentsname}{Sommaire} 
 \tableofcontents
 
-\section{Introduction}
+\newpage
 
-%Intro
-
-
-Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.
-Pour cela nous avons imaginé un scénario de mini jeu semblable au jeux en deux dimensions où notre robot prendrait la forme d'un héros sans peur et sans reproche.
-Le manuel suivant se composera de plusieurs parties :
-La premiere vous aidera à comprendre le but du jeu ses règles et l'histoire de notre petit monde.
-La seconde décrira comment installer l'application et les différentes options d'installation.
-La troisième partie constitura la documentation utilisateur.
-La quatrième quand a elle sera dédié à la description détaillés de l'infrastructure logicielle sur la forme d'une documentation dédier aux développeurs ou utilisateurs confirmé et enfin nous vous proposerons un tutoriel retrassant une simulation pour illustré le rendement de notre jeu.
 
 
 \section{iRover, l'histoire d'un héros}
 
 %background, histoire, scénario
 
+\vspace{1cm}
 
-Dans la vallé perdu du Vertou, là où nul aventurier n'a plus mit les pieds depuis des années. On raconte qu'il y a 
-plusieurs siècle, un grand pirate du nom de Stevy J. y aurait caché un trésors :"le chamalo magique".
-Notre héros, jeune et intrépide aventurier du nom de Rover est à la recherche de cet artefact et se voit donc lancer 
-dans cette grande quete afin de retrouver cette sucrerie antique.
-Cependant, la cette mistérieuse vallé est habité par d'étranges créatures, des chou-kêtes. 
-Cette horde de créature est farouchement attaché à leur territoire et n'hésiteront pas à attaquer quiconque y pénetrera.
+Cette partie est dédiée à l'histoire de notre héros, son monde et ses motivations.
+Si vous désirez en apprendre plus, laisser moi vous compter son histoire.
+
+\vspace{1cm}
+
+\subsection{Le monde de Lorr}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+	\includegraphics[width=350pt, height=180pt]{Illustration/Lina.jpg}
+	\caption{Lina}
+\end{figure}
+
+\vspace{1cm}
+
+Le pays de Lorr, vaste étendu de terre fertile entouré de montages et de forêts luxuriantes, abrite la vallée perdu du Vertou, 
+là où nul n'a mit les pieds depuis plusieurs siècle.\\
+On raconte que c'est ici que le grand pirate du nom de Stevy J. y aurait caché un trésors :"le chamalo magique".\\
+Notre héros, intrépide aventurier du nom de Rover quitte alors sa ville natale Lina, où l'industrie et la maitrise de l'acier règne,  et part à la recherche de cette sucrerie antique.\\
+
+\newpage
+
+Cependant  cette mystérieuse vallée est habitée par d'étranges créatures : "des chou-kêtes".\\
+Une horde de monstre farouchement attaché à leur territoire connu pour attaquer quiconque y pénetrera.\\
+
+\vspace{1cm}
+
+\begin{figure}[h]
+	\includegraphics[width=350pt]{Illustration/vertou.jpg}
+	\caption{Vertou}
+\end{figure}
 
 
-%regle du jeu
 
-But du jeu :
+\vspace{1cm}
 
-L'objectif  principal du jeu (ou plutot de notre jeune amis) est de ramasser tous les trésors présents 
-sur le terrain afin d'atteindre gloire et richesse et surtout un jour trouver le chamalo magique.
 
-Ces coffres seront disséminés sur la carte, souvent derrière des obstacles que le héros devra contourner. 
-Des ennemis (les chou-kêtes) pourront également attaquer notre héros et donc un combat sans merci s'enclanchera entre héros et monstre.
+\newpage
+\subsection{Stevy J.}
 
-Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peut plus continuer son aventure.
+\vspace{1cm}
+
+\begin{figure}[h]
+  	\includegraphics[width=350pt]{Illustration/Steve.jpg}
+	\caption{Illustration du bateau de Steve}
+\end{figure}
+
+\vspace{1cm}
+
+A une époque lointaine, Steve J Obse de son nom complet, grand pirate et chasseur de trésor, écuma les 8 océans du monde pour venir finir ses jours dans le pays de Lorr.\\
+On raconte qu'il aurait réussi à trouver le chamalo magique un artefact qui apporterait gloire, richesse et sucrerie infinie à quiconque le possèdera.\\
+Stevy sera capturé et pendu pour piraterie et ne révèlera jamais ses secrets même dans sa biographie post mortem.\\
+Beaucoup d'aventurié ont tenté de retrouver son trésor partout dans le monde mais il n'existe qu'un seul endroit où personne n'a mit les pied après le passage du celèbre pirate.
+
 
 
 \subsection{Rover, un héros pas comme les autres}
 
 
+Rover, notre héros, un apprenti forgerons reve d'aventure ! Ses années d'apprentissage lui permit de créer une armure lui donnant une apparance de robot et surtout augmentant sa protection contre les dangers de la vie au quotidient.
+Lors de ses excursions il ne sort jamais sans son arme :  un petit bazooka, une arme de poing d'une très grande puissance.
 
-Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
-Il pourra se déplacer sur la carte, case par case et rencontrera des obstacles. 
-Il pourra interagir avec d'autre éléments du monde. 
-
-N'ayant pas appris à nagé et du à des crises de vertiges récurente, il ne pourra ni se déplacer sur l'eau ni grimper sur les rochers,
-les arbres, les murs et même les buissons !
-
-Il pourra cependant ramasser des objets au sol (des clefs), se battre contre les ennemis et ouvrir les coffres. 
-
-\subsection{Les iClef}
-
-%Aucune clef sur le terrain pour l'instant
-
-Un certain nombre de clé seront présents sur la carte ou peuvent être obtenus en tuant des ennemies.
-Pour certains coffre, il peut etre necessaire d'avoir une clef. 
-Une fois le coffre ouvert, la clef est consomé et le robot devra en récupérer d'autres pour ouvrir d'autres coffres.
-
-Pour récupérer une clef, il faut que le robot se trouve sur la même case que celle ci, elle disparait alors de la carte et 
-viens s'ajouter à son inventaire de clef.
 
 \subsection{Les Chou-kêtes}
 
-Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté. 
-Le robot devra alors combattre ces ennemis s'il les rencontre afin de rester en vie.
-
-Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. 
-Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi. 
-
-Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, 
-notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
+Bien des sciècles après la mort de Stevy J. On raconte que des créatures marines surgirent des océans pour venir habité dans la valée.
+Personne ne sait exactement qui ils sont, d'ou ils viennent. Le dialogue avec ces êtres est impossible et il ne réponde que par la violence aux étrangers qui
+pénetre sur leurs territoire.
 
 
+
+%regle du jeu
+
+\section{But du jeu}
+
+L'objectif principal du jeu (ou plutot de notre jeune amis) est de ramasser tous les trésors présents 
+sur le terrain afin d'atteindre gloire et richesse et surtout un jour trouver le chamalo magique.
+
+Des coffres seront disséminés sur la carte, souvent derrière des obstacles que le héros devra contourner. 
+Des ennemis (les chou-kêtes) pourront également attaquer notre héros et donc un combat sans merci s'enclanchera entre héros et monstre.
+
+Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peut plus continuer son aventure.
+
+
+\begin{figure}[h]
+   \includegraphics[width=350pt]{Illustration/coffre.jpg}
+\end{figure}
+
+
+\newpage
 
 \section{Manuel d'installation}
 
@@ -114,22 +150,37 @@ notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
 %a ambélir si on a des idées (rappelle que meme si c'est pas implémenté, ça peut nous donner des points)
 
 
+\newpage
+
 \section{Documentation utilisateur}
 
 %documentation utilisateur : donner des informations à des utilisateurs lambda sans grande connaissance informatique, avec des mots simple sur le fonctionnement de l'application.
 %donner egalement une description simple de comment est faite ou est géré les partie de l'application.
 
-\subsection{Les personnages}
-Le jeu possède deux type de personnages: le robot et les ennemis. Une classe nommée Personnage permet de réaliser les actions de ces deux types de personnages, soit:
-\begin{enumerate}
-	\item se déplacer
-	\item combattre
-\end{enumerate}
-Chaque personnage possède des attributs positionX et positionY qui sont respectivements les position du personnage en X et en Y.
 
-\subsubsection{Le robot}
-Le robot se déplace uniquement horizontalement et verticalement, il ne peut donc pas se déplacer en diagonale. 
-Il ne pourra se déplacer que d'une case à la foi.
+Cette partie est dédiée aux utilisateurs recherchant à comprendre les méchanismes de cette petite application.
+Si vous voulez des détails technique merci de vous referrez au Manuel Technique.
+Nous vous expliquerons ici comment les divers élément du jeux s'articule afin de vous permettre une meilleur expérience utilisateur.
+
+
+\subsection{Les personnages}
+Le jeu possède deux type de personnages: 
+
+\begin{enumerate}
+\item le héros, notre rover ou petit robot
+\item les ennemis, les chou-kêtes.
+\end{enumerate}
+
+Ces deux type de personnages peuvent à la fois :
+
+\begin{enumerate}
+	\item se déplacer, avancer case par case 
+	\item combattre, lancer un combat
+\end{enumerate}
+
+Chaque personnage possède des coordonnées indiquant leur emplacement en temps réel sur la carte ainsi que des statistiques mais aussi possèdera une armure ainsi qu'une arme.
+
+\subsubsection{Le robot, Rover}
 
 
 Le robot, en plus de pouvoir se déplacer sur le terrain, peut aussi ramasser des clefs et ouvrir des coffres.
@@ -137,13 +188,26 @@ Pour celà, le robot possède un entier nommé "inventaire" qui représente le n
 Lorsque la fonction ramasser(Clef* clef) est appelée, l'inventaire du robot va s'incrémenter de 1 et lorsque la méthode ouvrir(Coffre* coffre)
 est appelée, l'inventaire va se décrémenter de 1.
 
-
+Rover, notre héros, est controlé par une intelligence artificiel d'où son petit surnom de robot.
+Il pourra se déplacer sur la carte, case par case et rencontrera des obstacles. 
+N'ayant pas appris à nager et du à des crises de vertiges récurente, il ne pourra ni se déplacer sur l'eau ni grimper sur les rochers,
+les arbres, les murs et même les buissons !
+Il pourra interagir avec d'autre éléments du monde comme ramasser des objets au sol, se battre contre les ennemis et ouvrir les coffres. 
 
 \subsubsection{les ennemis}
 
 Les ennemis ont les mêmes propriétés que la classe Personnage, c'est juste leur manière de se déplacer qui change par rapport au robot. 
 Un ennemi peut se déplacer sur toute la carte de manière aléatoire grâce à un algorithme qui génère un déplacement aléatoire.
 Lorsqu'un ennemi est proche du robot, un combat se lance entre les deux personnages.
+
+
+
+Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté. 
+Le robot devra alors combattre ces ennemis s'il les rencontre afin de rester en vie.
+Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. 
+Celà se traduit par un algorithme de combat qui fera gagner le duel au robot ou à l'ennemi. 
+Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, 
+notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
 
 \subsection{les coffres}
 
