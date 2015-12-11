@@ -1,18 +1,18 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Manuel Documentation Technique}{3}
-\contentsline {subsection}{\numberline {1.1}Les personnages}{3}
-\contentsline {subsubsection}{\numberline {1.1.1}Le robot, Rover}{3}
-\contentsline {subsubsection}{\numberline {1.1.2}les ennemis}{3}
-\contentsline {subsection}{\numberline {1.2}les coffres}{3}
-\contentsline {subsection}{\numberline {1.3}les cl\IeC {\'e}}{3}
-\contentsline {subsection}{\numberline {1.4}L'environnement}{3}
-\contentsline {subsection}{\numberline {1.5}La gestion des \IeC {\'e}v\IeC {\^e}nements}{3}
-\contentsline {subsubsection}{\numberline {1.5.1}Rencontre avec un ennemi}{3}
-\contentsline {subsubsection}{\numberline {1.5.2}Ouvertude d'un coffre}{3}
-\contentsline {subsubsection}{\numberline {1.5.3}Ramasser une cl\IeC {\'e}}{3}
-\contentsline {subsection}{\numberline {1.6}l'interface utilisateur}{3}
-\contentsline {subsection}{\numberline {1.7}IA}{3}
-\contentsline {subsubsection}{\numberline {1.7.1}path finding}{3}
-\contentsline {subsubsection}{\numberline {1.7.2}d\IeC {\'e}couverte de la carte}{3}
-\contentsline {subsection}{\numberline {1.8}condition fin de jeu}{3}
-\contentsline {section}{\numberline {2}FAQ}{3}
+\contentsline {section}{\numberline {2}Les personnages}{3}
+\contentsline {subsection}{\numberline {2.1}Le robot, Rover}{3}
+\contentsline {subsection}{\numberline {2.2}les ennemis}{3}
+\contentsline {section}{\numberline {3}les coffres}{3}
+\contentsline {section}{\numberline {4}les cl\IeC {\'e}}{3}
+\contentsline {section}{\numberline {5}L'environnement}{3}
+\contentsline {section}{\numberline {6}La gestion des \IeC {\'e}v\IeC {\^e}nements}{3}
+\contentsline {subsection}{\numberline {6.1}Rencontre avec un ennemi}{3}
+\contentsline {subsection}{\numberline {6.2}Ouvertude d'un coffre}{3}
+\contentsline {subsection}{\numberline {6.3}Ramasser une cl\IeC {\'e}}{3}
+\contentsline {section}{\numberline {7}l'interface utilisateur}{3}
+\contentsline {section}{\numberline {8}IA}{3}
+\contentsline {subsection}{\numberline {8.1}path finding}{3}
+\contentsline {subsection}{\numberline {8.2}d\IeC {\'e}couverte de la carte}{3}
+\contentsline {section}{\numberline {9}condition fin de jeu}{3}
+\contentsline {section}{\numberline {10}FAQ}{3}
