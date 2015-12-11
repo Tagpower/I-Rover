@@ -8,6 +8,6 @@
 Scanner::Scanner(){
 }
 
-scannerCarte(Map* map){
+scannerCarte(){
 
 }
