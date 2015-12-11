@@ -43,27 +43,100 @@ Cette partie est dÃ©diÃ©e aux dÃ©veloppeur
 
 
 \section{Les personnages}
+Le jeu possède des personnages. Ceux-ci sont représentés par la classe personnage. Tous les personnages possèdent des attributs:
+\begin{enumerate}
+	\item positionX: La position du personnage sur l'axe x.
+	\item positionY: La position du personnage sur l'axe y.
+	\item arme: L'arme qui possède le personnage.
+	\item armure: L'armure que possède le personnage.
+	\item puissance: La puissance du personnage, déterminée à partir de son arme.
+	\item robustesse: La robustesse du personnage, déterminée à partir de son armure.
+	\item isActive: Pour savoir si le personnage est encore en vie.
+	\item sprite: L'image du personnage dans le jeu.
+	\item collision_map: Un vecteur qui détermine les endroits où le personnage peut aller.
+\end{enumerate}
+
+Grâce à ces attributs, tous les personnages peuvent se déplacer d'une case grâce à la méthode deplacer(int x,int y). Les personnages peuvent aussi combattre d'autres personnages grâce à la méthode combattre(Personnage* personnage).
+
+Le vainqueur d'un combat est déterminé par le celui qui à la plus grande chance de gagner. Les deux adversaires tire un nombre déterminé par l'algorithme suivant :
+
+\begin{equation}
+    random() \times puissance \times robustesse 
+    \label{combat}
+\end{equation}
+
+Ainsi on compare ces deux nombres. Celui qui a le plus grand gagner le duel.
 
 \subsection{Le robot, Rover}
 
-\subsection{les ennemis}
+Le robot, en plus d'hériter des propriétés des personnages, possède un attribut inventaire qui représente le nombre de clefs qu'il possède.
+
+L'objectif du robot est d'ouvrir tous les coffres de la carte et chaque coffre s'ouvre à l'aide d'une clef. Ainsi, le robot possède les méthode ramasser(Clef* clef) ou ouvrir(Coffre* coffre).
+
+Le robot se déplace d'une certaines manière, grâce à un algorithme de pathfinding\ref{pathfinding}.
+
+\subsection{Les ennemis}
+
+Un ennemi est un simple personnage qui a sa propre façon de se déplacer et de combattre. 
+Une ennemi se déplace aléatoirement sur la carte, et continue tant que la partie n'est pas finie ou tant qu'il est encore en vie.
+
+Lorsqu'un ennemi est à une case du robot, alors celui-ci affronte le robot.
 
 
+\section{Les coffres}
 
-\section{les coffres}
+Les coffres sont de simples objets qui possèdent les propriétés suivantes: 
 
-\section{les clÃ©}
+\begin{enumerate}
+	\item positionX: sa position sur l'axe x.
+	\item positionY: sa position sur l'axe y. 
+	\item ouvert: boolean qui permet de savoir si le coffre est ouvert ou fermé.
+	\item sprite: l'image du coffre.
+\end{enumerate}
 
+Une fois le coffre ouvert, son parametre ouvert passe à true et ne peut donc plus s'ouvrir.
+
+
+\section{Les clef}
+
+Les clefs ont les mêmes attributs que les coffres excepté pour l'attribut ouvert. Une fois la clef ramassée, celle-ci disparait de la carte et l'inventaire du robot augmente de 1.
+
+\section{Les actuateurs}
+
+Le robot, tout comme les ennemis possèdent deux sortes d'actuateurs: les armes et les armures.
+
+Ces armes et armures déterminent la puissance et la robustesse de chaque personnage du jeu.
+
+Plusieurs armes existent dans le jeu, un bazooka qui augmente fortemment la puissance du possesseur, des mines que le personnage laisse derière lui régulièrement\ldots
+
+Grâce à ces différents actuateurs, il est possible de choisir sa stratégie selon le nombre d'ennemis sur la carte, la forme de la carte\ldots
+
+Toutes les armes héritent de la classes Arme et les armures de la classe Armure. Ainsi, i lest facile de créer de nouveaux types d'armes et armures.
+
+\section{Les senseurs}
+
+Le robot possède un scanner. Celui-ci permet de scanner une map et de savoir quels sont les endroits où il peut aller et les endroits qu'ils lui sont impossible d'aller.
+
+%schéma héritage généré par doxygen
 
 \section{L'environnement}
 
 
-\section{La gestion des Ã©vÃªnements}
+\section{La gestion des Evènements}
 
+La gestion des évènemments concerne toutes les action que peuvent faire les personnages dans le jeu.
 
 \subsection {Rencontre avec un ennemi} 
+
+Lorsque le robot rencontre un ennemi, un combat se déclenche. Une des deux personnages en sort vainqueur, si le robot gagne alors la partie continue, sinon la partie s'arrête.
+
 \subsection {Ouvertude d'un coffre}
-\subsection {Ramasser une clÃ©}
+
+Lorsque le robot possède au moins une clef et qu'il se trouve à la même position qu'un coffre, alors il l'ouvre. Le statut ouvert du coffre passe donc à true.
+
+\subsection {Ramasser une clef}
+
+Lorsque le robot est à la même position qu'une clef, celui-ci la ramasse automatiquement. Son attribut inventaire est donc incrémenté de 1.
 
 
 \section{l'interface utilisateur}

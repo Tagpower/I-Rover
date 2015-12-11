@@ -9,7 +9,8 @@
 
 %mettez vos noms svp!!!!!!
 
-\author{R. Joachim CLAYTON, efzefzfzefezfef}
+\author{R. Joachim CLAYTON}
+\author{Geoffrey DESBROSSES}
 
 \begin{document}
 
@@ -59,22 +60,26 @@ L'autre aspect de ce projet est de pousser notre groupe à utiliser, comprendre 
 \subsection{Membre du groupe et tâches de chacun}
 \vspace{1 cm}
 
-Le projet s'articule sur 5 grands pôles :
+
 
 \vspace{1 cm}
 
-\begin{tabbing}
-\hspace{3.75 cm} \= \hspace{6 cm} \= \hspace{3.75 cm} \= \kill
-\textbf{Pôle}\> \textbf{Description} \> \textbf {Responsable} \\
-\\
-Définition de la Carte \> La création de l'environnement \> Clément Bauchet\\											
-Définition du robot \> Définitions de code de chaque \> Geoffrey Desbrosses\+ \\
-élément de l'application. \- \\
-IHM \> Interface utilisateur de l'application.\\
-IA  \> Définitions des algorithmes \> Jean-Christophe Gambino Guerin \+ \\	
-de déplacement et de découverte \-	\\
-Documentation  \> Redaction de la documentation \> Joachim Clayton                           
-\end{tabbing}
+\begin{tabular}{| c | p{6cm} | c |}
+\hline
+\textbf{Responsable} & \textbf{Tâche} & \textbf {Description} \\
+\hline
+Clément Bauchet & Création graphique & La création de l'environnement graphiques et des images \\					
+& Parsing de la carte & L'interprétation entre les objets graphiques et les objets C++\\					
+\hline				
+Geoffrey Desbrosses & Création des objets & Création de chaque objet de l'application et de leurs actions\\
+& Documentation du code source & Gestion de la documentation Doxygen \\ 
+\hline
+& IHM & Interface utilisateur de l'application. \\
+\hline
+Jean-Christophe Guerin & IA  & Définitions des algorithmes de pathfinding de déplacement et de découverte\\	
+\hline
+Joachim Clayton & Documentation utilisateur & Redaction de la documentation utilisateur \\                 
+\end{tabular}
 
 
 
@@ -90,13 +95,19 @@ Documentation  \> Redaction de la documentation \> Joachim Clayton
 
 
 \newpage
-\section{Définition du robot}
+%partie Geoffrey
 
-%partie Geoff
-%mettre une petite introduction et parlez de vos parties
+\section{Définition des objets}
+La définition des objets comprend la création de tous les objets Personnage, Coffre, Clef, Arme\ldots et toutes les actions entre ces objets.
 
-\subsection{code en c++(trouve un titre geoff xD)}
+\subsection{Les objets existants}
+Le robot possède une fonction pour se déplacer et modifier ses coordonnées. Il possède également une méthode combattre propre à notre sujet. Des actuateurs arme et armure ont été implémentés. Le robot peut intéragir avec d'autres objets tels que les ennemis, les clefs ou les coffres. Deux types d'armes ont également été créé (bazooka et mine) et les classes Arme et Armures permettent d'implémenter facilement de nouvelles armes et armures ayant leurs propres caractéristiques.
+
+\subsection{Les objets manquant}
+Le robot ne possède pas de senseur. L'idée était d'implémenter un scanner qui pouvait scanner une carte et savoir quels étaient les cases du terrain où le robot pouvait aller. Aucun type d'armure n'a été implémenté, cependant les personnages peuvent tout de même avoir une armure par défaut avec une robustesse et un nom. Ainsi ça ne modifie pas le comportement des personnages.
+
 \subsection{gestion des évênements}
+Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser au contact d'un ennemi, deux personnages peuvent s'affronter, le robot peut ramasser des clefs et ouvrir des coffres. Cependant, ces actions ne sont pas visibles sur l'interface graphique, excepté le déplacement du robot.
 
 \section{IHM}
 
