@@ -1,6 +1,8 @@
 
 #include "arme.h"
 
+#pragma once
+
 class Bazooka : public Arme
 {
 private:

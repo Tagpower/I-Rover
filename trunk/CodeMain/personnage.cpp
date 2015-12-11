@@ -18,13 +18,13 @@
  * @param [out] isActive true par défaut pour que le personnage soit actif.
  * @return Personnage le personnage créé.
  */
-Personnage::Personnage(int x, int y, Arme* arme, Armure* armure, clan::Image sprite){
+Personnage::Personnage(int x, int y, Arme arme, Armure armure, clan::Image sprite){
 	this->positionX = x;
 	this->positionY = y;
 	this->arme = arme;
 	this->armure = armure;
-	this->puissance = arme->getPuissance();
-	this->robustesse = armure->getRobustesse();
+	this->puissance = arme.getPuissance();
+	this->robustesse = armure.getRobustesse();
     this->sprite = sprite;
     this->isActive=true;
 }
@@ -124,7 +124,7 @@ void Personnage::setRobustesse(int robustesse){
  * Le getter de l'arme du personnage.
  * @return l'arme du personnage.
  */
-int Personnage::getArme(){
+Arme Personnage::getArme(){
 	return this->arme;
 }
 
@@ -134,7 +134,7 @@ int Personnage::getArme(){
  * @param [in] arme la nouvelle arme du personnage.
  * @param [out] arme La nouvelle arme du personnage.
  */
-void Personnage::setArme(Arme* arme){
+void Personnage::setArme(Arme arme){
 	this->arme = arme;
 }
 
@@ -142,7 +142,7 @@ void Personnage::setArme(Arme* arme){
  * Le getter de l'armure du personnage.
  * @return l'armure du personnage.
  */
-int Personnage::getArmure(){
+Armure Personnage::getArmure(){
 	return this->armure;
 }
 
@@ -152,25 +152,18 @@ int Personnage::getArmure(){
  * @param [in] armure la nouvelle armure du personnage.
  * @param [out] armure La nouvelle armure du personnage.
  */
-void Personnage::setArmure(Armure* armure){
+void Personnage::setArmure(Armure armure){
 	this->armure = armure;
 }
 
 /*!
  * passe la valeur à true de l'attribut isActive du personnage.
- * @param [out] isActive = true. Le personnage n'est plus actif dans le jeu.
+ * @param [out] isActive = active. Le personnage n'est plus actif dans le jeu.
  */
-void Personnage::setActive(){
-	this->isActive=true;
+void Personnage::setActive(bool active){
+	this->isActive = active;
 }
 
-/*!
- * passe la valeur à false de l'attribut isActive du personnage.
- * @param [out] isActive = false. Le personnage est actif dans le jeu.
- */
-void Personnage::setInactive(){
-	this->isActive=false;
-}
 
 /*!
  * Getter de l'attribut isActivre d'un personnage.
@@ -202,9 +195,9 @@ void Personnage::deplacer(int x, int y){
 		throw std::string("le déplacement ne doit pas dépasser une case");
 	}
 	//Pose une mine avant de se déplacer
-	if(this->arme->getNom().compare("mine") == 0 && this->positionX%2 == 0 && this->positionY%2 == 1){
-        Mine mine = new Mine(this->positionX, this->positionY);
-	}
+//	if(this->arme.getNom().compare("mine") == 0 && this->positionX%2 == 0 && this->positionY%2 == 1){
+//            Mine mine(this->positionX, this->positionY);
+//	}
 	//Déplacement horizontal
 	if(x == 1 && y == 0){
             if (this->positionX < collision_map.at(0).size()-1) {
@@ -267,7 +260,5 @@ bool Personnage::Combattre(Personnage* adversaire){
 void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }
-vector<vector<int> > Personnage::getCollisionMap(){
-	return this->collision_map;
-}
+
 
