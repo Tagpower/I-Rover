@@ -110,11 +110,11 @@ bool MapDisplayTestPathfinding::update()
                                map_origin.y + (ennemi.getPositionY()*tileset.getTile_height()));
         }
 
-        this->robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
+        robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
 
-		std::string pathRobot = this->pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
-        this->goTo(robot, pathRobot);
+		std::string pathRobot = pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
+		goTo(robot, pathRobot);
         
         //std::string pathEnnemi = this->pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
         //this->goTo(robot, pathEnnemi);
