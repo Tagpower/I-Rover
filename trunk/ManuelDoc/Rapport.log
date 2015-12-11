@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  11 DEC 2015 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  11 DEC 2015 14:27
 entering extended mode
-**C:/Users/Joachim/Desktop/depain/ManuelDoc/Manuel.tex
-(C:/Users/Joachim/Desktop/depain/ManuelDoc/Manuel.tex
+**C:/Users/Joachim/Desktop/depain/ManuelDoc/Rapport.tex
+(C:/Users/Joachim/Desktop/depain/ManuelDoc/Rapport.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 4 languages loaded.
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\article.cls"
@@ -318,22 +318,22 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 LaTeX Warning: Unused global option(s):
     [a4paper12pts].
 
-(Manuel.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Info: Redefining \degres on input line 16.
-LaTeX Info: Redefining \dots on input line 16.
-LaTeX Info: Redefining \up on input line 16.
+(Rapport.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Info: Redefining \degres on input line 14.
+LaTeX Info: Redefining \dots on input line 14.
+LaTeX Info: Redefining \up on input line 14.
  ("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count93
@@ -349,137 +349,53 @@ LaTeX Info: Redefining \up on input line 16.
 \everyMPtoPDFconversion=\toks18
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 16.
  <Illustration/proj_irover.jpg, id=1, 722.7pt x 377.15906pt>
 File: Illustration/proj_irover.jpg Graphic file (type jpg)
 
 <use Illustration/proj_irover.jpg>
-Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 22.
+Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 182.6572pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 22--23
+Overfull \hbox (5.0pt too wide) in paragraph at lines 20--21
 [][] 
  []
 
 [1
 
 {C:/Users/Joachim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Illustr
-ation/proj_irover.jpg>] (Manuel.toc
+ation/proj_irover.jpg>] (Rapport.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 )
 \tf@toc=\write3
- [2]
-<Illustration/Lina.jpg, id=15, 154.86429pt x 98.70016pt>
-File: Illustration/Lina.jpg Graphic file (type jpg)
-
-<use Illustration/Lina.jpg>
-Package pdftex.def Info: Illustration/Lina.jpg used on input line 54.
-(pdftex.def)             Requested size: 350.04356pt x 180.02159pt.
-
-Overfull \hbox (5.04356pt too wide) in paragraph at lines 54--55
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
-
- []
-
-[3 <./Illustration/Lina.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
-
- []
-
-<Illustration/vertou.jpg, id=20, 1003.75pt x 508.90125pt>
-File: Illustration/vertou.jpg Graphic file (type jpg)
-
-<use Illustration/vertou.jpg>
-Package pdftex.def Info: Illustration/vertou.jpg used on input line 73.
-(pdftex.def)             Requested size: 350.0pt x 177.4503pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 73--74
-[][] 
- []
-
-[4 <./Illustration/vertou.jpg>]
-<Illustration/Steve.jpg, id=24, 451.6875pt x 254.1495pt>
-File: Illustration/Steve.jpg Graphic file (type jpg)
-
-<use Illustration/Steve.jpg>
-Package pdftex.def Info: Illustration/Steve.jpg used on input line 88.
-(pdftex.def)             Requested size: 350.0pt x 196.94443pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 88--89
-[][] 
- []
-
-[5 <./Illustration/Steve.jpg>]
-<Illustration/Rover.jpg, id=28, 511.9125pt x 510.10574pt>
-File: Illustration/Rover.jpg Graphic file (type jpg)
-
-<use Illustration/Rover.jpg>
-Package pdftex.def Info: Illustration/Rover.jpg used on input line 108.
-(pdftex.def)             Requested size: 350.0pt x 348.76651pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 108--109
-[][] 
- []
-
-<Illustration/Badboy.jpg, id=29, 702.625pt x 803.0pt>
-File: Illustration/Badboy.jpg Graphic file (type jpg)
-
-<use Illustration/Badboy.jpg>
-Package pdftex.def Info: Illustration/Badboy.jpg used on input line 122.
-(pdftex.def)             Requested size: 300.0pt x 342.86948pt.
- [6 <./Illustration/Rover.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 141--143
-
- []
-
-[7 <./Illustration/Badboy.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
-
- []
-
-<Illustration/coffre.jpg, id=37, 602.25pt x 425.59pt>
-File: Illustration/coffre.jpg Graphic file (type jpg)
-
-<use Illustration/coffre.jpg>
-Package pdftex.def Info: Illustration/coffre.jpg used on input line 149.
-(pdftex.def)             Requested size: 350.0pt x 247.34239pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 149--150
-[][] 
- []
-
-[8 <./Illustration/coffre.jpg>] [9] [10] [11] [12] (Manuel.aux) ) 
+ [2] [3] (Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 2660 strings out of 495235
- 34485 string characters out of 3179868
- 92156 words of memory out of 3000000
- 5898 multiletter control sequences out of 15000+200000
+ 2624 strings out of 495235
+ 33722 string characters out of 3179868
+ 90174 words of memory out of 3000000
+ 5868 multiletter control sequences out of 15000+200000
  12439 words of font info for 31 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 28i,6n,30p,307b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Joa
-chim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <
-C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
-bx1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1440.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Joachim\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Joachim\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on Manuel.pdf (12 pages, 802915 bytes).
+ 28i,6n,30p,261b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Joachim\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Joachim\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Us
+ers\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc100
+0.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecrm1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecrm1728.pk>
+Output written on Rapport.pdf (3 pages, 115374 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
+ 232 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
