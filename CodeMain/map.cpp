@@ -1,5 +1,5 @@
 /*! 
- * \brief construit et dessine une map.
+ * \brief Construit et dessine une carte.
  * \details 
  * \author Clément Bauchet
  * \version 1
@@ -22,12 +22,13 @@ Map::Map() {
  * Création d'une carte de taille donnée.
  * @param [in] height La hauteur de la map à créer.
  * @param [in] width La largeur de la map à créer.
- * @param [in] tileset Le tileset à charger pour construire la map.
- * @param [out] height La hauteur de la map.
- * @param [out] width La largeur de la map.
- * @param [out] tiles 
- * @param [out] tileset Le tileset utilisé pour la map.
- * @param [out] tile_size la tailel du tileset utilisé.
+ * @param [in] tileset Le tileset à charger pour dessiner la map.
+ * @param [out] height La hauteur de la map en cases.
+ * @param [out] width La largeur de la map en cases.
+ * @param [out] tiles La matrice des cases de la carte
+ * @param [out] collision_map La matrice de collision de la carte
+ * @param [out] tileset Le tileset utilisé pour dessiner la map.
+ * @param [out] tile_size la taille en pixels des cases du tileset utilisé (en supposant les tiles carrés).
  * @return la Map créée.
  */
 Map::Map(int height, int width, Tileset tileset) {
@@ -45,9 +46,10 @@ Map::Map(int height, int width, Tileset tileset) {
  * @param [in] orig La Map à copier.
  * @param [out] height La hauteur de la map.
  * @param [out] width La largeur de la map.
- * @param [out] tiles 
- * @param [out] tileset Le tileset utilisé pour la map.
- * @param [out] tile_size la tailel du tileset utilisé.
+ * @param [out] tiles La matrice des cases de la carte
+ * @param [out] collision_map La matrice de collision de la carte
+ * @param [out] tileset Le tileset utilisé pour dessiner la map.
+ * @param [out] tile_size la taille en pixels des cases du tileset utilisé (en supposant les tiles carrés).
  * @return la Map créée.
  */
 Map::Map(const Map& orig) {
@@ -63,14 +65,15 @@ Map::Map(const Map& orig) {
  * Création d'une carte à partir du seul fichier .tmx
  * @param [in] tmxFile le fichier au format .tmx contenant les données de la carte.
  * @param [in] tileset le tileset contenant les tiles à dessiner.
- * @param [out] height
- * @param [out] wifth
- * @param [out] tileset
- * @param [out] tile_size
- * @param [out] tiles
+ * @param [out] height La hauteur de la map.
+ * @param [out] width La largeur de la map.
+ * @param [out] tileset Le tileset utilisé pour dessiner la map.
+ * @param [out] tile_size la taille en pixels des cases du tileset utilisé (en supposant les tiles carrés).
+ * @param [out] tiles La matrice des cases de la carte
  */
 Map::Map(std::string tmxFile, Tileset tileset) {
     
+      //Création d'un document DOM pour lire les données au format XML
       clan::File mapTmx(tmxFile);
       clan::DomDocument doc;
       doc.load(mapTmx);
@@ -93,7 +96,6 @@ Map::Map(std::string tmxFile, Tileset tileset) {
           for(int j=0; j < this->width; j++) {
               clan::DomString tile_id = all_tiles.item(i*this->width+j).get_attributes().get_named_item("gid").get_node_value();
               cout << tile_id << " ";
-              //istringstream (tile_id) >> id;
               id = stoi(tile_id);
               setTileAt(i, j, id);
           }
@@ -105,7 +107,7 @@ Map::Map(std::string tmxFile, Tileset tileset) {
 }
 
 /*!
- * Méthode qui vide la map.
+ * Destructeur de la map.
  */ 
 Map::~Map() {
     tiles.clear();
@@ -113,7 +115,7 @@ Map::~Map() {
 
 /*!
  * Getter de l'attribut height.
- * @return height La valeur height de la classe Map.
+ * @return height La hauteur de la carte en cases.
  */ 
 int Map::getHeight() {
     return this->height;
@@ -121,7 +123,7 @@ int Map::getHeight() {
 
 /*!
  * Getter de l'attribut width.
- * @return width La valeur width de la classe Map.
+ * @return width La largeur de la carte en cases.
  */ 
 int Map::getWidth() {
     return this->width;
@@ -129,7 +131,7 @@ int Map::getWidth() {
 
 /*!
  * Getter de l'attribut tiles.
- * @return tiles La valeur tiles de la classe Map.
+ * @return tiles La matrice des cases de la carte.
  */ 
 vector<vector<int>> Map::getTiles() {
     return this->tiles;
@@ -137,17 +139,17 @@ vector<vector<int>> Map::getTiles() {
 
 /*!
  * Getter de l'attribut tile_size.
- * @return tile_size La valeur tile_size de la classe Map.
+ * @return tile_size La taille en pixels des cases (en supposant les cases carrées).
  */ 
 int Map::getTileSize() {
     return this->tile_size;
 }
 
 /*!
- * Getter de l'attribut height à une certaine position.
- * @param [in] row La ligne à laquelle se trouve le tiles.
- * @param [in] col La colonne à laquelel se trouve le tiles.
- * @return tiles La valeur tiles de la classe Map à la position (row, col).
+ * Getter de la valeur de la case à une position donnée.
+ * @param [in] row La ligne à laquelle se trouve la case.
+ * @param [in] col La colonne à laquelel se trouve la case.
+ * @return tiles Un entier représentant le type de case présent à la position (row, col).
  */ 
 int Map::getTileAt(int row, int col) {
     return this->tiles[row][col];
@@ -155,18 +157,18 @@ int Map::getTileAt(int row, int col) {
 
 /*!
  * Setter de l'attribut tiles. 
- * Modifie le tiles à une certaines position.
- * @param [in] row la ligne à laquelle se trouve le tile à modifier.
- * @param [in] col la colonne à laquelle se trouve le tile à modifier.
- * @param [in] tile la nouvelle valeur du tile à modifier.
- * @param [out] tiles Le nouveau tiles de l'objet en (row, col).
+ * Modifie la case à une certaine position.
+ * @param [in] row la ligne à laquelle se trouve la case à modifier.
+ * @param [in] col la colonne à laquelle se trouve la case à modifier.
+ * @param [in] tile la nouvelle valeur de la case à modifier.
+ * @param [out] tiles la nouvelle valeur de la case en (row, col).
  */ 
 void Map::setTileAt(int row, int col, int tile) {
     this->tiles[row][col] = tile;
 }
 
 /*!
- * Méthode qui permet de retourner un objet Map à partir d'un fichier XML.
+ * Méthode qui permet de remplir la matrice de cases de la carte à partir d'un fichier XML.
  * @param [in] file Le nom du fichier à lire.
  */ 
 void Map::readTmxFile(std::string file) {
@@ -195,10 +197,18 @@ void Map::readTmxFile(std::string file) {
    
 }
 
+/*!
+ * Méthode qui retourne la matrice de collision de la carte.
+ * @param [out] file La matrice de collision de la carte.
+ */ 
 vector<vector<int>> Map::getCollisionMap() {
     return this->collision_map;
 }
 
+/*!
+ * Méthode qui établit la matrice de collision de la carte, en fonction d'une liste d'id de cases passables.
+ * @param [out] file La matrice de collision de la carte.
+ */ 
 void Map::setCollisionMap(vector<int> passable_tiles) {
     
     for(int i=0; i < height; i++) {
@@ -217,8 +227,7 @@ void Map::setCollisionMap(vector<int> passable_tiles) {
 
 /*!
  * Dessine la carte dans le canvas.
- * @param [in] c
- * @param [out] tileset
+ * @param [in] c le canvas dans lequel dessiner
  */ 
 void Map::drawMap(clan::Canvas c) {
     
@@ -232,10 +241,9 @@ void Map::drawMap(clan::Canvas c) {
 
 /*!
  * Dessine la carte dans le canvas à une position donnée.
- * @param [in] c Le canvas à dessiner à une certaine position.
- * @param [in] x
- * @param [in] y
- * @param [out] tileset
+ * @param [in] c Le canvas dans lequel dessiner à une certaine position.
+ * @param [in] x La coordonnée x de la position du canvas où dessiner  
+ * @param [in] y La coordonnée y de la position du canvas où dessiner
  */ 
 void Map::drawMap(clan::Canvas c, int x, int y) {
     

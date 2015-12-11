@@ -75,6 +75,9 @@ MapDisplay::MapDisplay()
 	game_time.reset();
 }
 
+/*! Méthode mettant à jour l'application et redessinant tout
+ * @return quit un booléen indiquant si l'application doit être quittée ou non
+ */
 bool MapDisplay::update()
 {
 	game_time.update();
@@ -126,7 +129,8 @@ void MapDisplay::on_input_up(const clan::InputEvent &key)
 	{
 		quit = true;
 	}
-
+	
+	//Déplacement manuel du robot
         switch (key.id) {
             case clan::keycode_up :
                 this->robot.deplacer(0,-1);

@@ -1,5 +1,5 @@
 /*! 
- * \brief 
+ * \brief Classe représentant un tileset, c'est-à-dire la liste des images utilisées pour dessiner la carte et leurs informations.
  * \details 
  * \author Clément Bauchet
  * \version 1
@@ -19,13 +19,13 @@ Tileset::Tileset() {
 
 /*!
  * Constructeur de l'objet Tileset.
- * @param [in] tilesheet
- * @param [in] h
- * @param [in] w
- * @param [in] tile_h
- * @param [in] tile_w
- * @param [in] spacing
- * @return Tileset un objet Tileset avec les propriétés des valeurs e nentrée.
+ * @param [in] tilesheet l'image contenant les tiles
+ * @param [in] h la hauteur du tileset en tiles
+ * @param [in] w la largeur du tileset en tiles
+ * @param [in] tile_h la hauteur d'un tile en pixels
+ * @param [in] tile_w la largeur d'un tile en pixels
+ * @param [in] spacing l'espace entre chaque tile dans la tilesheet, en pixels
+ * @return Tileset un objet Tileset avec les propriétés des valeurs en entrée.
  * 
  */ 
 Tileset::Tileset(clan::Image tilesheet, int h, int w, int tile_h, int tile_w, int spacing) {
@@ -39,8 +39,10 @@ Tileset::Tileset(clan::Image tilesheet, int h, int w, int tile_h, int tile_w, in
 }
 
 /*!
- * Constructeur de l'objet Tileset.
- * 
+ * Constructeur de l'objet Tileset, par lecture du fichier de carte .tmx correspondant
+ * @param [in] tilesheet l'image contenant les tiles
+ * @param [in] tmxFile le nom du fichier de carte .tmx utilisant ce tileset
+ * @return Tileset un objet Tileset avec les propriétés récupérées depuis le fichier .tmx.
  */ 
 Tileset::Tileset(clan::Image tilesheet, std::string tmxFile) {
     clan::File mapTmx(tmxFile);
@@ -63,8 +65,8 @@ Tileset::Tileset(clan::Image tilesheet, std::string tmxFile) {
 }
 
 /*!
- * 
- * 
+ * Constructeur de l'objet Tileset par copie d'un autre tileset
+ * @return Tileset un objet Tileset identique à celui fourni en entrée
  */ 
 Tileset::Tileset(const Tileset& orig) {
     this->tilesheet = orig.tilesheet;
@@ -76,13 +78,17 @@ Tileset::Tileset(const Tileset& orig) {
 }
 
 /*!
- * 
+ * Destructeur de Tileset
  */ 
 Tileset::~Tileset() {
 }
 
 /*!
- * 
+ * Méthode dessinant une case du tileset à une position donnée 
+ * @param [in] c le canvas où dessiner la case
+ * @param [in] id le numéro dans le tileset de la tile à dessiner
+ * @param [in] x la coordonnée x de la position où dessiner la case
+ * @param [in] y la coordonnée y de la position où dessiner la case
  */ 
 void Tileset::drawTile(clan::Canvas c, int id, int x, int y) {
     clan::Point coords_src( (id-1) % width * (tile_width  + spacing),
