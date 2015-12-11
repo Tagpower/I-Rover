@@ -1,0 +1,161 @@
+\hypertarget{classRobot}{}\section{Référence de la classe Robot}
+\label{classRobot}\index{Robot@{Robot}}
+
+
+Graphe d\textquotesingle{}héritage de Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classRobot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classRobot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot} ()
+\begin{DoxyCompactList}\small\item\em Classe \hyperlink{classRobot}{Robot}. \end{DoxyCompactList}\item 
+\hyperlink{classRobot_a9d9ae3c384c32f3e12c4b4d294562062}{Robot} (int position\+X, int position\+Y, Arme arme, Armure armure, clan\+::\+Image sprite)
+\item 
+int \hyperlink{classRobot_ada7c2dc3d10f11e4665ddbeaadfc2eec}{get\+Inventaire} ()
+\item 
+void \hyperlink{classRobot_a53f5a07f6d2adaea7703127a63af80a7}{set\+Inventaire} (int inventaire)
+\item 
+void \hyperlink{classRobot_a9472759b16c5988cbaa577ed37b4bb44}{ouvrir} (\hyperlink{classCoffre}{Coffre} $\ast$coffre)
+\item 
+void \hyperlink{classRobot_a39dd169de1eecba937e0b8fdd115c061}{ramasser} (\hyperlink{classClef}{Clef} $\ast$clef)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{}\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\subsubsection[{Robot}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+::\+Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}
+
+
+Classe \hyperlink{classRobot}{Robot}. 
+
+Implémentation de la classe \hyperlink{classRobot}{Robot} et de ses méthodes. \begin{DoxyAuthor}{Auteur}
+Geoffrey D\+E\+S\+B\+R\+O\+S\+S\+E\+S 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2015-\/12-\/09
+\end{DoxyDate}
+Constructeur du robot. \begin{DoxyReturn}{Renvoie}
+\hyperlink{classRobot}{Robot} le robot créé. 
+\end{DoxyReturn}
+\hypertarget{classRobot_a9d9ae3c384c32f3e12c4b4d294562062}{}\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\subsubsection[{Robot}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+::\+Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Arme}]{arme, }
+\item[{Armure}]{armure, }
+\item[{clan\+::\+Image}]{sprite}
+\end{DoxyParamCaption}
+)}\label{classRobot_a9d9ae3c384c32f3e12c4b4d294562062}
+Constructeur du robot. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x} & La position en x du robot sur la carte. \\
+\hline
+\mbox{\tt in}  & {\em y} & La position en y du robot sur la carte. \\
+\hline
+\mbox{\tt in}  & {\em arme} & L\textquotesingle{}arme du robot. \\
+\hline
+\mbox{\tt in}  & {\em armure} & L\textquotesingle{}armure du robot. \\
+\hline
+\mbox{\tt in}  & {\em sprite} & L\textquotesingle{}image du robot. \\
+\hline
+\mbox{\tt out}  & {\em inventaire} & La taille de l\textquotesingle{}inventaire du robot, 0 par défaut. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{classRobot}{Robot} le robot créé. 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classRobot_ada7c2dc3d10f11e4665ddbeaadfc2eec}{}\index{Robot@{Robot}!get\+Inventaire@{get\+Inventaire}}
+\index{get\+Inventaire@{get\+Inventaire}!Robot@{Robot}}
+\subsubsection[{get\+Inventaire}]{\setlength{\rightskip}{0pt plus 5cm}int Robot\+::get\+Inventaire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classRobot_ada7c2dc3d10f11e4665ddbeaadfc2eec}
+Methode servant à retourner l\textquotesingle{}inventaire du robot. L\textquotesingle{}inventaire correspond au nombre de clef que possède le robot. \begin{DoxyReturn}{Renvoie}
+inventaire L\textquotesingle{}inventaire du robot. 
+\end{DoxyReturn}
+\hypertarget{classRobot_a9472759b16c5988cbaa577ed37b4bb44}{}\index{Robot@{Robot}!ouvrir@{ouvrir}}
+\index{ouvrir@{ouvrir}!Robot@{Robot}}
+\subsubsection[{ouvrir}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::ouvrir (
+\begin{DoxyParamCaption}
+\item[{{\bf Coffre} $\ast$}]{coffre}
+\end{DoxyParamCaption}
+)}\label{classRobot_a9472759b16c5988cbaa577ed37b4bb44}
+Methode servant a ouvrir un coffre. Il faut que le robot ai la même position que le coffre. Le coffre disparait après ouverture et le robot perd une clef. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em coffre} & Le coffre à ouvrir. \\
+\hline
+\mbox{\tt out}  & {\em inventaire} & L\textquotesingle{}inventaire du robot avec une clef en moins. \\
+\hline
+\mbox{\tt out}  & {\em ouvert} & Le statut du coffre à ouvrir après ouverture. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em si} & le robot ne possède aucune clef. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classRobot_a39dd169de1eecba937e0b8fdd115c061}{}\index{Robot@{Robot}!ramasser@{ramasser}}
+\index{ramasser@{ramasser}!Robot@{Robot}}
+\subsubsection[{ramasser}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::ramasser (
+\begin{DoxyParamCaption}
+\item[{{\bf Clef} $\ast$}]{clef}
+\end{DoxyParamCaption}
+)}\label{classRobot_a39dd169de1eecba937e0b8fdd115c061}
+Methode servant a ramasser une clef. Incrémente l\textquotesingle{}inventaire de 1 quand on ramasse la clef et fait disparaitre la clef de la carte. Il faut que le robot ai la même position que la clef pour la ramasser. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em clef} & La clef à ramasser. \\
+\hline
+\mbox{\tt out}  & {\em inventaire} & l\textquotesingle{}inventaire incrémenté de 1. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobot_a53f5a07f6d2adaea7703127a63af80a7}{}\index{Robot@{Robot}!set\+Inventaire@{set\+Inventaire}}
+\index{set\+Inventaire@{set\+Inventaire}!Robot@{Robot}}
+\subsubsection[{set\+Inventaire}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::set\+Inventaire (
+\begin{DoxyParamCaption}
+\item[{int}]{inventaire}
+\end{DoxyParamCaption}
+)}\label{classRobot_a53f5a07f6d2adaea7703127a63af80a7}
+Methode servant à modifier l\textquotesingle{}inventaire du robot. L\textquotesingle{}inventaire correspond au nombre de clef que possède le robot. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em inventaire} & La valeur à affecter à l\textquotesingle{}inventaire. \\
+\hline
+\mbox{\tt out}  & {\em inventaire} & La nouvelle valeur de l\textquotesingle{}inventaire. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code\+Main/robot.\+hpp\item 
+Code\+Main/robot.\+cpp\end{DoxyCompactItemize}

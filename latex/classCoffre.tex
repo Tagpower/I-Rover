@@ -1,0 +1,179 @@
+\hypertarget{classCoffre}{}\section{Référence de la classe Coffre}
+\label{classCoffre}\index{Coffre@{Coffre}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCoffre_aaec05282cbda83ba82707a492007d7c4}{Coffre} ()
+\item 
+\hyperlink{classCoffre_a4ab515b02d49013a961784899c65ca9b}{Coffre} (int position\+X, int position\+Y, clan\+::\+Image sprite)
+\begin{DoxyCompactList}\small\item\em Classe \hyperlink{classCoffre}{Coffre}. \end{DoxyCompactList}\item 
+int \hyperlink{classCoffre_a09119b47a3c3a84401a0f60b0713cf69}{get\+Position\+X} ()
+\item 
+int \hyperlink{classCoffre_a9623a6bfad74ccb403757bc054cf24dd}{get\+Position\+Y} ()
+\item 
+bool \hyperlink{classCoffre_a01124ba421e43f7460e3220c227fb7c3}{is\+Ouvert} ()
+\item 
+void \hyperlink{classCoffre_a514d95ef3c53b50c2a24e97ef4cf49ba}{set\+Position\+X} (int x)
+\item 
+void \hyperlink{classCoffre_a5e351644ab4ebea39f9ffaf655b97b9b}{set\+Position\+Y} (int y)
+\item 
+void \hyperlink{classCoffre_ab5d1d8a72878a967e12e96e7226b17f4}{set\+Ouvert} (bool status)
+\item 
+void \hyperlink{classCoffre_ab54166a456bd84edd5fcb345f6bdd6ef}{draw} (clan\+::\+Canvas c, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classCoffre_aaec05282cbda83ba82707a492007d7c4}{}\index{Coffre@{Coffre}!Coffre@{Coffre}}
+\index{Coffre@{Coffre}!Coffre@{Coffre}}
+\subsubsection[{Coffre}]{\setlength{\rightskip}{0pt plus 5cm}Coffre\+::\+Coffre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCoffre_aaec05282cbda83ba82707a492007d7c4}
+Le constructeur d\textquotesingle{}un coffre par défaut. \begin{DoxyReturn}{Renvoie}
+\hyperlink{classCoffre}{Coffre} le coffre créé. 
+\end{DoxyReturn}
+\hypertarget{classCoffre_a4ab515b02d49013a961784899c65ca9b}{}\index{Coffre@{Coffre}!Coffre@{Coffre}}
+\index{Coffre@{Coffre}!Coffre@{Coffre}}
+\subsubsection[{Coffre}]{\setlength{\rightskip}{0pt plus 5cm}Coffre\+::\+Coffre (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{clan\+::\+Image}]{sprite}
+\end{DoxyParamCaption}
+)}\label{classCoffre_a4ab515b02d49013a961784899c65ca9b}
+
+
+Classe \hyperlink{classCoffre}{Coffre}. 
+
+Implémentation de la classe \hyperlink{classCoffre}{Coffre} avec ses méthodes. \begin{DoxyAuthor}{Auteur}
+Geoffrey D\+E\+S\+B\+R\+O\+S\+S\+E\+S 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2015-\/12-\/09
+\end{DoxyDate}
+Constructeur d\textquotesingle{}un coffre. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x} & la position en x où le coffre sera créé. \\
+\hline
+\mbox{\tt in}  & {\em y} & la position en y où le coffre sera créé. \\
+\hline
+\mbox{\tt in}  & {\em sprite} & L\textquotesingle{}image du coffre à créer. \\
+\hline
+\mbox{\tt out}  & {\em position\+X} & La position du coffre en x. \\
+\hline
+\mbox{\tt out}  & {\em position\+Y} & La position du coffre en y. \\
+\hline
+\mbox{\tt out}  & {\em ouvert} & Le statut du coffre, false par défaut. \\
+\hline
+\mbox{\tt out}  & {\em sprite} & La nouvelle image du coffre. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{classCoffre}{Coffre} le coffre créé. 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classCoffre_ab54166a456bd84edd5fcb345f6bdd6ef}{}\index{Coffre@{Coffre}!draw@{draw}}
+\index{draw@{draw}!Coffre@{Coffre}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Coffre\+::draw (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Canvas}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classCoffre_ab54166a456bd84edd5fcb345f6bdd6ef}
+Méthode servant à dessiner un coffre sur la map. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em c} & L\textquotesingle{}image à dessiner. \\
+\hline
+\mbox{\tt in}  & {\em x} & la position en x du coffre à dessiner. \\
+\hline
+\mbox{\tt in}  & {\em y} & la position en y du coffre à dessiner. \\
+\hline
+\mbox{\tt out}  & {\em sprite} & L\textquotesingle{}image de l\textquotesingle{}objet aux coordonnées (x,y). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCoffre_a09119b47a3c3a84401a0f60b0713cf69}{}\index{Coffre@{Coffre}!get\+Position\+X@{get\+Position\+X}}
+\index{get\+Position\+X@{get\+Position\+X}!Coffre@{Coffre}}
+\subsubsection[{get\+Position\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Coffre\+::get\+Position\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCoffre_a09119b47a3c3a84401a0f60b0713cf69}
+Méthode qui permet d\textquotesingle{}acceder à la position en x d\textquotesingle{}un coffre. \begin{DoxyReturn}{Renvoie}
+la position en x du coffre. 
+\end{DoxyReturn}
+\hypertarget{classCoffre_a9623a6bfad74ccb403757bc054cf24dd}{}\index{Coffre@{Coffre}!get\+Position\+Y@{get\+Position\+Y}}
+\index{get\+Position\+Y@{get\+Position\+Y}!Coffre@{Coffre}}
+\subsubsection[{get\+Position\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Coffre\+::get\+Position\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCoffre_a9623a6bfad74ccb403757bc054cf24dd}
+Méthode qui permet d\textquotesingle{}acceder à la position en y d\textquotesingle{}un coffre. \begin{DoxyReturn}{Renvoie}
+la position en y du coffre. 
+\end{DoxyReturn}
+\hypertarget{classCoffre_a01124ba421e43f7460e3220c227fb7c3}{}\index{Coffre@{Coffre}!is\+Ouvert@{is\+Ouvert}}
+\index{is\+Ouvert@{is\+Ouvert}!Coffre@{Coffre}}
+\subsubsection[{is\+Ouvert}]{\setlength{\rightskip}{0pt plus 5cm}bool Coffre\+::is\+Ouvert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCoffre_a01124ba421e43f7460e3220c227fb7c3}
+Méthode qui permet de savoir si un coffre est ouvert ou non. \begin{DoxyReturn}{Renvoie}
+ouvert Boolean qui prend la valeur true si le coffre est ouvert, false sinon. 
+\end{DoxyReturn}
+\hypertarget{classCoffre_ab5d1d8a72878a967e12e96e7226b17f4}{}\index{Coffre@{Coffre}!set\+Ouvert@{set\+Ouvert}}
+\index{set\+Ouvert@{set\+Ouvert}!Coffre@{Coffre}}
+\subsubsection[{set\+Ouvert}]{\setlength{\rightskip}{0pt plus 5cm}void Coffre\+::set\+Ouvert (
+\begin{DoxyParamCaption}
+\item[{bool}]{ouv}
+\end{DoxyParamCaption}
+)}\label{classCoffre_ab5d1d8a72878a967e12e96e7226b17f4}
+Méthode qui permet de modifier le statut d\textquotesingle{}un coffre. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ouv} & la valeur booléenne à affecter au statut du coffre. \\
+\hline
+\mbox{\tt out}  & {\em ouvert} & Le statut du coffre\+: true si le coffre est ouvert, false sinon. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCoffre_a514d95ef3c53b50c2a24e97ef4cf49ba}{}\index{Coffre@{Coffre}!set\+Position\+X@{set\+Position\+X}}
+\index{set\+Position\+X@{set\+Position\+X}!Coffre@{Coffre}}
+\subsubsection[{set\+Position\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Coffre\+::set\+Position\+X (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\label{classCoffre_a514d95ef3c53b50c2a24e97ef4cf49ba}
+Méthode qui mermet de modifier la position en x d\textquotesingle{}un coffre. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x} & La nouvelle position en x du coffre à modifier. \\
+\hline
+\mbox{\tt out}  & {\em position\+X} & La position du coffre après modification. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCoffre_a5e351644ab4ebea39f9ffaf655b97b9b}{}\index{Coffre@{Coffre}!set\+Position\+Y@{set\+Position\+Y}}
+\index{set\+Position\+Y@{set\+Position\+Y}!Coffre@{Coffre}}
+\subsubsection[{set\+Position\+Y}]{\setlength{\rightskip}{0pt plus 5cm}void Coffre\+::set\+Position\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classCoffre_a5e351644ab4ebea39f9ffaf655b97b9b}
+Méthode qui mermet de modifier la position en x d\textquotesingle{}un coffre. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em y} & La nouvelle position en y du coffre à modifier. \\
+\hline
+\mbox{\tt out}  & {\em position\+Y} & La position du coffre àprès modification. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code\+Main/coffre.\+hpp\item 
+Code\+Main/coffre.\+cpp\end{DoxyCompactItemize}
