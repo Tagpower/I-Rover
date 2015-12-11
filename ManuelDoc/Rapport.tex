@@ -7,10 +7,11 @@
 
 \title{Rapport de Projet : iRover}
 
-%mettez vos noms svp!!!!!!
+%mettez vos noms svp !!
 
 \author{R. Joachim CLAYTON}
 \author{Geoffrey DESBROSSES}
+\author{Clément BAUCHET}
 
 \begin{document}
 
@@ -47,18 +48,7 @@
 
 
 \subsection{Introduction}
-
-\vspace{1 cm}
-
-
-Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.\\
-Pour cela nous avons imaginé un scénario de mini jeu semblable au jeux en deux dimensions où notre robot prendrait la forme d'un héros sans peur et sans reproche.\\
-L'autre aspect de ce projet est de pousser notre groupe à utiliser, comprendre et intégrer les autotools.
-\vspace{1 cm}
-
-
 \subsection{Membre du groupe et tâches de chacun}
-\vspace{1 cm}
 
 
 
@@ -81,20 +71,21 @@ Jean-Christophe Guerin & IA  & Définitions des algorithmes de pathfinding de d�
 Joachim Clayton & Documentation utilisateur & Redaction de la documentation utilisateur \\                 
 \end{tabular}
 
+\section{Définition de la carte}
+
+Pour commencer, il fallait générer un ou plusieurs terrains à l'aide du logiciel \emph{Tiled}, un éditeur de cartes. La carte est créée avec une certaine tilesheet (une image contenant le dessin de toutes les cases possibles), et enregistrée sous le format \textbf{.tmx}, un format de type XML.
+
+Pour pouvoir afficher le terrain dans notre application, nous avons d'abord fait appel au module \emph{ClanXML} de la bibliothèque \emph{ClanLib} qui est utilisée pour notre application, notamment pour l'affichage. Une classe \textbf{Map} a été créée, représentant le terrain et ses informations : les dimensions, les types de ses cases et la praticabilité de celles-ci par le robot ou d'autres entités. A la création d'une carte, ces informations sont récupérées directement depuis le fichier de carte .tmx fourni, en le parsant en tant que document DOM comme permis par \emph{ClanXML}. \\
+\emph{N.B. :} A l'heure actuelle, il n'est pas possible de déterminer par seule lecture du fichier .tmx quels types de cases sont praticables par le robot. Ceci est déterminé au cas par cas dans le code. De plus, la praticabilité des cases se résume simplement à la possibilité ou non d'aller dessus. Nous pourrions définir un coût de déplacement pour chaque type de case, qui serait alors pris en compte dans l'évaluation du chemin optimal du robot.
+
+Une fois les données de la carte obtenues, il nous faut afficher cette dernière dans la fenêtre principale de l'application. Comme nous ne disposons que de données brutes sur les cases (un nombre indiquant quelle texture sera utilisée pour dessiner la case), nous avons créé une autre classe, \textbf{Tileset}, qui représente l'image regroupant toutes les textures utilisables pour dessiner les cases (la \emph{tilesheet} décrite précédemment), ainsi que ses informations : ses dimensions, la taille des cases en pixels et l'espace entre chaque texture dans l'image. Là encore, ces données peuvent être retrouvées directement depuis le même fichier \emph{.tmx} utilisé pour créer la carte.
+En connaissant le numéro d'une case de la carte, on peut alors retrouver quelle texture utiliser pour la dessiner. Il est donc désormais possible d'afficher toute la carte.
+
+Enfin, nous avons défini la classe \textbf{mapDisplay}, qui sert actuellement de classe principale pour l'exécution de l'application. C'est ici que toutes les entités intervenant dans le déroulement du jeu sont affichées : la carte, le robot, ses ennemis et les objets.
+
+Une possibilté d'extension serait de permettre au robot d'interagir directement sur son environnement et modifier le terrain au fur et à mesure de son exploration (\emph{e.g.} en construisant des ponts, ou détruisant des murs...), ce que la structure de Map permet car la carte n'est pas en lecture seule après l'analyse du fichier \emph{.tmx}. 
 
 
-
-
-\newpage
-\section{Définition de la Carte}
-
-
-%partie de Clément
-
-%mettre une petite introduction et parlez de vos parties
-
-
-\newpage
 %partie Geoffrey
 
 \section{Définition des objets}
@@ -109,22 +100,31 @@ Le robot ne possède pas de senseur. L'idée était d'implémenter un scanner qu
 \subsection{gestion des évênements}
 Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser au contact d'un ennemi, deux personnages peuvent s'affronter, le robot peut ramasser des clefs et ouvrir des coffres. Cependant, ces actions ne sont pas visibles sur l'interface graphique, excepté le déplacement du robot.
 
+\subsection{Le robot}
+\subsection{Les ennemis}
+\subsection{Les coffres}
+\subsection{Les clés}
+\subsection{La gestion des évènements}
+\subsubsection {Rencontre avec un ennemi} 
+\subsubsection {Ouverture d'un coffre}
+\subsubsection {Ramasser une clé}
+
 \section{IHM}
 
 
-\newpage
+
 \section{IA}
 
 %partie JC
-%mettre une petite introduction et parlez de vos parties
 
 \subsection{path finding}
 \subsection{découverte de la carte}
 
 
-\newpage
-\section{Problèmes rencontrer}
 
+\section{Problèmes rencontrés}
+
+Malgré un début difficile en raison de problèmes à la compilation et l'édition des liens de ClanLib, cette bibliothèque s'est avérée assez facile et intuitive à utiliser, ce qui a permis de vite obtenir un affichage de l'application.
 
 \section{Conclusion}
 
