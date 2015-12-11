@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  11 DEC 2015 13:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  11 DEC 2015 13:50
 entering extended mode
 **C:/Users/Joachim/Desktop/depain/ManuelDoc/Manuel.tex
 (C:/Users/Joachim/Desktop/depain/ManuelDoc/Manuel.tex
@@ -421,38 +421,65 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 88--89
  []
 
 [5 <./Illustration/Steve.jpg>]
-<Illustration/coffre.jpg, id=28, 602.25pt x 425.59pt>
-File: Illustration/coffre.jpg Graphic file (type jpg)
+<Illustration/Rover.jpg, id=28, 511.9125pt x 510.10574pt>
+File: Illustration/Rover.jpg Graphic file (type jpg)
 
-<use Illustration/coffre.jpg>
-Package pdftex.def Info: Illustration/coffre.jpg used on input line 130.
-(pdftex.def)             Requested size: 350.0pt x 247.34239pt.
+<use Illustration/Rover.jpg>
+Package pdftex.def Info: Illustration/Rover.jpg used on input line 108.
+(pdftex.def)             Requested size: 350.0pt x 348.76651pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 130--131
+Overfull \hbox (5.0pt too wide) in paragraph at lines 108--109
 [][] 
  []
 
-[6 <./Illustration/coffre.jpg>] [7] [8] [9] [10] (Manuel.aux) ) 
+<Illustration/Badboy.jpg, id=29, 702.625pt x 803.0pt>
+File: Illustration/Badboy.jpg Graphic file (type jpg)
+
+<use Illustration/Badboy.jpg>
+Package pdftex.def Info: Illustration/Badboy.jpg used on input line 122.
+(pdftex.def)             Requested size: 300.0pt x 342.86948pt.
+ [6 <./Illustration/Rover.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
+
+ []
+
+[7 <./Illustration/Badboy.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
+
+ []
+
+<Illustration/coffre.jpg, id=37, 602.25pt x 425.59pt>
+File: Illustration/coffre.jpg Graphic file (type jpg)
+
+<use Illustration/coffre.jpg>
+Package pdftex.def Info: Illustration/coffre.jpg used on input line 149.
+(pdftex.def)             Requested size: 350.0pt x 247.34239pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 149--150
+[][] 
+ []
+
+[8 <./Illustration/coffre.jpg>] [9] [10] [11] [12] (Manuel.aux) ) 
 Here is how much of TeX's memory you used:
- 2650 strings out of 495235
- 34248 string characters out of 3179868
+ 2660 strings out of 495235
+ 34485 string characters out of 3179868
  92156 words of memory out of 3000000
- 5890 multiletter control sequences out of 15000+200000
+ 5898 multiletter control sequences out of 15000+200000
  12439 words of font info for 31 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  28i,6n,30p,307b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Joach
-im\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:
-\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx
-1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecbx1440.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Joachim\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Joachim\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on Manuel.pdf (10 pages, 386287 bytes).
+ <C:\Users\Joa
+chim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <
+C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+bx1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1440.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
+ur\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Joachim\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Joachim\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
+Output written on Manuel.pdf (12 pages, 803386 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
+ 313 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
