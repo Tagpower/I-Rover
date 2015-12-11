@@ -25,6 +25,6 @@ Ennemi::Ennemi() : Personnage(){
  * @param [in] sprite L'image de l'ennemi.
  * @return Ennemi l'ennemi créé.
  */
-Ennemi::Ennemi(int x, int y, Arme* arme, Armure* armure, clan::Image sprite) : Personnage(x, y, arme, armure, sprite){
+Ennemi::Ennemi(int x, int y, Arme arme, Armure armure, clan::Image sprite) : Personnage(x, y, arme, armure, sprite){
 
 }

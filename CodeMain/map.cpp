@@ -89,6 +89,7 @@ Map::Map(std::string tmxFile, Tileset tileset) {
       this->tile_size = tileset.getTile_height();
       
       this->tiles = vector<vector<int>>(height, vector<int>(width));
+      this->collision_map = vector<vector<int>>(height, vector<int>(width));
       
       //Remplissage de la matrice de tiles
       int id;

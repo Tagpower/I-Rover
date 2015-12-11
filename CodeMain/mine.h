@@ -18,6 +18,6 @@ public:
 	int getPositionY();
 	void setPositionX(int x);
 	void setPositionY(int y);
-	void exploser();
+	void exploser(Ennemi* ennemi);
     void draw(clan::Canvas c, int x, int y);
 };

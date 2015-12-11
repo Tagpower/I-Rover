@@ -52,8 +52,11 @@ MapDisplay::MapDisplay()
         this->tileset = myTileset;
         this->map = terrain;
         this->map.setCollisionMap(vector<int>({6,1005})); //A changer en fonction de la map
+        
+        Mine mine(4,4,sprite_mine); 
+        Armure armure(5,"lol");
 
-        this->robot = Robot(0,0, sprite_robot);
+        this->robot = Robot(0,0, mine, armure, sprite_robot);
         this->robot.setCollisionMap(this->map.getCollisionMap());
 
         this->liste_coffres = vector<Coffre>();
@@ -67,8 +70,8 @@ MapDisplay::MapDisplay()
 
 
         this->liste_ennemis = vector<Ennemi>();
-        this->liste_ennemis.push_back(Ennemi(14,10,sprite_ennemi_1));
-        this->liste_ennemis.push_back(Ennemi(8,14,sprite_ennemi_1));
+        this->liste_ennemis.push_back(Ennemi(14,10, mine, armure, sprite_ennemi_1));
+        this->liste_ennemis.push_back(Ennemi(8,14, mine, armure, sprite_ennemi_1));
 
 
 
@@ -105,6 +108,15 @@ bool MapDisplay::update()
             clef.draw(canvas,map_origin.x + (clef.getPositionX()*tileset.getTile_width()) ,
                              map_origin.y + (clef.getPositionY()*tileset.getTile_height()));
         }
+        
+        //Mine laMine = this->robot.getArme;
+	if(this->robot.getArme().getNom().compare("mine") == 0 && this->robot.getPositionX()%2 == 0 && this->robot.getPositionY()%2 == 1){
+            Mine laMine(this->robot.getPositionX(), this->robot.getPositionY(), clan::Image(canvas, "mine.png"));
+            laMine.draw(canvas,map_origin.x + (laMine.getPositionX()*tileset.getTile_width()) ,
+                         map_origin.y + (laMine.getPositionY()*tileset.getTile_height()));
+	}
+        
+        
         for(auto &ennemi : this->liste_ennemis) {
             ennemi.draw(canvas,map_origin.x + (ennemi.getPositionX()*tileset.getTile_width()) ,
                                map_origin.y + (ennemi.getPositionY()*tileset.getTile_height()));
@@ -113,9 +125,7 @@ bool MapDisplay::update()
         this->robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
 
-
-        //this->robot.deplacer(0,0);
-
+        
          //Afficher les changements du canvas
 	window.flip(1);
 

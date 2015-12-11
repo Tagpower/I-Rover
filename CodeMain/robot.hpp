@@ -13,7 +13,7 @@ private:
 	int inventaire;
 public:
 	Robot();
-	Robot(int positionX, int positionY, Arme* arme, Armure* armure, clan::Image sprite);
+	Robot(int positionX, int positionY, Arme arme, Armure armure, clan::Image sprite);
 	int getInventaire();
 	void setInventaire(int inventaire);
 	void ouvrir(Coffre* coffre);
