@@ -239,7 +239,7 @@ void Personnage::deplacer(int x, int y){
 bool Personnage::Combattre(Personnage* adversaire){
 	bool victoire;
 	int force_hero = rand() * this->puissance * this->robustesse;
-	int force_adversaire = rand() * adversaire->puissance * adversaire->robustesse;
+	int force_adversaire = rand() * adversaire->getPuissance() * adversaire->getRobustesse();
 
 	if(force_hero >= force_adversaire){
 		victoire = true;

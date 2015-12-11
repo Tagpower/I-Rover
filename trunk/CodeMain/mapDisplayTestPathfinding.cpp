@@ -115,7 +115,7 @@ bool MapDisplayTestPathfinding::update()
 
 		std::string pathRobot = pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
 		goTo(robot, pathRobot);
-        
+
         //std::string pathEnnemi = this->pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
         //this->goTo(robot, pathEnnemi);
 
@@ -125,14 +125,17 @@ bool MapDisplayTestPathfinding::update()
 	return !quit;
 }
 
-//Gestion des évènements du clavier
+/** Gestion des évènements du clavier
+ * Les touches reconnues sont uniquement echap, haut, bas, gauche et droite.
+ * @param [in] key La touche pressée du clavier.
+ */
 void MapDisplayTestPathfinding::on_input_up(const clan::InputEvent &key)
 {
 	if(key.id == clan::keycode_escape)
 	{
 		quit = true;
 	}
-	
+
 	//Déplacement manuel du robot
         switch (key.id) {
             case clan::keycode_up :
@@ -150,6 +153,11 @@ void MapDisplayTestPathfinding::on_input_up(const clan::InputEvent &key)
         }
 }
 
+/**
+ * Méthode permattant à un personnage d'aller vers une direction en particulier.
+ * @param [in] perso Le personnage se déplaçant.
+ * @param [in] path
+ */
 void goTo(Personnage perso, std::string path){
 	while (path::length()>0){
 			int dirToGo= path.at(0);
@@ -172,8 +180,8 @@ void goTo(Personnage perso, std::string path){
 					break();
 				default:
 					break();
-					
-				path::erase(0,1)		
-			}			
+
+				path::erase(0,1)
+			}
 }
 }
