@@ -9,6 +9,9 @@
 %macro
 
 
+
+
+
 \title{Manuel Utilisateur iRover}
 
 \author{R. Joachim CLAYTON}
@@ -226,94 +229,160 @@ Chaque personnage possède des coordonnées indiquant leur emplacement en temps 
 \subsubsection{Le robot, Rover}
 \vspace{1cm}
 
-Le robot pourra se déplacer sur la carte, case par case et rencontrera des obstacles. \\
+Le robot se déplace sur la carte case par case et rencontrera des obstacles. \\
 N'ayant pas appris à nager et du à des crises de vertiges récurente, il ne pourra ni se déplacer sur l'eau ni grimper sur les rochers,
 les arbres, les murs et même les buissons !\\
 Le robot, en plus de pouvoir se déplacer sur le terrain, peut aussi ramasser des clefs et ouvrir des coffres.\\
 Pour celà, le robot possède un inventaire de clef représenter par le nombre de clefs que possède le robot.\\
 Lorsque le robot va ramasser une clef, le nombre de clefs que le robot possède augmente donc de 1.\\
 Inversement, lorsque notre robot ouvrira un coffre, le nombre de clefs dont il dispose diminura de 1 tout en sachant qu'il n'arrivera pas à ouvrir un coffre sans clef.\\
-Le robot devra également combattre les ennemis pour rester en vie si il a le malheur de croisé un chou-kête.\\
+Le robot devra également combattre les ennemis pour rester en vie si il a le malheur de croiser un chou-kête.\\
 Il possède une armure et une arme.
-Le robot peut également prendre connaissance de ce qui l'entour grâce à sa vision et ses senseurs. Il sait donc où aller et quoi faire.
+Le robot peut également prendre connaissance de ce qui l'entoure grâce à sa vision et ses senseurs. Il sait donc où aller et quoi faire.
+
+\vspace{0.75cm}
+
+\subsubsection{Les ennemis}
 
 
-\subsubsection{les ennemis}
+\vspace{0.75cm}
 
 
-Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté. 
+Certains ennemis seront présent sur le terrain et mettrons le robot en difficulté.\\ 
 Le robot devra alors combattre ces ennemis s'il les rencontre afin de rester en vie.
 Lorsque le robot se trouve à côté d'un ennemi, il est obligé de le combattre. 
-Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, 
-notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.
+Une fois l'ennemi vaincu, celui-ci disparait du terrain mais dans le cas contraire, notre héros ne sera plus en mesure de continuer et notre jeu prendra fin.\\
 Les ennemis tout comme le héros peuvent se déplacer sur la carte mais ils auront un déplacement différent par rapport au héros.
 
 
 
-\subsection{les coffres}
+\newpage
+\subsection{Les coffres}
 
-\subsection{les clé}
+
+\vspace{0.75cm}
+
+Les coffres sont des éléments posé aléatoirement sur la carte. Ils possèdent des trésors que notre héros souhaite récupérer.
+Ils ne peuvent s'ouvrir qu'à l'aide de clefs.
+
+
+\vspace{0.75cm}
+
+\subsection{Les clefs}
+
+\vspace{0.75cm}
+
+Les clefs sont des éléments posé aléatoirement sur la carte. Ils permettent d'ouvrir les coffres au trésor disséminé un peu partout sur la carte.\\
+Les clefs se détériore après leur utilisation fesant d'eux un consomable.
+
+
+\vspace{0.75cm}
+
 
 \subsection{L'environnement}
-La carte sur laquelle le robot se déplace est construite à l'aide de Tiled, il s'agit d'un logicielle permettant de créer des cartes case par case. 
-Pour les cartes modélisées, on distingue deux types de cases:
 
-L'environnement comprend la gestion des coffres et des clefs.
-Une clef possède des attributs positionX et positionY qui sont ses positions en X et en Y sur la carte. 
-Un coffre possède les mêmes attributs mais un statut en plus qui est simplement une valeur booléenne qui dit si le coffre est ouvert ou fermé.
 
+\vspace{0.75cm}
+
+La carte sur laquelle le robot se déplace est constitué de cases comme appelles comunémant des Tiles (carreaux). \\
+On distingue deux types de cases:
 
 \begin{enumerate}
-	\item les cases ou le robot peut se déplacer
-	\item les cases ou le robot ne peut pas se déplacer
+	\item Les cases où le robot peut se déplacer.
+	\item Les cases où le robot ne peut pas se déplacer.
 \end{enumerate}
 
-La carte est sous forme d'un fichier XML que le programme interprête pour renvoyer une carte exploitable par le robot.
+Ces cases permette de décrire le décord et le type de terrain où se balade notre robot.
+L'environement sert de base également pour la disposition des autres éléments tel que les coffres, les clefs, et ennemis.\\
+La rencontre avec un de ces éléments entraine une gestion d'évênements.
 
-L'environement servira de base également pour la disposition des autres entités présente, coffre, clef ennemie.
-Ceux ci sont disposé aléatoirement sur la carte à des endroits accessibles par le héros mais ils ne peuvent pas se déplacer.
-La rencontre avec un de ces éléments entraine la gestion des évênements.
-
-
-
-
-
+\newpage
 \subsection{La gestion des évênements}
 
+
+\vspace{0.75cm}
 Le robot, notre amis rover, devra faire face à beaucoup d'évênements, ouvrir un coffre, se battre contre un ennemi, ramasser une clef, se cogner contre un mur etc..
-Tout ceci est géré par le comportement de chaque objets mais aussi pour sa hierarchi sur la carte.
+Tout ceci est géré par le comportement de chaque entité mais aussi pour l'affichage de l'environement.
 
-\subsubsection {Rencontre avec un ennemi} 
-Un ennemis et notre héros devront avoir la même importance physique : il ne peuvent pas se supperposer.
-Un ennemis et notre héros n'auront besoin que d'un regard pour enclanché le combat ! 1 case de différence.
+Par exemple il doit être possible de marcher sur une clef pour la ramasser alors qu'il doit être impossible de marcher sur un ennemis
+
+\vspace{0.75cm}
+
+\subsubsection {Rencontre avec un ennemi}
+
+\vspace{0.75cm}
+ 
+Un ennemis et notre héros devront avoir la même importance physique : il ne peuvent pas se superposer.
+Un ennemis et notre héros n'auront besoin que d'un regard pour enclanché le combat ! (1 case de différence )
 
 %mettre un schéma
+\vspace{0.75cm}
 
-\subsubsection {Ouvertude d'un coffre}
-Un coffre et notre héros n'ont pas la même importance physique : le héros devra pouvoir "marcher" sur le coffre.
-Un coffre et notre héros devront impérativement être sur la même case pour que le coffre puisse s'ouvrir et ce dernier, 
-le héros, devra avoir une clé pour que cela soit possible.
+\subsubsection {Ouvrir un coffre}
+
+\vspace{0.75cm}
+
+Un coffre et notre héros n'ont pas la même importance physique : le héros devra pouvoir "marcher" sur le coffre.\\
+Un coffre et notre héros devront impérativement être sur la même case pour que le coffre puisse s'ouvrir et ce dernier, le héros, devra avoir une clé pour que cela soit possible.
 
 %mettre un schéma
+\vspace{0.75cm}
 
 \subsubsection {Ramasser une clé}
+
+\vspace{0.75cm}
 Une clé et notre héros n'ont pas la même importance physique : le héros devra pouvoir "marcher" sur la clé.
+La clé et notre héros devront impérativement être sur la même case pour que la clé puisse être ramasser par ce dernier.
+L'inventaire de clé augmentera alors.
 
 %mettre un schéma
- 
-\subsection{l'interface utilisateur}
+\vspace{0.75cm} 
+\subsection{L'interface utilisateur}
 
 \subsection{IA}
 
-\subsubsection{path finding}
+L'intelligence artificielle est dans notre application ce qui détermine le scénario de ce mini jeu.
+En effet notre robot se déplace et agit de façon intelligente.
+\vspace{0.75cm}
 
-\subsubsection{découverte de la carte}
+\subsubsection{Le Path Finding}
 
-\subsection{condition fin de jeu}
+\vspace{0.75cm}
 
+Le path finding correspond à la capacité du robot à trouver un chemin à suivre pour atteindre un objectif qu'il se fixe.
+Par exemple : 
 
+\vspace{0.5cm}
 
+\begin{enumerate}
+\item "Je dois retrouver mon amis qui est en bas à droite de la carte"
+\item "Je suis au centre de la carte"
+\item "Je regarde le chemin le plus simple pour y aller"
+\item "Je le suis jusqu'à destination"
+\end{enumerate}
 
+\vspace{0.75cm}
+
+\subsubsection{La découverte de la carte}
+
+\vspace{0.75cm}
+
+La découverte de la carte est ce qu'on appelle un senseur.
+Meme si notre amis Rover est pixéliser il est doté de sens lui permettant de "voir" ce qui l'entour et de comprendre son environement.
+Afin d'utiliser le path finding (expliqué au paragraphe précédent)
+il a besoin de savoir où il est et où il doit se rendre.
+
+\vspace{0.75cm}
+
+\subsection{Les conditions de fin du jeu}
+
+\vspace{0.75cm}
+
+Le jeu se termine sous deux conditions bien distainct.
+Soit le héros n'est plus apte à continuer son aventure après un combat.
+Soit le héros a récupéré tout les coffres de la carte et a réussi son objectif.
+
+\newpage
 
 \section{tutoriel}
 
