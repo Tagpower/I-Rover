@@ -1,0 +1,401 @@
+\hypertarget{classPersonnage}{}\section{Référence de la classe Personnage}
+\label{classPersonnage}\index{Personnage@{Personnage}}
+
+
+Graphe d\textquotesingle{}héritage de Personnage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classPersonnage__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPersonnage_abec36eb0310adc71f3375297fc590c65}{Personnage} ()
+\item 
+\hyperlink{classPersonnage_a35385ac425d6818de9dec2d8128004a8}{Personnage} (int position\+X, int position\+Y, Arme arme, Armure armure, clan\+::\+Image sprite)
+\item 
+int \hyperlink{classPersonnage_ab398b805fa9060fc10b5edb00685bbbb}{get\+Position\+X} ()
+\item 
+int \hyperlink{classPersonnage_ab19dcfb269109b0bc74ffe0143a8cda1}{get\+Position\+Y} ()
+\item 
+int \hyperlink{classPersonnage_ac46ff9c905454f0e3b71097b8f75c5ea}{get\+Puissance} ()
+\item 
+int \hyperlink{classPersonnage_a80ff0a5dc97749f73b84dd52a4185aa4}{get\+Robustesse} ()
+\item 
+Arme \hyperlink{classPersonnage_a5af967c395cfccb901fb44123c373dfa}{get\+Arme} ()
+\item 
+Armure \hyperlink{classPersonnage_af0ef6f5bf22b2b471efefbd588bf4dd6}{get\+Armure} ()
+\item 
+void \hyperlink{classPersonnage_ae065b66e67f3a6c5781453a156786d67}{set\+Position\+X} (int x)
+\item 
+void \hyperlink{classPersonnage_a757454177b4a3bff5fc641ed53824154}{set\+Position\+Y} (int y)
+\item 
+void \hyperlink{classPersonnage_a21ee83fd23bf612ff4fadc513c78dc94}{set\+Puissance} (int puissance)
+\item 
+void \hyperlink{classPersonnage_a777c12bd052992cc9ccbf1f6317433c7}{set\+Robustesse} (int robustesse)
+\item 
+void \hyperlink{classPersonnage_a332229cbb1b8e46808472c48e7c1f3f2}{set\+Collision\+Map} (vector$<$ vector$<$ int $>$ $>$ map)
+\item 
+void \hyperlink{classPersonnage_a20b675cc63e94015ddced4e7db6d9b56}{set\+Arme} (Arme arme)
+\item 
+void \hyperlink{classPersonnage_a331e0aeb7190a266cfb879acdd22e83a}{set\+Armure} (Armure armure)
+\item 
+void \hyperlink{classPersonnage_afc55c03d855c3f6caf71cdb061829a6d}{deplacer} (int x, int y)
+\item 
+bool \hyperlink{classPersonnage_ab3b895b1830c07d547a36f0827ec9eb4}{Combattre} (\hyperlink{classPersonnage}{Personnage} $\ast$adversaire)
+\item 
+void \hyperlink{classPersonnage_a745bf0265378d340d7dd6f2a8225421f}{draw} (clan\+::\+Canvas c, int x, int y)
+\item 
+void \hyperlink{classPersonnage_ab3ce2fb4d37fc9b3bbef43d33910ac2f}{set\+Active} (bool active)
+\item 
+bool \hyperlink{classPersonnage_a5a95a7603154e30550bd67cf4bd4f990}{get\+Is\+Active} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPersonnage_af599fcbd1767fbf8ef5d1c90a8eaa638}{}int {\bfseries position\+X}\label{classPersonnage_af599fcbd1767fbf8ef5d1c90a8eaa638}
+
+\item 
+\hypertarget{classPersonnage_a02842b34a8c93f54772242e40e4c5a8a}{}int {\bfseries position\+Y}\label{classPersonnage_a02842b34a8c93f54772242e40e4c5a8a}
+
+\item 
+\hypertarget{classPersonnage_ac53717e24a91a7698955d506c092d2b7}{}int {\bfseries puissance}\label{classPersonnage_ac53717e24a91a7698955d506c092d2b7}
+
+\item 
+\hypertarget{classPersonnage_ab3287f35ae3106f42eb195cc60371dae}{}int {\bfseries robustesse}\label{classPersonnage_ab3287f35ae3106f42eb195cc60371dae}
+
+\item 
+\hypertarget{classPersonnage_aa724215ef4023e5444f7cdf6a6a3a8f4}{}bool {\bfseries is\+Active}\label{classPersonnage_aa724215ef4023e5444f7cdf6a6a3a8f4}
+
+\item 
+\hypertarget{classPersonnage_adf517de2c6d5f39fde55136bf8a031ea}{}clan\+::\+Image {\bfseries sprite}\label{classPersonnage_adf517de2c6d5f39fde55136bf8a031ea}
+
+\item 
+\hypertarget{classPersonnage_a5ab0e54e773a08c5efb042dfcbab9251}{}vector$<$ vector$<$ int $>$ $>$ {\bfseries collision\+\_\+map}\label{classPersonnage_a5ab0e54e773a08c5efb042dfcbab9251}
+
+\item 
+\hypertarget{classPersonnage_a538199d18a1705e6511c5f17013efd16}{}Arme {\bfseries arme}\label{classPersonnage_a538199d18a1705e6511c5f17013efd16}
+
+\item 
+\hypertarget{classPersonnage_a0b1b3eaed5cd4f3721b22645db7833de}{}Armure {\bfseries armure}\label{classPersonnage_a0b1b3eaed5cd4f3721b22645db7833de}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classPersonnage_abec36eb0310adc71f3375297fc590c65}{}\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\subsubsection[{Personnage}]{\setlength{\rightskip}{0pt plus 5cm}Personnage\+::\+Personnage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_abec36eb0310adc71f3375297fc590c65}
+Le constructeur d\textquotesingle{}un personnage par défaut. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em is\+Active} & true par défaut pour que le personnage soit actif. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{classPersonnage}{Personnage} le personnage créé. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_a35385ac425d6818de9dec2d8128004a8}{}\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\subsubsection[{Personnage}]{\setlength{\rightskip}{0pt plus 5cm}Personnage\+::\+Personnage (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Arme}]{arme, }
+\item[{Armure}]{armure, }
+\item[{clan\+::\+Image}]{sprite}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a35385ac425d6818de9dec2d8128004a8}
+Constructeur d\textquotesingle{}un personnage. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x} & la position en x où le personnage sera créé. \\
+\hline
+\mbox{\tt in}  & {\em y} & la position en y où le personnage sera créé. \\
+\hline
+\mbox{\tt in}  & {\em arme} & L\textquotesingle{}arme que possède le personnage. \\
+\hline
+\mbox{\tt in}  & {\em armure} & L\textquotesingle{}armure que possède le personnage. \\
+\hline
+\mbox{\tt in}  & {\em sprite} & L\textquotesingle{}image du personnage. \\
+\hline
+\mbox{\tt out}  & {\em position\+X} & la position en x du personnage sur la map. \\
+\hline
+\mbox{\tt out}  & {\em position\+Y} & la position en y du personnage sur la map. \\
+\hline
+\mbox{\tt out}  & {\em arme} & l\textquotesingle{}arme du personnage. \\
+\hline
+\mbox{\tt out}  & {\em armure} & l\textquotesingle{}armure du personnage. \\
+\hline
+\mbox{\tt out}  & {\em puissance} & La puissance du personnage, calculée à partir de son arme. \\
+\hline
+\mbox{\tt out}  & {\em robustesse} & La robustesse du personnage, calculée à partir de son armure. \\
+\hline
+\mbox{\tt out}  & {\em sprite} & L\textquotesingle{}image du personnage. \\
+\hline
+\mbox{\tt out}  & {\em is\+Active} & true par défaut pour que le personnage soit actif. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{classPersonnage}{Personnage} le personnage créé. 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classPersonnage_ab3b895b1830c07d547a36f0827ec9eb4}{}\index{Personnage@{Personnage}!Combattre@{Combattre}}
+\index{Combattre@{Combattre}!Personnage@{Personnage}}
+\subsubsection[{Combattre}]{\setlength{\rightskip}{0pt plus 5cm}bool Personnage\+::\+Combattre (
+\begin{DoxyParamCaption}
+\item[{{\bf Personnage} $\ast$}]{adversaire}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_ab3b895b1830c07d547a36f0827ec9eb4}
+Methode servant a faire affronter deux personnages du jeu. Calcul aléatoirement la force des deux adversaires et compare ces deux forces à partir de leur puissance et de leur robustesse. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em adversaire} & Le personnage a combattre. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+victoire true si le combat est gagné, false sinon. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_afc55c03d855c3f6caf71cdb061829a6d}{}\index{Personnage@{Personnage}!deplacer@{deplacer}}
+\index{deplacer@{deplacer}!Personnage@{Personnage}}
+\subsubsection[{deplacer}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::deplacer (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_afc55c03d855c3f6caf71cdb061829a6d}
+Deplace le personnage d\textquotesingle{}une case a droite, gauche, haut ou bas. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x} & la valeur de déplacement en x. \\
+\hline
+\mbox{\tt in}  & {\em y} & la valeur de déplacement en y. \\
+\hline
+\mbox{\tt out}  & {\em x} & la position du personnage en x après le déplacement. \\
+\hline
+\mbox{\tt out}  & {\em y} & la position du personnage en y après le déplacement. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em si} & x et y en entrée ne sont pas entre -\/1 et 1. \\
+\hline
+{\em s\textquotesingle{}il} & n\textquotesingle{}y a aucun déplacement. \\
+\hline
+{\em si} & x et y sont différents de 0. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Renvoie}
+rien 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_a745bf0265378d340d7dd6f2a8225421f}{}\index{Personnage@{Personnage}!draw@{draw}}
+\index{draw@{draw}!Personnage@{Personnage}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::draw (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Canvas}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a745bf0265378d340d7dd6f2a8225421f}
+Desinne un personnage sur la map. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em c} & L\textquotesingle{}image du personnage. \\
+\hline
+\mbox{\tt in}  & {\em x} & la position en x où dessiner le personnage. \\
+\hline
+\mbox{\tt in}  & {\em y} & la position en y où dessiner le personnage. \\
+\hline
+\mbox{\tt out}  & {\em sprite} & l\textquotesingle{}image dessinée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a5af967c395cfccb901fb44123c373dfa}{}\index{Personnage@{Personnage}!get\+Arme@{get\+Arme}}
+\index{get\+Arme@{get\+Arme}!Personnage@{Personnage}}
+\subsubsection[{get\+Arme}]{\setlength{\rightskip}{0pt plus 5cm}Arme Personnage\+::get\+Arme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a5af967c395cfccb901fb44123c373dfa}
+Le getter de l\textquotesingle{}arme du personnage. \begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}arme du personnage. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_af0ef6f5bf22b2b471efefbd588bf4dd6}{}\index{Personnage@{Personnage}!get\+Armure@{get\+Armure}}
+\index{get\+Armure@{get\+Armure}!Personnage@{Personnage}}
+\subsubsection[{get\+Armure}]{\setlength{\rightskip}{0pt plus 5cm}Armure Personnage\+::get\+Armure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_af0ef6f5bf22b2b471efefbd588bf4dd6}
+Le getter de l\textquotesingle{}armure du personnage. \begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}armure du personnage. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_a5a95a7603154e30550bd67cf4bd4f990}{}\index{Personnage@{Personnage}!get\+Is\+Active@{get\+Is\+Active}}
+\index{get\+Is\+Active@{get\+Is\+Active}!Personnage@{Personnage}}
+\subsubsection[{get\+Is\+Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Personnage\+::get\+Is\+Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a5a95a7603154e30550bd67cf4bd4f990}
+Getter de l\textquotesingle{}attribut is\+Activre d\textquotesingle{}un personnage. \begin{DoxyReturn}{Renvoie}
+si le personnage est actif ou non. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_ab398b805fa9060fc10b5edb00685bbbb}{}\index{Personnage@{Personnage}!get\+Position\+X@{get\+Position\+X}}
+\index{get\+Position\+X@{get\+Position\+X}!Personnage@{Personnage}}
+\subsubsection[{get\+Position\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\+::get\+Position\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_ab398b805fa9060fc10b5edb00685bbbb}
+Le getter de la position en x du personnage. \begin{DoxyReturn}{Renvoie}
+la position courante du personnage en x. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_ab19dcfb269109b0bc74ffe0143a8cda1}{}\index{Personnage@{Personnage}!get\+Position\+Y@{get\+Position\+Y}}
+\index{get\+Position\+Y@{get\+Position\+Y}!Personnage@{Personnage}}
+\subsubsection[{get\+Position\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\+::get\+Position\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_ab19dcfb269109b0bc74ffe0143a8cda1}
+Le getter de la position en y du personnage. \begin{DoxyReturn}{Renvoie}
+la position courante du personnage en y. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_ac46ff9c905454f0e3b71097b8f75c5ea}{}\index{Personnage@{Personnage}!get\+Puissance@{get\+Puissance}}
+\index{get\+Puissance@{get\+Puissance}!Personnage@{Personnage}}
+\subsubsection[{get\+Puissance}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\+::get\+Puissance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_ac46ff9c905454f0e3b71097b8f75c5ea}
+Le getter de la puissance du personnage. \begin{DoxyReturn}{Renvoie}
+la puissance du personnage. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_a80ff0a5dc97749f73b84dd52a4185aa4}{}\index{Personnage@{Personnage}!get\+Robustesse@{get\+Robustesse}}
+\index{get\+Robustesse@{get\+Robustesse}!Personnage@{Personnage}}
+\subsubsection[{get\+Robustesse}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\+::get\+Robustesse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a80ff0a5dc97749f73b84dd52a4185aa4}
+Le getter de la robustesse du personnage. \begin{DoxyReturn}{Renvoie}
+la robustesse du personnage. 
+\end{DoxyReturn}
+\hypertarget{classPersonnage_ab3ce2fb4d37fc9b3bbef43d33910ac2f}{}\index{Personnage@{Personnage}!set\+Active@{set\+Active}}
+\index{set\+Active@{set\+Active}!Personnage@{Personnage}}
+\subsubsection[{set\+Active}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Active (
+\begin{DoxyParamCaption}
+\item[{bool}]{active}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_ab3ce2fb4d37fc9b3bbef43d33910ac2f}
+passe la valeur à true de l\textquotesingle{}attribut is\+Active du personnage. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em is\+Active} & = active. Le personnage n\textquotesingle{}est plus actif dans le jeu. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a20b675cc63e94015ddced4e7db6d9b56}{}\index{Personnage@{Personnage}!set\+Arme@{set\+Arme}}
+\index{set\+Arme@{set\+Arme}!Personnage@{Personnage}}
+\subsubsection[{set\+Arme}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Arme (
+\begin{DoxyParamCaption}
+\item[{Arme}]{arme}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a20b675cc63e94015ddced4e7db6d9b56}
+Le setter de l\textquotesingle{}arme du personnage. Modifie l\textquotesingle{}arme du personnage. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em arme} & la nouvelle arme du personnage. \\
+\hline
+\mbox{\tt out}  & {\em arme} & La nouvelle arme du personnage. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a331e0aeb7190a266cfb879acdd22e83a}{}\index{Personnage@{Personnage}!set\+Armure@{set\+Armure}}
+\index{set\+Armure@{set\+Armure}!Personnage@{Personnage}}
+\subsubsection[{set\+Armure}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Armure (
+\begin{DoxyParamCaption}
+\item[{Armure}]{armure}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a331e0aeb7190a266cfb879acdd22e83a}
+Le setter de l\textquotesingle{}armure du personnage. Modifie l\textquotesingle{}armure du personnage. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em armure} & la nouvelle armure du personnage. \\
+\hline
+\mbox{\tt out}  & {\em armure} & La nouvelle armure du personnage. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a332229cbb1b8e46808472c48e7c1f3f2}{}\index{Personnage@{Personnage}!set\+Collision\+Map@{set\+Collision\+Map}}
+\index{set\+Collision\+Map@{set\+Collision\+Map}!Personnage@{Personnage}}
+\subsubsection[{set\+Collision\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Collision\+Map (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ int $>$ $>$}]{map}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a332229cbb1b8e46808472c48e7c1f3f2}
+Le setter pour collision\+Map. Donne une map au personnage pour savoir là où il peut passer. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em map} & Le vector représentant la map. \\
+\hline
+\mbox{\tt out}  & {\em map} & Le vector donné au personnage représentant la map courante. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_ae065b66e67f3a6c5781453a156786d67}{}\index{Personnage@{Personnage}!set\+Position\+X@{set\+Position\+X}}
+\index{set\+Position\+X@{set\+Position\+X}!Personnage@{Personnage}}
+\subsubsection[{set\+Position\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Position\+X (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_ae065b66e67f3a6c5781453a156786d67}
+Le setter de la position en x du personnage. Modifie la position du personnage en x. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x} & la position à affecter au personnage en x. \\
+\hline
+\mbox{\tt out}  & {\em position\+X} & la nouvelle position en x du personnage. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a757454177b4a3bff5fc641ed53824154}{}\index{Personnage@{Personnage}!set\+Position\+Y@{set\+Position\+Y}}
+\index{set\+Position\+Y@{set\+Position\+Y}!Personnage@{Personnage}}
+\subsubsection[{set\+Position\+Y}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Position\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a757454177b4a3bff5fc641ed53824154}
+Le setter de la position en x du personnage. Modifie la position du personnage en y. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em y} & la position à affecter au personnage en y. \\
+\hline
+\mbox{\tt out}  & {\em position\+Y} & la nouvelle position en y du personnage. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a21ee83fd23bf612ff4fadc513c78dc94}{}\index{Personnage@{Personnage}!set\+Puissance@{set\+Puissance}}
+\index{set\+Puissance@{set\+Puissance}!Personnage@{Personnage}}
+\subsubsection[{set\+Puissance}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Puissance (
+\begin{DoxyParamCaption}
+\item[{int}]{puissance}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a21ee83fd23bf612ff4fadc513c78dc94}
+Le setter de la puissance du personnage. Modifie la puissance du personnage. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em puissance} & la nouvelle puissance du personnage. \\
+\hline
+\mbox{\tt out}  & {\em puissance} & La nouvelle puissance du personnage. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPersonnage_a777c12bd052992cc9ccbf1f6317433c7}{}\index{Personnage@{Personnage}!set\+Robustesse@{set\+Robustesse}}
+\index{set\+Robustesse@{set\+Robustesse}!Personnage@{Personnage}}
+\subsubsection[{set\+Robustesse}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Robustesse (
+\begin{DoxyParamCaption}
+\item[{int}]{robustesse}
+\end{DoxyParamCaption}
+)}\label{classPersonnage_a777c12bd052992cc9ccbf1f6317433c7}
+Le setter de la robustesse du personnage. Modifie la robustesse du personnage. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em robustesse} & la nouvelle robustesse du personnage. \\
+\hline
+\mbox{\tt out}  & {\em robustesse} & La nouvelle robustesse du personnage. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code\+Main/personnage.\+hpp\item 
+Code\+Main/personnage.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,144 @@
+\hypertarget{classTileset}{}\section{Référence de la classe Tileset}
+\label{classTileset}\index{Tileset@{Tileset}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTileset_a9b75b605d834e3c9e25fb1c2429a36f6}{Tileset} ()
+\begin{DoxyCompactList}\small\item\em Classe représentant un tileset, c\textquotesingle{}est-\/à-\/dire la liste des images utilisées pour dessiner la carte et leurs informations. \end{DoxyCompactList}\item 
+\hyperlink{classTileset_ab9bd53a57698359f4ed3ff3d51370666}{Tileset} (clan\+::\+Image tilesheet, int h, int w, int tile\+\_\+h, int tile\+\_\+w, int spacing)
+\item 
+\hyperlink{classTileset_aa84d0a1454e7ca41989970371af95296}{Tileset} (clan\+::\+Image tilesheet, std\+::string tmx\+File)
+\item 
+\hyperlink{classTileset_a2a8acb9867fb31574cffa0c0ef8bd980}{Tileset} (const \hyperlink{classTileset}{Tileset} \&orig)
+\item 
+virtual \hyperlink{classTileset_afbb53f34f87b8b9c1f575349e89a6cd5}{$\sim$\+Tileset} ()
+\item 
+\hypertarget{classTileset_a81c24ec86c6b52a4f69f983571fecac5}{}int {\bfseries get\+Tile\+\_\+height} () const \label{classTileset_a81c24ec86c6b52a4f69f983571fecac5}
+
+\item 
+\hypertarget{classTileset_a3cf00412804a3f5210767cac1e0556eb}{}int {\bfseries get\+Tile\+\_\+width} () const \label{classTileset_a3cf00412804a3f5210767cac1e0556eb}
+
+\item 
+void \hyperlink{classTileset_a564a51b3a420ec234190e77e6b6acc1c}{draw\+Tile} (clan\+::\+Canvas c, int id, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classTileset_a9b75b605d834e3c9e25fb1c2429a36f6}{}\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\subsubsection[{Tileset}]{\setlength{\rightskip}{0pt plus 5cm}Tileset\+::\+Tileset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classTileset_a9b75b605d834e3c9e25fb1c2429a36f6}
+
+
+Classe représentant un tileset, c\textquotesingle{}est-\/à-\/dire la liste des images utilisées pour dessiner la carte et leurs informations. 
+
+\begin{DoxyAuthor}{Auteur}
+Clément Bauchet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20 novembre 2015, 19\+:22
+\end{DoxyDate}
+Constructeur par défaut de la classe \hyperlink{classTileset}{Tileset}. \begin{DoxyReturn}{Renvoie}
+\hyperlink{classTileset}{Tileset} un objet \hyperlink{classTileset}{Tileset} vide. 
+\end{DoxyReturn}
+\hypertarget{classTileset_ab9bd53a57698359f4ed3ff3d51370666}{}\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\subsubsection[{Tileset}]{\setlength{\rightskip}{0pt plus 5cm}Tileset\+::\+Tileset (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Image}]{tilesheet, }
+\item[{int}]{h, }
+\item[{int}]{w, }
+\item[{int}]{tile\+\_\+h, }
+\item[{int}]{tile\+\_\+w, }
+\item[{int}]{spacing}
+\end{DoxyParamCaption}
+)}\label{classTileset_ab9bd53a57698359f4ed3ff3d51370666}
+Constructeur de l\textquotesingle{}objet \hyperlink{classTileset}{Tileset}. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em tilesheet} & l\textquotesingle{}image contenant les tiles \\
+\hline
+\mbox{\tt in}  & {\em h} & la hauteur du tileset en tiles \\
+\hline
+\mbox{\tt in}  & {\em w} & la largeur du tileset en tiles \\
+\hline
+\mbox{\tt in}  & {\em tile\+\_\+h} & la hauteur d\textquotesingle{}un tile en pixels \\
+\hline
+\mbox{\tt in}  & {\em tile\+\_\+w} & la largeur d\textquotesingle{}un tile en pixels \\
+\hline
+\mbox{\tt in}  & {\em spacing} & l\textquotesingle{}espace entre chaque tile dans la tilesheet, en pixels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{classTileset}{Tileset} un objet \hyperlink{classTileset}{Tileset} avec les propriétés des valeurs en entrée. 
+\end{DoxyReturn}
+\hypertarget{classTileset_aa84d0a1454e7ca41989970371af95296}{}\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\subsubsection[{Tileset}]{\setlength{\rightskip}{0pt plus 5cm}Tileset\+::\+Tileset (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Image}]{tilesheet, }
+\item[{std\+::string}]{tmx\+File}
+\end{DoxyParamCaption}
+)}\label{classTileset_aa84d0a1454e7ca41989970371af95296}
+Constructeur de l\textquotesingle{}objet \hyperlink{classTileset}{Tileset}, par lecture du fichier de carte .tmx correspondant 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em tilesheet} & l\textquotesingle{}image contenant les tiles \\
+\hline
+\mbox{\tt in}  & {\em tmx\+File} & le nom du fichier de carte .tmx utilisant ce tileset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{classTileset}{Tileset} un objet \hyperlink{classTileset}{Tileset} avec les propriétés récupérées depuis le fichier .tmx. 
+\end{DoxyReturn}
+\hypertarget{classTileset_a2a8acb9867fb31574cffa0c0ef8bd980}{}\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\index{Tileset@{Tileset}!Tileset@{Tileset}}
+\subsubsection[{Tileset}]{\setlength{\rightskip}{0pt plus 5cm}Tileset\+::\+Tileset (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tileset} \&}]{orig}
+\end{DoxyParamCaption}
+)}\label{classTileset_a2a8acb9867fb31574cffa0c0ef8bd980}
+Constructeur de l\textquotesingle{}objet \hyperlink{classTileset}{Tileset} par copie d\textquotesingle{}un autre tileset \begin{DoxyReturn}{Renvoie}
+\hyperlink{classTileset}{Tileset} un objet \hyperlink{classTileset}{Tileset} identique à celui fourni en entrée 
+\end{DoxyReturn}
+\hypertarget{classTileset_afbb53f34f87b8b9c1f575349e89a6cd5}{}\index{Tileset@{Tileset}!````~Tileset@{$\sim$\+Tileset}}
+\index{````~Tileset@{$\sim$\+Tileset}!Tileset@{Tileset}}
+\subsubsection[{$\sim$\+Tileset}]{\setlength{\rightskip}{0pt plus 5cm}Tileset\+::$\sim$\+Tileset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classTileset_afbb53f34f87b8b9c1f575349e89a6cd5}
+Destructeur de \hyperlink{classTileset}{Tileset} 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classTileset_a564a51b3a420ec234190e77e6b6acc1c}{}\index{Tileset@{Tileset}!draw\+Tile@{draw\+Tile}}
+\index{draw\+Tile@{draw\+Tile}!Tileset@{Tileset}}
+\subsubsection[{draw\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}void Tileset\+::draw\+Tile (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Canvas}]{c, }
+\item[{int}]{id, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classTileset_a564a51b3a420ec234190e77e6b6acc1c}
+Méthode dessinant une case du tileset à une position donnée 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em c} & le canvas où dessiner la case \\
+\hline
+\mbox{\tt in}  & {\em id} & le numéro dans le tileset de la tile à dessiner \\
+\hline
+\mbox{\tt in}  & {\em x} & la coordonnée x de la position où dessiner la case \\
+\hline
+\mbox{\tt in}  & {\em y} & la coordonnée y de la position où dessiner la case \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code\+Main/tileset.\+hpp\item 
+Code\+Main/tileset.\+cpp\end{DoxyCompactItemize}

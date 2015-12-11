@@ -1,0 +1,311 @@
+\hypertarget{classMap}{}\section{Référence de la classe Map}
+\label{classMap}\index{Map@{Map}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMap_a0f5ad0fd4563497b4214038cbca8b582}{Map} ()
+\begin{DoxyCompactList}\small\item\em Construit et dessine une carte. \end{DoxyCompactList}\item 
+\hyperlink{classMap_a46ac1f99aad9f30fe227bbcbbc9bfb40}{Map} (int height, int width, \hyperlink{classTileset}{Tileset} tileset)
+\item 
+\hyperlink{classMap_a2cd2cd94fc4acf3d4929fb657ea2708f}{Map} (std\+::string tmx\+File, \hyperlink{classTileset}{Tileset} tileset)
+\item 
+\hyperlink{classMap_ad656e50a9b15ff4eb04c1b603d11d0f3}{Map} (const \hyperlink{classMap}{Map} \&orig)
+\item 
+virtual \hyperlink{classMap_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map} ()
+\item 
+int \hyperlink{classMap_a2b09c8875af2efb711fc3a022e70427d}{get\+Height} ()
+\item 
+int \hyperlink{classMap_afd34d12227676b3cebeed9f5fae2508f}{get\+Width} ()
+\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{classMap_a06f3a536bfac5e0e23497aa7b3bff0eb}{get\+Tiles} ()
+\item 
+int \hyperlink{classMap_addae7f55daf2a95b893bbeb4807fa7ec}{get\+Tile\+At} (int x, int y)
+\item 
+void \hyperlink{classMap_ac7894d7c53218b8a323119ed7cd9969a}{set\+Tile\+At} (int x, int y, int tile)
+\item 
+int \hyperlink{classMap_a1a165f12a747bc248016964acabfbc0e}{get\+Tile\+Size} ()
+\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{classMap_a0a937e8ca98865f0fff39657b70fc6fe}{get\+Collision\+Map} ()
+\item 
+void \hyperlink{classMap_ae7fb26d285fa138b674394b59d5186d9}{set\+Collision\+Map} (vector$<$ int $>$ passable\+\_\+tiles)
+\item 
+void \hyperlink{classMap_aa7b78361476169633bb9236ab2300381}{read\+Tmx\+File} (std\+::string file)
+\item 
+void \hyperlink{classMap_aa92361fe9347de4548b31a306f77764e}{draw\+Map} (clan\+::\+Canvas c)
+\item 
+void \hyperlink{classMap_a8bd29f94b805b8e29e4eac427e2ff0e1}{draw\+Map} (clan\+::\+Canvas c, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classMap_a0f5ad0fd4563497b4214038cbca8b582}{}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMap_a0f5ad0fd4563497b4214038cbca8b582}
+
+
+Construit et dessine une carte. 
+
+\begin{DoxyAuthor}{Auteur}
+Clément Bauchet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20 novembre 2015, 19\+:22
+\end{DoxyDate}
+Constructeur de la map par défaut. \begin{DoxyReturn}{Renvoie}
+la \hyperlink{classMap}{Map} créée. 
+\end{DoxyReturn}
+\hypertarget{classMap_a46ac1f99aad9f30fe227bbcbbc9bfb40}{}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{height, }
+\item[{int}]{width, }
+\item[{{\bf Tileset}}]{tileset}
+\end{DoxyParamCaption}
+)}\label{classMap_a46ac1f99aad9f30fe227bbcbbc9bfb40}
+Création d\textquotesingle{}une carte de taille donnée. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em height} & La hauteur de la map à créer. \\
+\hline
+\mbox{\tt in}  & {\em width} & La largeur de la map à créer. \\
+\hline
+\mbox{\tt in}  & {\em tileset} & Le tileset à charger pour dessiner la map. \\
+\hline
+\mbox{\tt out}  & {\em height} & La hauteur de la map en cases. \\
+\hline
+\mbox{\tt out}  & {\em width} & La largeur de la map en cases. \\
+\hline
+\mbox{\tt out}  & {\em tiles} & La matrice des cases de la carte \\
+\hline
+\mbox{\tt out}  & {\em collision\+\_\+map} & La matrice de collision de la carte \\
+\hline
+\mbox{\tt out}  & {\em tileset} & Le tileset utilisé pour dessiner la map. \\
+\hline
+\mbox{\tt out}  & {\em tile\+\_\+size} & la taille en pixels des cases du tileset utilisé (en supposant les tiles carrés). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la \hyperlink{classMap}{Map} créée. 
+\end{DoxyReturn}
+\hypertarget{classMap_a2cd2cd94fc4acf3d4929fb657ea2708f}{}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{tmx\+File, }
+\item[{{\bf Tileset}}]{tileset}
+\end{DoxyParamCaption}
+)}\label{classMap_a2cd2cd94fc4acf3d4929fb657ea2708f}
+Création d\textquotesingle{}une carte à partir du seul fichier .tmx 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em tmx\+File} & le fichier au format .tmx contenant les données de la carte. \\
+\hline
+\mbox{\tt in}  & {\em tileset} & le tileset contenant les tiles à dessiner. \\
+\hline
+\mbox{\tt out}  & {\em height} & La hauteur de la map. \\
+\hline
+\mbox{\tt out}  & {\em width} & La largeur de la map. \\
+\hline
+\mbox{\tt out}  & {\em tileset} & Le tileset utilisé pour dessiner la map. \\
+\hline
+\mbox{\tt out}  & {\em tile\+\_\+size} & la taille en pixels des cases du tileset utilisé (en supposant les tiles carrés). \\
+\hline
+\mbox{\tt out}  & {\em tiles} & La matrice des cases de la carte \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_ad656e50a9b15ff4eb04c1b603d11d0f3}{}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{const {\bf Map} \&}]{orig}
+\end{DoxyParamCaption}
+)}\label{classMap_ad656e50a9b15ff4eb04c1b603d11d0f3}
+Création d\textquotesingle{}une carte par copie d\textquotesingle{}une autre \begin{DoxyAuthor}{Auteur}
+Clément Bauchet 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em orig} & La \hyperlink{classMap}{Map} à copier. \\
+\hline
+\mbox{\tt out}  & {\em height} & La hauteur de la map. \\
+\hline
+\mbox{\tt out}  & {\em width} & La largeur de la map. \\
+\hline
+\mbox{\tt out}  & {\em tiles} & La matrice des cases de la carte \\
+\hline
+\mbox{\tt out}  & {\em collision\+\_\+map} & La matrice de collision de la carte \\
+\hline
+\mbox{\tt out}  & {\em tileset} & Le tileset utilisé pour dessiner la map. \\
+\hline
+\mbox{\tt out}  & {\em tile\+\_\+size} & la taille en pixels des cases du tileset utilisé (en supposant les tiles carrés). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la \hyperlink{classMap}{Map} créée. 
+\end{DoxyReturn}
+\hypertarget{classMap_aa403fbe09394ccf39747588f5168e3b2}{}\index{Map@{Map}!````~Map@{$\sim$\+Map}}
+\index{````~Map@{$\sim$\+Map}!Map@{Map}}
+\subsubsection[{$\sim$\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::$\sim$\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMap_aa403fbe09394ccf39747588f5168e3b2}
+Destructeur de la map. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classMap_aa92361fe9347de4548b31a306f77764e}{}\index{Map@{Map}!draw\+Map@{draw\+Map}}
+\index{draw\+Map@{draw\+Map}!Map@{Map}}
+\subsubsection[{draw\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::draw\+Map (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Canvas}]{c}
+\end{DoxyParamCaption}
+)}\label{classMap_aa92361fe9347de4548b31a306f77764e}
+Dessine la carte dans le canvas. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em c} & le canvas dans lequel dessiner \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_a8bd29f94b805b8e29e4eac427e2ff0e1}{}\index{Map@{Map}!draw\+Map@{draw\+Map}}
+\index{draw\+Map@{draw\+Map}!Map@{Map}}
+\subsubsection[{draw\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::draw\+Map (
+\begin{DoxyParamCaption}
+\item[{clan\+::\+Canvas}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classMap_a8bd29f94b805b8e29e4eac427e2ff0e1}
+Dessine la carte dans le canvas à une position donnée. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em c} & Le canvas dans lequel dessiner à une certaine position. \\
+\hline
+\mbox{\tt in}  & {\em x} & La coordonnée x de la position du canvas où dessiner \\
+\hline
+\mbox{\tt in}  & {\em y} & La coordonnée y de la position du canvas où dessiner \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_a0a937e8ca98865f0fff39657b70fc6fe}{}\index{Map@{Map}!get\+Collision\+Map@{get\+Collision\+Map}}
+\index{get\+Collision\+Map@{get\+Collision\+Map}!Map@{Map}}
+\subsubsection[{get\+Collision\+Map}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ int $>$ $>$ Map\+::get\+Collision\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMap_a0a937e8ca98865f0fff39657b70fc6fe}
+Méthode qui retourne la matrice de collision de la carte. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em file} & La matrice de collision de la carte. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_a2b09c8875af2efb711fc3a022e70427d}{}\index{Map@{Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Map@{Map}}
+\subsubsection[{get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMap_a2b09c8875af2efb711fc3a022e70427d}
+Getter de l\textquotesingle{}attribut height. \begin{DoxyReturn}{Renvoie}
+height La hauteur de la carte en cases. 
+\end{DoxyReturn}
+\hypertarget{classMap_addae7f55daf2a95b893bbeb4807fa7ec}{}\index{Map@{Map}!get\+Tile\+At@{get\+Tile\+At}}
+\index{get\+Tile\+At@{get\+Tile\+At}!Map@{Map}}
+\subsubsection[{get\+Tile\+At}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Tile\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{classMap_addae7f55daf2a95b893bbeb4807fa7ec}
+Getter de la valeur de la case à une position donnée. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em row} & La ligne à laquelle se trouve la case. \\
+\hline
+\mbox{\tt in}  & {\em col} & La colonne à laquelel se trouve la case. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tiles Un entier représentant le type de case présent à la position (row, col). 
+\end{DoxyReturn}
+\hypertarget{classMap_a06f3a536bfac5e0e23497aa7b3bff0eb}{}\index{Map@{Map}!get\+Tiles@{get\+Tiles}}
+\index{get\+Tiles@{get\+Tiles}!Map@{Map}}
+\subsubsection[{get\+Tiles}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ int $>$ $>$ Map\+::get\+Tiles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMap_a06f3a536bfac5e0e23497aa7b3bff0eb}
+Getter de l\textquotesingle{}attribut tiles. \begin{DoxyReturn}{Renvoie}
+tiles La matrice des cases de la carte. 
+\end{DoxyReturn}
+\hypertarget{classMap_a1a165f12a747bc248016964acabfbc0e}{}\index{Map@{Map}!get\+Tile\+Size@{get\+Tile\+Size}}
+\index{get\+Tile\+Size@{get\+Tile\+Size}!Map@{Map}}
+\subsubsection[{get\+Tile\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Tile\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMap_a1a165f12a747bc248016964acabfbc0e}
+Getter de l\textquotesingle{}attribut tile\+\_\+size. \begin{DoxyReturn}{Renvoie}
+tile\+\_\+size La taille en pixels des cases (en supposant les cases carrées). 
+\end{DoxyReturn}
+\hypertarget{classMap_afd34d12227676b3cebeed9f5fae2508f}{}\index{Map@{Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Map@{Map}}
+\subsubsection[{get\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMap_afd34d12227676b3cebeed9f5fae2508f}
+Getter de l\textquotesingle{}attribut width. \begin{DoxyReturn}{Renvoie}
+width La largeur de la carte en cases. 
+\end{DoxyReturn}
+\hypertarget{classMap_aa7b78361476169633bb9236ab2300381}{}\index{Map@{Map}!read\+Tmx\+File@{read\+Tmx\+File}}
+\index{read\+Tmx\+File@{read\+Tmx\+File}!Map@{Map}}
+\subsubsection[{read\+Tmx\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::read\+Tmx\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file}
+\end{DoxyParamCaption}
+)}\label{classMap_aa7b78361476169633bb9236ab2300381}
+Méthode qui permet de remplir la matrice de cases de la carte à partir d\textquotesingle{}un fichier X\+M\+L. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file} & Le nom du fichier à lire. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_ae7fb26d285fa138b674394b59d5186d9}{}\index{Map@{Map}!set\+Collision\+Map@{set\+Collision\+Map}}
+\index{set\+Collision\+Map@{set\+Collision\+Map}!Map@{Map}}
+\subsubsection[{set\+Collision\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::set\+Collision\+Map (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{passable\+\_\+tiles}
+\end{DoxyParamCaption}
+)}\label{classMap_ae7fb26d285fa138b674394b59d5186d9}
+Méthode qui établit la matrice de collision de la carte, en fonction d\textquotesingle{}une liste d\textquotesingle{}id de cases passables. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em file} & La matrice de collision de la carte. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_ac7894d7c53218b8a323119ed7cd9969a}{}\index{Map@{Map}!set\+Tile\+At@{set\+Tile\+At}}
+\index{set\+Tile\+At@{set\+Tile\+At}!Map@{Map}}
+\subsubsection[{set\+Tile\+At}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::set\+Tile\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col, }
+\item[{int}]{tile}
+\end{DoxyParamCaption}
+)}\label{classMap_ac7894d7c53218b8a323119ed7cd9969a}
+Setter de l\textquotesingle{}attribut tiles. Modifie la case à une certaine position. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em row} & la ligne à laquelle se trouve la case à modifier. \\
+\hline
+\mbox{\tt in}  & {\em col} & la colonne à laquelle se trouve la case à modifier. \\
+\hline
+\mbox{\tt in}  & {\em tile} & la nouvelle valeur de la case à modifier. \\
+\hline
+\mbox{\tt out}  & {\em tiles} & la nouvelle valeur de la case en (row, col). \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code\+Main/map.\+hpp\item 
+Code\+Main/map.\+cpp\end{DoxyCompactItemize}
