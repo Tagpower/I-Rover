@@ -160,7 +160,7 @@ void Personnage::setArmure(Armure* armure){
  * passe la valeur à true de l'attribut isActive du personnage.
  * @param [out] isActive = true. Le personnage n'est plus actif dans le jeu.
  */
-void setActive(){
+void Personnage::setActive(){
 	this->isActive=true;
 }
 
@@ -168,7 +168,7 @@ void setActive(){
  * passe la valeur à false de l'attribut isActive du personnage.
  * @param [out] isActive = false. Le personnage est actif dans le jeu.
  */
-void setInactive(){
+void Personnage::setInactive(){
 	this->isActive=false;
 }
 
@@ -176,7 +176,7 @@ void setInactive(){
  * Getter de l'attribut isActivre d'un personnage.
  * @return si le personnage est actif ou non.
  */
-bool getIsActive(){
+bool Personnage::getIsActive(){
 	return this->isActive;
 }
 
@@ -267,5 +267,7 @@ bool Personnage::Combattre(Personnage* adversaire){
 void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }
-
+vector<vector<int> > Personnage::getCollisionMap(){
+	return this->collision_map;
+}
 

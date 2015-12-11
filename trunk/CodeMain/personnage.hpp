@@ -43,4 +43,5 @@ public:
     void setActive();
 	void setInactive();
 	bool getIsActive();
+	vector<vector<int> > getCollisionMap();
 };
