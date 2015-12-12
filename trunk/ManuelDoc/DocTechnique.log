@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 01:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 21:08
 entering extended mode
 **C:/Users/Joachim/Desktop/depain/ManuelDoc/DocTechnique.tex
 (C:/Users/Joachim/Desktop/depain/ManuelDoc/DocTechnique.tex
@@ -376,28 +376,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 4.
 )
 \tf@toc=\write3
- [2] [3] [4] (DocTechnique.aux) ) 
-Here is how much of TeX's memory you used:
- 2626 strings out of 495235
- 33804 string characters out of 3179868
- 90145 words of memory out of 3000000
- 5869 multiletter control sequences out of 15000+200000
- 13125 words of font info for 32 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 28i,5n,30p,690b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Joachim\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Joachim\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users
-\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.p
-k> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecrm1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\eccc1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on DocTechnique.pdf (4 pages, 131503 bytes).
-PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ [2]
 
+! Package inputenc Error: Unicode char \u8:ède not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 Le jeu possède
+                    des personnages. Ceux-ci sont représentés par la classe ...
+
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.46 Le jeu possède
+                    des personnages. Ceux-ci sont représentés par la classe ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 2620 strings out of 495235
+ 33891 string characters out of 3179868
+ 90145 words of memory out of 3000000
+ 5866 multiletter control sequences out of 15000+200000
+ 11663 words of font info for 30 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 28i,5n,30p,266b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
