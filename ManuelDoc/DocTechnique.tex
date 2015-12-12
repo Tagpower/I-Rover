@@ -3,6 +3,33 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{graphicx}
+\usepackage{verbatim}
+
+%macro
+
+
+
+\usepackage[T1]{fontenc}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\definecolor{Zgris}{rgb}{0.87,0.85,0.85}
+
+\newsavebox{\BBbox}
+\newenvironment{DDbox}[1]{
+\begin{lrbox}{\BBbox}\begin{minipage}{\linewidth}}
+{\end{minipage}\end{lrbox}\noindent\colorbox{Zgris}{\usebox{\BBbox}} \\
+[.5cm]}
+
+
+
+
+
+
+
+
+
+
 
 
 \title{Documentation Technique : iRover}
@@ -42,8 +69,54 @@ Cette partie est dédiée aux développeurs et aux utilisateurs expérimenté ay
 Les divers éléments de l'application y sont décrit de façon plus mathématique et logique.
 Vous pouvez vous rapprocher de la doc Doxygen pour avoir encore plus de détails.
 
+\subsection{Génération Doc Doxygen}
+
+executer la commande pour générer le fichier de config
+
+\vspace{0.5 cm}
+\begin{DDbox}{\linewidth}
+\begin{verbatim}
+doxygen -g config_dox
+\end{verbatim}
+\end{DDbox}
 
 
+modifier les champs suivants dans le fichier de config :
+
+\vspace{0.3 cm}
+
+
+\begin{DDbox}{\linewidth}
+\begin{verbatim}
+
+
+PROJECT_NAME           = "I-rover"
+
+PROJECT_NUMBER         = 1.0
+
+OUTPUT_LANGUAGE        = French
+INPUT                  = CodeMain
+
+FILE_PATTERNS          = *.hpp *.cpp
+
+
+\end{verbatim}
+\end{DDbox}
+
+
+executer la commande :
+
+\vspace{0.3 cm}
+
+\begin{DDbox}{\linewidth}
+\begin{verbatim}
+
+doxygen config\_dox
+\end{verbatim}
+\end{DDbox}
+\vspace{0.3 cm}
+
+\newpage
 \section{Les personnages}
 Le jeu possède des personnages. Ceux-ci sont représentés par la classe personnage. Tous les personnages possèdent des attributs:
 \begin{enumerate}
@@ -120,7 +193,7 @@ Toutes les armes héritent de la classes Arme et les armures de la classe Armure
 
 Le robot possède un scanner. Celui-ci permet de scanner une map et de savoir quels sont les endroits où il peut aller et les endroits qu'ils lui sont impossible d'aller.
 
-
+\newpage
 \section{L'environnement}
 
 Le terrain est représenté par la classe \textbf{Map}, qui contient les informations sur ce terrain (hauteur, largeur, taille des cases) et deux matrices contenant respectivement les types de cases de la carte, et la praticabilité de celles-ci. Cette dernière matrice est passée aux entités évoluant dans cette carte, pour connaître les cases passables ou non et adapter leurs algorithmes de recherche de chemin en conséquence.
@@ -145,16 +218,12 @@ Lorsque le robot possède au moins une clef et qu'il se trouve à la même posit
 Lorsque le robot est à la même position qu'une clef, celui-ci la ramasse automatiquement. Son attribut inventaire est donc incrémenté de 1.
 
 
-\section{l'interface utilisateur}
 
 \section{IA}
 
 \subsection{path finding}
 
 \subsection{découverte de la carte}
-
-
-\section {FAQ}
 
 
 
