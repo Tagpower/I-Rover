@@ -7,8 +7,6 @@
 \contentsline {section}{\numberline {2}But du jeu}{8}
 \contentsline {section}{\numberline {3}Manuel d'installation}{9}
 \contentsline {subsection}{\numberline {3.1}makefile}{9}
-\contentsline {subsubsection}{\numberline {3.1.1}gestion des systeme d'exploitation}{9}
-\contentsline {subsection}{\numberline {3.2}.config ????????}{9}
 \contentsline {section}{\numberline {4}Documentation utilisateur}{10}
 \contentsline {subsection}{\numberline {4.1}Les personnages}{10}
 \contentsline {subsubsection}{\numberline {4.1.1}Le robot, Rover}{11}
@@ -19,10 +17,10 @@
 \contentsline {subsection}{\numberline {4.5}La gestion des \IeC {\'e}v\IeC {\`e}nements}{13}
 \contentsline {subsubsection}{\numberline {4.5.1}Rencontre avec un ennemi}{13}
 \contentsline {subsubsection}{\numberline {4.5.2}Ouverture d'un coffre}{13}
-\contentsline {subsubsection}{\numberline {4.5.3}Ramasser une cl\IeC {\'e}}{13}
-\contentsline {subsection}{\numberline {4.6}L'interface utilisateur}{13}
-\contentsline {subsection}{\numberline {4.7}IA}{13}
-\contentsline {subsubsection}{\numberline {4.7.1}Le Path Finding}{14}
-\contentsline {subsubsection}{\numberline {4.7.2}La d\IeC {\'e}couverte de la carte}{14}
-\contentsline {subsection}{\numberline {4.8}Les conditions de fin du jeu}{14}
-\contentsline {section}{\numberline {5}tutoriel}{15}
+\contentsline {subsubsection}{\numberline {4.5.3}Ramasser une cl\IeC {\'e}}{14}
+\contentsline {subsection}{\numberline {4.6}L'interface utilisateur}{14}
+\contentsline {subsection}{\numberline {4.7}IA}{15}
+\contentsline {subsubsection}{\numberline {4.7.1}Le Path Finding}{15}
+\contentsline {subsubsection}{\numberline {4.7.2}La d\IeC {\'e}couverte de la carte}{15}
+\contentsline {subsection}{\numberline {4.8}Les conditions de fin du jeu}{15}
+\contentsline {section}{\numberline {5}tutoriel}{16}

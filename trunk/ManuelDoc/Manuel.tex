@@ -168,18 +168,13 @@ Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peu
 
 \subsection{makefile}
 
-%expliquer l'installation
 
-%expliquer les librairies à utiliser
-%parler de l'option pour que ça compile avec tout les systemes d'exploitation
+Cette partie est dédiée à l'installation de l'application.
+Depuis un terminal linux.
+Mettez vous dans le dossier courrant où les fichiers de l'application sont présents puis tappez :
+Makefile.
 
-\subsubsection{gestion des systeme d'exploitation}
-
-\subsection{.config ????????}
-%a virer si on utilise pas
-%les options du makefile
-%a embellir si on a des idées (rappelle que meme si c'est pas implémenté, ça peut nous donner des points)
-
+%graaaaahhhhhhhhh il devrait y avoir plus d'info....
 
 \newpage
 
@@ -191,7 +186,7 @@ Le jeu prendra fin une fois tous les coffres ramassés ou si notre héros ne peu
 \vspace{2cm}
 
 Cette partie est dédiée aux utilisateurs recherchant à comprendre les mécanismes de cette application.
-Si vous recherchez des détails techniques, merci de vous reférer au Manuel Technique.
+Si vous recherchez des détails techniques, merci de vous reférer au Manuel Technique ou à la Doxygen du projet.
 Nous vous expliquerons ici comment les divers éléments du jeu s'articulent afin de vous permettre une meilleure expérience utilisateur.
 
 \vspace{0.5cm}	
@@ -201,7 +196,7 @@ Nous vous expliquerons ici comment les divers éléments du jeu s'articulent afi
 \vspace{1cm}
 
 
-Le jeu possède deux type de personnages : 
+Le jeu possède deux types de personnage : 
 
 \vspace{0.5cm}
 
@@ -223,7 +218,7 @@ Ces deux types de personnage peuvent à la fois :
 
 \vspace{0.5cm}
 
-Chaque personnage possède des coordonnées indiquant son emplacement en temps réel sur la carte ainsi que des statistiques propre à chacun mais aussi possèdera une armure ainsi qu'une arme.
+Chaque personnage possède des coordonnées indiquant son emplacement en temps réel sur la carte ainsi que des statistiques propres à chacun mais aussi possèdera une armure ainsi qu'une arme.
 
 \newpage
 \subsubsection{Le robot, Rover}
@@ -315,7 +310,10 @@ Par exemple il doit être possible de marcher sur une clef pour la ramasser alor
 Un ennemi et le héros devront avoir la même importance physique : il ne peuvent pas se superposer.
 Un ennemi et le héros n'auront besoin que d'un regard pour enclencher le combat ! 1 case de différence.
 
-%mettre un schéma
+\begin{figure}[h!]
+	\includegraphics[width=200pt]{Illustration/screens/screen4.png}
+\caption{screenshot de la carte numéros 2}
+\end{figure}
 \vspace{0.75cm}
 
 \subsubsection {Ouverture d'un coffre}
@@ -336,6 +334,8 @@ L'inventaire de clé augmentera alors.
 %mettre un schéma
 \vspace{0.75cm} 
 \subsection{L'interface utilisateur}
+
+\newpage
 
 \subsection{IA}
 
@@ -392,21 +392,26 @@ Ce tutoriel vous permettra de lancer l'application et d'avoir une idée de comme
    \includegraphics[width=200pt]{Illustration/screens/screen1.png}
 	\caption{screenshot de la carte numéros 1}
 \end{figure}
-\vspace{0.25cm}
+
+Après quelque seconde, notre robot décide d'aller chercher une clef.
+
 \begin{figure}[h]
    \includegraphics[width=200pt]{Illustration/screens/screen2.png}
 \caption{screenshot de Rover proche d'une clef}
 \end{figure}
 
 \newpage
+
+
+Ici nous voyons Rover en mauvaise posture proche d'un ennemis qui l'attaque.
+
+\vspace{1cm}
+
 \begin{figure}[h]   
 	\includegraphics[width=200pt]{Illustration/screens/screen3.png}
 \caption{screenshot de Rover proche d'un ennemis}
 \end{figure}
-\begin{figure}[h!]
-	\includegraphics[width=200pt]{Illustration/screens/screen4.png}
-\caption{screenshot de la carte numéros 2}
-\end{figure}
+
 
 
 \end{document}
