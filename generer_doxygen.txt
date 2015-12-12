@@ -1,0 +1,12 @@
+executer la commande pour générer la fichier de config
+doxygen -g config_dox
+
+modifier les champs suivants dans le fichier de config: 
+PROJECT_NAME           = "I-rover"
+PROJECT_NUMBER         = 1.0
+OUTPUT_LANGUAGE        = French
+INPUT                  = CodeMain
+FILE_PATTERNS          = *.hpp *.cpp
+
+executer la commande pour générer la doc
+doxygen config_dox
