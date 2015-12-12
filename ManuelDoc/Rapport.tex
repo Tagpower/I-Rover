@@ -9,9 +9,7 @@
 
 %mettez vos noms svp !!
 
-\author{R. Joachim CLAYTON}
-\author{Geoffrey DESBROSSES}
-\author{Clément BAUCHET}
+\author{R. Joachim CLAYTON, Geoffrey DESBROSSES, Clément BAUCHET, }
 
 \begin{document}
 
@@ -48,31 +46,61 @@
 
 
 \subsection{Introduction}
+
+Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.\\
+Pour cela nous avons imaginé un scénario de mini jeu semblable au jeux en deux dimensions où notre robot prendrait la forme d'un héros sans peur et sans reproche.\\
+L'autre aspect de ce projet est de pousser notre groupe à utiliser, comprendre et intégrer les autotools à savoir : 
+
+\begin{enumerate}
+\item Utilisation des autotools.
+\item Génération d'une documentation technique avec Doxygen.
+\item Utilisation d'une platforme svn pour la réalisation de notre projet.
+\item Rédaction de documents avec \LaTeX .
+\item Réalisation de quelques test avec cppedit.
+
+\end{enumerate}
+
+\vspace{075 cm}
+
 \subsection{Membre du groupe et tâches de chacun}
 
 
+\begin{tabbing}
+Voici \= un petit exemple \= de l'environnement tabbing \\
+\> on commence au premier repère \\
+\> \> ici on est au second repère
+\end{tabbing}
 
 \vspace{1 cm}
 
-\begin{tabular}{| c | p{6cm} | c |}
-\hline
-\textbf{Responsable} & \textbf{Tâche} & \textbf {Description} \\
-\hline
-Clément Bauchet & Création graphique & La création de l'environnement graphiques et des images \\					
-& Parsing de la carte & L'interprétation entre les objets graphiques et les objets C++\\					
-\hline				
-Geoffrey Desbrosses & Création des objets & Création de chaque objet de l'application et de leurs actions\\
-& Documentation du code source & Gestion de la documentation Doxygen \\ 
-\hline
-& IHM & Interface utilisateur de l'application. \\
-\hline
-Jean-Christophe Guerin & IA  & Définitions des algorithmes de pathfinding de déplacement et de découverte\\	
-\hline
-Joachim Clayton & Documentation utilisateur & Redaction de la documentation utilisateur \\                 
-\end{tabular}
+\begin{tabbing}
+
+\hspace{4cm} \= \hspace{6cm} \= \hspace{2cm} \= \kill
+\textbf{Responsable} \> \textbf{Tâche} \> \textbf {Description} \\
+\\
+Clément Bauchet \> Création graphique \> La création de l'environnement \\
+ \> \>graphiques et des images \\					
+\> Parsing de la carte \>L'interprétation entre les objets \\
+\> \> graphiques et les objets C++\\					
+\\
+Geoffrey Desbrosses \> Création des objets \> Création de chaque objet de l'application\\
+\> \> et de leurs actions\\
+\> Documentation du code source \> Gestion de la documentation Doxygen \\ 
+\\
+\> IHM \> Interface utilisateur de l'application. \> \\
+\\
+Jean-Christophe Guerin \> IA  \> Définitions des algorithmes de pathfinding\\
+\> \> de déplacement et de découverte\\	
+\\
+Joachim Clayton \> Documentation utilisateur \> Redaction de la documentation utilisateur \\
+\\ 
+\end{tabbing}
+
+
+\newpage
 
 \section{Définition de la carte}
-
+\vspace{1cm}
 Pour commencer, il fallait générer un ou plusieurs terrains à l'aide du logiciel \emph{Tiled}, un éditeur de cartes. La carte est créée avec une certaine tilesheet (une image contenant le dessin de toutes les cases possibles), et enregistrée sous le format \textbf{.tmx}, un format de type XML.
 
 Pour pouvoir afficher le terrain dans notre application, nous avons d'abord fait appel au module \emph{ClanXML} de la bibliothèque \emph{ClanLib} qui est utilisée pour notre application, notamment pour l'affichage. Une classe \textbf{Map} a été créée, représentant le terrain et ses informations : les dimensions, les types de ses cases et la praticabilité de celles-ci par le robot ou d'autres entités. A la création d'une carte, ces informations sont récupérées directement depuis le fichier de carte .tmx fourni, en le parsant en tant que document DOM comme permis par \emph{ClanXML}. \\
@@ -105,7 +133,7 @@ Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser 
 \section{IHM}
 
 
-
+\newpage
 \section{IA}
 
 %partie JC
@@ -113,15 +141,55 @@ Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser 
 \subsection{path finding}
 \subsection{découverte de la carte}
 
+\newpage
 
+\section{Documentation}
 
-\section{Problèmes rencontrés}
+%Partie Jo
 
+Au sujet de la documentation nous avons rédigé trois documents que nous lions à la doxygen du projet.
+
+\subsection{Documentation Utilisateur}
+
+La Documentation Utilisateur contient une approche scénaristique afin de donner envie à l'utilisateur d'entrer dans un monde fantastique
+afin de le divertir. Il est important dans un jeu de réfléchir à l'histoire qui entoure une application, un univers, une mythologie pour éventuellement
+faire évoluer et atteindre les générations.
+Toujours dans ce même document, la deuxieme grande partie est un descriptif explicatif destiné à l'utilisateur.
+Ce document doit être comprehensible par tous et reprendre les élements important dont à besoin un utilisateur.
+
+\subsection{Documentation Technique}
+
+La Documentation Technique contient une approche comme son nom l'indique, beaucoup plus technique. Elle est destiné à un public programmeur,
+ou à des informaticiens dûs au nombre de termes techniques employés.
+Elle est illustré par la doxygen.
+
+\subsection{Le rapport}
+
+Le document rapport est le résumer de notre travail ayant pour lecteur notre professeur de module "Concept et Outils de développement".
+Nous avons souhaité chacun ajouter un descriptif de nos parties mais aussi faire part des problèmes rencontrés et des  améliorations que l'on souhaitait ajouter.
+
+\newpage
+\section{Problèmes rencontrés et idées non aboutis}
+
+\subsection{Definition de la carte : Clan Lib}
 Malgré un début difficile en raison de problèmes à la compilation et l'édition des liens de ClanLib, cette bibliothèque s'est avérée assez facile et intuitive à utiliser, ce qui a permis de vite obtenir un affichage de l'application.
+
+\subsection{makefile}
+Nous aurions aimé rajouter d'autre option au makefile ou au .configure plutôt pour fournir une partie plus complete sur ce sujet.
+
+\subsection{Documentation : FAQ}
+
+Nous avions pensée à ajouter une FAQ à nos documentation technique et utilisateur, pour permettre aux utilisateurs de ces documentations d'avoir des réponses aux question récurrante qui se posent aux prémiers abords d'une application de ce type.
+
+\subsection{Documentation : bib}
+
+Nous voulions également créer une bibliotheque de référence pour permettre un archivage et une indexation plus efficace de nos documents, sources, programmes et illustration.
+
+
 
 \section{Conclusion}
 
-
+Notre objectif était de pouvoir créer une petite application mais et surtout l'utilisation des autotools linux et
 
 \end{document}
 

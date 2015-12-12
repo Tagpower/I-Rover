@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 01:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 20:53
 entering extended mode
 **C:/Users/Joachim/Desktop/depain/ManuelDoc/Rapport.tex
 (C:/Users/Joachim/Desktop/depain/ManuelDoc/Rapport.tex
@@ -319,21 +319,21 @@ LaTeX Warning: Unused global option(s):
     [a4paper12pts].
 
 (Rapport.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Info: Redefining \degres on input line 16.
-LaTeX Info: Redefining \dots on input line 16.
-LaTeX Info: Redefining \up on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Info: Redefining \degres on input line 14.
+LaTeX Info: Redefining \dots on input line 14.
+LaTeX Info: Redefining \up on input line 14.
  ("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count93
@@ -349,19 +349,24 @@ LaTeX Info: Redefining \up on input line 16.
 \everyMPtoPDFconversion=\toks18
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 18.
- <Illustration/proj_irover.jpg, id=1, 722.7pt x 377.15906pt>
+(Font)              <6> on input line 16.
+
+Overfull \hbox (35.43768pt too wide) in paragraph at lines 16--16
+ [][] 
+ []
+
+<Illustration/proj_irover.jpg, id=1, 722.7pt x 377.15906pt>
 File: Illustration/proj_irover.jpg Graphic file (type jpg)
 
 <use Illustration/proj_irover.jpg>
-Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 22.
+Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 182.6572pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 22--23
+Overfull \hbox (5.0pt too wide) in paragraph at lines 20--21
 [][] 
  []
 
@@ -375,22 +380,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 )
 \tf@toc=\write3
- [2]
-Overfull \hbox (312.29071pt too wide) in paragraph at lines 57--73
-[][] 
- []
-
-[3] [4] [5] (Rapport.aux) ) 
+ [2] [3] [4] [5] [6] [7] [8] [9]
+(Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 2629 strings out of 495235
- 33784 string characters out of 3179868
- 93155 words of memory out of 3000000
- 5872 multiletter control sequences out of 15000+200000
- 13125 words of font info for 32 fonts, out of 3000000 for 9000
+ 2631 strings out of 495235
+ 33804 string characters out of 3179868
+ 91198 words of memory out of 3000000
+ 5873 multiletter control sequences out of 15000+200000
+ 13893 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 28i,8n,30p,780b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\
+ 28i,6n,30p,780b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecti1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\
 2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Joachim\AppData\L
 ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Joach
 im\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:
@@ -399,9 +401,9 @@ im\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:
 \dpi600\eccc1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fon
 ts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on Rapport.pdf (5 pages, 136975 bytes).
+Output written on Rapport.pdf (9 pages, 157194 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
+ 351 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

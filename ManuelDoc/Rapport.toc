@@ -1,15 +1,23 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Rapport de Projet}{3}
 \contentsline {subsection}{\numberline {1.1}Introduction}{3}
-\contentsline {subsection}{\numberline {1.2}Membre du groupe et t\IeC {\^a}ches de chacun}{3}
-\contentsline {section}{\numberline {2}D\IeC {\'e}finition de la carte}{3}
-\contentsline {section}{\numberline {3}D\IeC {\'e}finition des objets}{4}
-\contentsline {subsection}{\numberline {3.1}Les objets existants}{4}
-\contentsline {subsection}{\numberline {3.2}Les objets manquant}{4}
-\contentsline {subsection}{\numberline {3.3}gestion des \IeC {\'e}v\IeC {\^e}nements}{4}
-\contentsline {section}{\numberline {4}IHM}{5}
-\contentsline {section}{\numberline {5}IA}{5}
-\contentsline {subsection}{\numberline {5.1}path finding}{5}
-\contentsline {subsection}{\numberline {5.2}d\IeC {\'e}couverte de la carte}{5}
-\contentsline {section}{\numberline {6}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{5}
-\contentsline {section}{\numberline {7}Conclusion}{5}
+\contentsline {subsection}{\numberline {1.2}Membre du groupe et t\IeC {\^a}ches de chacun}{4}
+\contentsline {section}{\numberline {2}D\IeC {\'e}finition de la carte}{5}
+\contentsline {section}{\numberline {3}D\IeC {\'e}finition des objets}{6}
+\contentsline {subsection}{\numberline {3.1}Les objets existants}{6}
+\contentsline {subsection}{\numberline {3.2}Les objets manquant}{6}
+\contentsline {subsection}{\numberline {3.3}gestion des \IeC {\'e}v\IeC {\^e}nements}{6}
+\contentsline {section}{\numberline {4}IHM}{6}
+\contentsline {section}{\numberline {5}IA}{7}
+\contentsline {subsection}{\numberline {5.1}path finding}{7}
+\contentsline {subsection}{\numberline {5.2}d\IeC {\'e}couverte de la carte}{7}
+\contentsline {section}{\numberline {6}Documentation}{8}
+\contentsline {subsection}{\numberline {6.1}Documentation Utilisateur}{8}
+\contentsline {subsection}{\numberline {6.2}Documentation Technique}{8}
+\contentsline {subsection}{\numberline {6.3}Le rapport}{8}
+\contentsline {section}{\numberline {7}Probl\IeC {\`e}mes rencontr\IeC {\'e}s et id\IeC {\'e}es non aboutis}{9}
+\contentsline {subsection}{\numberline {7.1}Definition de la carte : Clan Lib}{9}
+\contentsline {subsection}{\numberline {7.2}makefile}{9}
+\contentsline {subsection}{\numberline {7.3}Documentation : FAQ}{9}
+\contentsline {subsection}{\numberline {7.4}Documentation : bib}{9}
+\contentsline {section}{\numberline {8}Conclusion}{9}
