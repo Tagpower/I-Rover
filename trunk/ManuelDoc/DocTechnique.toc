@@ -6,13 +6,13 @@
 \contentsline {section}{\numberline {3}les coffres}{3}
 \contentsline {section}{\numberline {4}les cl\IeC {\'e}}{3}
 \contentsline {section}{\numberline {5}L'environnement}{3}
-\contentsline {section}{\numberline {6}La gestion des \IeC {\'e}v\IeC {\^e}nements}{3}
-\contentsline {subsection}{\numberline {6.1}Rencontre avec un ennemi}{3}
-\contentsline {subsection}{\numberline {6.2}Ouvertude d'un coffre}{3}
-\contentsline {subsection}{\numberline {6.3}Ramasser une cl\IeC {\'e}}{3}
-\contentsline {section}{\numberline {7}l'interface utilisateur}{3}
-\contentsline {section}{\numberline {8}IA}{3}
-\contentsline {subsection}{\numberline {8.1}path finding}{3}
-\contentsline {subsection}{\numberline {8.2}d\IeC {\'e}couverte de la carte}{3}
-\contentsline {section}{\numberline {9}condition fin de jeu}{3}
-\contentsline {section}{\numberline {10}FAQ}{3}
+\contentsline {section}{\numberline {6}La gestion des \IeC {\'e}v\IeC {\^e}nements}{4}
+\contentsline {subsection}{\numberline {6.1}Rencontre avec un ennemi}{4}
+\contentsline {subsection}{\numberline {6.2}Ouvertude d'un coffre}{4}
+\contentsline {subsection}{\numberline {6.3}Ramasser une cl\IeC {\'e}}{4}
+\contentsline {section}{\numberline {7}l'interface utilisateur}{4}
+\contentsline {section}{\numberline {8}IA}{4}
+\contentsline {subsection}{\numberline {8.1}path finding}{4}
+\contentsline {subsection}{\numberline {8.2}d\IeC {\'e}couverte de la carte}{4}
+\contentsline {section}{\numberline {9}condition fin de jeu}{4}
+\contentsline {section}{\numberline {10}FAQ}{4}
