@@ -20,4 +20,5 @@
 \contentsline {subsection}{\numberline {7.2}makefile}{9}
 \contentsline {subsection}{\numberline {7.3}Documentation : FAQ}{9}
 \contentsline {subsection}{\numberline {7.4}Documentation : bib}{9}
+\contentsline {subsection}{\numberline {7.5}Svn}{9}
 \contentsline {section}{\numberline {8}Conclusion}{9}
