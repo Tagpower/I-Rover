@@ -1,0 +1,19 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Manuel Documentation Technique}{3}
+\contentsline {section}{\numberline {2}Les personnages}{3}
+\contentsline {subsection}{\numberline {2.1}Le robot, Rover}{3}
+\contentsline {subsection}{\numberline {2.2}Les ennemis}{4}
+\contentsline {section}{\numberline {3}Les coffres}{4}
+\contentsline {section}{\numberline {4}Les clef}{4}
+\contentsline {section}{\numberline {5}Les actuateurs}{4}
+\contentsline {section}{\numberline {6}Les senseurs}{5}
+\contentsline {section}{\numberline {7}L'environnement}{5}
+\contentsline {section}{\numberline {8}La gestion des \IeC {\'e}v\IeC {\^e}nements}{5}
+\contentsline {subsection}{\numberline {8.1}Rencontre avec un ennemi}{5}
+\contentsline {subsection}{\numberline {8.2}Ouvertude d'un coffre}{6}
+\contentsline {subsection}{\numberline {8.3}Ramasser une clef}{6}
+\contentsline {section}{\numberline {9}l'interface utilisateur}{6}
+\contentsline {section}{\numberline {10}IA}{6}
+\contentsline {subsection}{\numberline {10.1}path finding}{6}
+\contentsline {subsection}{\numberline {10.2}d\IeC {\'e}couverte de la carte}{6}
+\contentsline {section}{\numberline {11}FAQ}{6}
