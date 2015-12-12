@@ -38,27 +38,29 @@
 
 \vspace{2cm}
 
-Cette partie est dÃ©diÃ©e aux dÃ©veloppeurs
-%expliquer Ã  quoi sert cette documentation
+Cette partie est dÃ©diÃ©e aux dÃ©veloppeurs et aux utilisateurs expÃ©rimentÃ© ayant une culture informatique.
+Les divers Ã©lÃ©ments de l'application y sont dÃ©crit de faÃ§on plus mathÃ©matique et logique.
+Vous pouvez vous rapprocher de la doc Doxygen pour avoir encore plus de dÃ©tails.
+
 
 
 \section{Les personnages}
-Le jeu possède des personnages. Ceux-ci sont représentés par la classe personnage. Tous les personnages possèdent des attributs:
+Le jeu possÃ¨de des personnages. Ceux-ci sont reprÃ©sentÃ©s par la classe personnage. Tous les personnages possÃ¨dent des attributs:
 \begin{enumerate}
 	\item positionX: La position du personnage sur l'axe x.
 	\item positionY: La position du personnage sur l'axe y.
-	\item arme: L'arme qui possède le personnage.
-	\item armure: L'armure que possède le personnage.
-	\item puissance: La puissance du personnage, déterminée à partir de son arme.
-	\item robustesse: La robustesse du personnage, déterminée à partir de son armure.
+	\item arme: L'arme qui possÃ¨de le personnage.
+	\item armure: L'armure que possÃ¨de le personnage.
+	\item puissance: La puissance du personnage, dÃ©terminÃ©e Ã  partir de son arme.
+	\item robustesse: La robustesse du personnage, dÃ©terminÃ©e Ã  partir de son armure.
 	\item isActive: Pour savoir si le personnage est encore en vie.
 	\item sprite: L'image du personnage dans le jeu.
-	\item collision_map: Un vecteur qui détermine les endroits où le personnage peut aller.
+	\item collision map: Un vecteur qui dÃ©termine les endroits oÃ¹ le personnage peut aller.
 \end{enumerate}
 
-Grâce à ces attributs, tous les personnages peuvent se déplacer d'une case grâce à la méthode deplacer(int x,int y). Les personnages peuvent aussi combattre d'autres personnages grâce à la méthode combattre(Personnage* personnage).
+GrÃ¢ce Ã  ces attributs, tous les personnages peuvent se dÃ©placer d'une case grÃ¢ce Ã  la mÃ©thode deplacer(int x,int y). Les personnages peuvent aussi combattre d'autres personnages grÃ¢ce Ã  la mÃ©thode combattre(Personnage* personnage).
 
-Le vainqueur d'un combat est déterminé par le celui qui à la plus grande chance de gagner. Les deux adversaires tire un nombre déterminé par l'algorithme suivant :
+Le vainqueur d'un combat est dÃ©terminÃ© par le celui qui a la plus grande chance de gagner. Les deux adversaires tire un nombre dÃ©terminÃ© par l'algorithme suivant :
 
 \begin{equation}
     random() \times puissance \times robustesse 
@@ -69,53 +71,54 @@ Ainsi on compare ces deux nombres. Celui qui a le plus grand gagner le duel.
 
 \subsection{Le robot, Rover}
 
-Le robot, en plus d'hériter des propriétés des personnages, possède un attribut inventaire qui représente le nombre de clefs qu'il possède.
+Le robot, en plus d'hÃ©riter des propriÃ©tÃ©s des personnages, possÃ¨de un attribut inventaire qui reprÃ©sente le nombre de clefs qu'il possÃ¨de.
 
-L'objectif du robot est d'ouvrir tous les coffres de la carte et chaque coffre s'ouvre à l'aide d'une clef. Ainsi, le robot possède les méthode ramasser(Clef* clef) ou ouvrir(Coffre* coffre).
+L'objectif du robot est d'ouvrir tous les coffres de la carte et chaque coffre s'ouvre Ã  l'aide d'une clef. Ainsi, le robot possÃ¨de les mÃ©thode ramasser//
+(Clef* clef) ou ouvrir(Coffre* coffre).
 
-Le robot se déplace d'une certaines manière, grâce à un algorithme de pathfinding\ref{pathfinding}.
+Le robot se dÃ©place d'une certaines maniÃ¨re, grÃ¢ce Ã  un algorithme de pathfinding\ref{pathfinding}.
 
 \subsection{Les ennemis}
 
-Un ennemi est un simple personnage qui a sa propre façon de se déplacer et de combattre. 
-Une ennemi se déplace aléatoirement sur la carte, et continue tant que la partie n'est pas finie ou tant qu'il est encore en vie.
+Un ennemi est un simple personnage qui a sa propre faÃ§on de se dÃ©placer et de combattre. 
+Une ennemi se dÃ©place alÃ©atoirement sur la carte, et continue tant que la partie n'est pas finie ou tant qu'il est encore en vie.
 
-Lorsqu'un ennemi est à une case du robot, alors celui-ci affronte le robot.
+Lorsqu'un ennemi est Ã  une case du robot, alors celui-ci affronte le robot.
 
 
 \section{Les coffres}
 
-Les coffres sont de simples objets qui possèdent les propriétés suivantes: 
+Les coffres sont de simples objets qui possÃ¨dent les propriÃ©tÃ©s suivantes: 
 
 \begin{enumerate}
 	\item positionX: sa position sur l'axe x.
 	\item positionY: sa position sur l'axe y. 
-	\item ouvert: boolean qui permet de savoir si le coffre est ouvert ou fermé.
+	\item ouvert: boolean qui permet de savoir si le coffre est ouvert ou fermÃ©.
 	\item sprite: l'image du coffre.
 \end{enumerate}
 
-Une fois le coffre ouvert, son parametre ouvert passe à true et ne peut donc plus s'ouvrir.
+Une fois le coffre ouvert, son parametre ouvert passe Ã  true et ne peut donc plus s'ouvrir.
 
 
 \section{Les clef}
 
-Les clefs ont les mêmes attributs que les coffres excepté pour l'attribut ouvert. Une fois la clef ramassée, celle-ci disparait de la carte et l'inventaire du robot augmente de 1.
+Les clefs ont les mÃªmes attributs que les coffres exceptÃ© pour l'attribut ouvert. Une fois la clef ramassÃ©e, celle-ci disparait de la carte et l'inventaire du robot augmente de 1.
 
 \section{Les actuateurs}
 
-Le robot, tout comme les ennemis possèdent deux sortes d'actuateurs: les armes et les armures.
+Le robot, tout comme les ennemis possÃ¨dent deux sortes d'actuateurs: les armes et les armures.
 
-Ces armes et armures déterminent la puissance et la robustesse de chaque personnage du jeu.
+Ces armes et armures dÃ©terminent la puissance et la robustesse de chaque personnage du jeu.
 
-Plusieurs armes existent dans le jeu, un bazooka qui augmente fortemment la puissance du possesseur, des mines que le personnage laisse derière lui régulièrement\ldots
+Plusieurs armes existent dans le jeu, un bazooka qui augmente fortemment la puissance du possesseur, des mines que le personnage laisse derriÃ¨re lui rÃ©guliÃ¨rement\ldots
 
-Grâce à ces différents actuateurs, il est possible de choisir sa stratégie selon le nombre d'ennemis sur la carte, la forme de la carte\ldots
+GrÃ¢ce Ã  ces diffÃ©rents actuateurs, il est possible de choisir sa stratÃ©gie selon le nombre d'ennemis sur la carte, la forme de la carte\ldots
 
-Toutes les armes héritent de la classes Arme et les armures de la classe Armure. Ainsi, i lest facile de créer de nouveaux types d'armes et armures.
+Toutes les armes hÃ©ritent de la classes Arme et les armures de la classe Armure. Ainsi, i lest facile de crÃ©er de nouveaux types d'armes et armures.
 
 \section{Les senseurs}
 
-Le robot possède un scanner. Celui-ci permet de scanner une map et de savoir quels sont les endroits où il peut aller et les endroits qu'ils lui sont impossible d'aller.
+Le robot possÃ¨de un scanner. Celui-ci permet de scanner une map et de savoir quels sont les endroits oÃ¹ il peut aller et les endroits qu'ils lui sont impossible d'aller.
 
 
 \section{L'environnement}
@@ -125,21 +128,21 @@ Une carte se construit Ã  partir d'un fichier au format \emph{.tmx}, un format d
 Pour gÃ©rer le dessin de la carte, la classe \textbf{Tileset} permet de reprÃ©senter une feuille de textures consistant en une image regroupant toutes les textures des cases pouvant Ãªtre dessinÃ©es. Ce tileset possÃ¨de des mÃ©tadonnÃ©es telles que le nombre de textures en lignes, colonnes, leur taille en pixels et l'espacement entre chacun dans l'image, mÃ©tadonnÃ©es qui peut Ãªtre rÃ©cupÃ©rÃ©es Ã©galement depuis le fichier de carte .tmx fourni. A partir d'un numÃ©ro de tile Ã  une certaine position dans la carte, on peut alors dÃ©terminer quelle texture doit Ãªtre dessinÃ©e Ã  l'emplacement correspondant. 
 La classe \textbf{mapDisplay} est pour l'instant la classe principale de l'application, oÃ¹ sont affichÃ©s la carte et tous les Ã©lÃ©ments interagissant avec. Tout l'affichage est gÃ©rÃ© par le module \emph{ClanDisplay} de la bibliothÃ¨que \emph{ClanLib 4.0}, qui dessine au milieu de la fenÃªtre toute la carte case par case conformÃ©ment au Tileset fourni, ainsi que tous les personnages et les objets.
 
-\section{La gestion des Evènements}
+\section{La gestion des Ã©vÃªnements}
 
-La gestion des évènemments concerne toutes les action que peuvent faire les personnages dans le jeu.
+La gestion des Ã©vÃªnemments concerne toutes les actions que peuvent faire les personnages dans le jeu.
 
 \subsection {Rencontre avec un ennemi} 
 
-Lorsque le robot rencontre un ennemi, un combat se déclenche. Une des deux personnages en sort vainqueur, si le robot gagne alors la partie continue, sinon la partie s'arrête.
+Lorsque le robot rencontre un ennemi, un combat se dÃ©clenche. Une des deux personnages en sort vainqueur, si le robot gagne alors la partie continue, sinon la partie s'arrÃªte.
 
 \subsection {Ouvertude d'un coffre}
 
-Lorsque le robot possède au moins une clef et qu'il se trouve à la même position qu'un coffre, alors il l'ouvre. Le statut ouvert du coffre passe donc à true.
+Lorsque le robot possÃ¨de au moins une clef et qu'il se trouve Ã  la mÃªme position qu'un coffre, alors il l'ouvre. Le statut ouvert du coffre passe donc Ã  true.
 
 \subsection {Ramasser une clef}
 
-Lorsque le robot est à la même position qu'une clef, celui-ci la ramasse automatiquement. Son attribut inventaire est donc incrémenté de 1.
+Lorsque le robot est Ã  la mÃªme position qu'une clef, celui-ci la ramasse automatiquement. Son attribut inventaire est donc incrÃ©mentÃ© de 1.
 
 
 \section{l'interface utilisateur}
@@ -150,7 +153,6 @@ Lorsque le robot est à la même position qu'une clef, celui-ci la ramasse automat
 
 \subsection{dÃ©couverte de la carte}
 
-\section{condition fin de jeu}
 
 \section {FAQ}
 
