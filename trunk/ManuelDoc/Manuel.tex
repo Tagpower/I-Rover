@@ -3,12 +3,23 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{graphicx}
-
-
+\usepackage{verbatim}
 
 %macro
 
 
+
+\usepackage[T1]{fontenc}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\definecolor{Zgris}{rgb}{0.87,0.85,0.85}
+
+\newsavebox{\BBbox}
+\newenvironment{DDbox}[1]{
+\begin{lrbox}{\BBbox}\begin{minipage}{\linewidth}}
+{\end{minipage}\end{lrbox}\noindent\colorbox{Zgris}{\usebox{\BBbox}} \\
+[.5cm]}
 
 
 
@@ -175,6 +186,53 @@ Mettez vous dans le dossier courrant où les fichiers de l'application sont pré
 Makefile.
 
 %graaaaahhhhhhhhh il devrait y avoir plus d'info....
+
+\subsection{Génération Doc Doxygen}
+
+executer la commande pour générer le fichier de config
+
+\vspace{0.5 cm}
+\begin{DDbox}{\linewidth}
+\begin{verbatim}
+doxygen -g config_dox
+\end{verbatim}
+\end{DDbox}
+
+
+modifier les champs suivants dans le fichier de config :
+
+\vspace{0.3 cm}
+
+
+\begin{DDbox}{\linewidth}
+\begin{verbatim}
+
+
+PROJECT_NAME           = "I-rover"
+
+PROJECT_NUMBER         = 1.0
+
+OUTPUT_LANGUAGE        = French
+INPUT                  = CodeMain
+
+FILE_PATTERNS          = *.hpp *.cpp
+
+
+\end{verbatim}
+\end{DDbox}
+
+
+executer la commande :
+
+\vspace{0.3 cm}
+
+\begin{DDbox}{\linewidth}
+\begin{verbatim}
+
+doxygen config\_dox
+\end{verbatim}
+\end{DDbox}
+\vspace{0.3 cm}
 
 \newpage
 

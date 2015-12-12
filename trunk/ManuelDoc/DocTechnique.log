@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 21:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 22:00
 entering extended mode
 **C:/Users/Joachim/Desktop/depain/ManuelDoc/DocTechnique.tex
 (C:/Users/Joachim/Desktop/depain/ManuelDoc/DocTechnique.tex
@@ -314,55 +314,94 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
+("C:\Program Files (x86)\MiKTeX\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+
+! LaTeX Error: File `fancyvrb.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+("C:\Program Files (x86)\MiKTeX\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+\BBbox=\box26
+
 
 LaTeX Warning: Unused global option(s):
     [a4paper12pts].
 
 (DocTechnique.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Info: Redefining \degres on input line 12.
-LaTeX Info: Redefining \dots on input line 12.
-LaTeX Info: Redefining \up on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Info: Redefining \degres on input line 39.
+LaTeX Info: Redefining \dots on input line 39.
+LaTeX Info: Redefining \up on input line 39.
 
 ("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count93
 \scratchdimen=\dimen108
-\scratchbox=\box26
+\scratchbox=\box27
 \nofMPsegments=\count94
 \nofMParguments=\count95
-\everyMPshowfont=\toks17
+\everyMPshowfont=\toks19
 \MPscratchCnt=\count96
 \MPscratchDim=\dimen109
 \MPnumerator=\count97
 \makeMPintoPDFobject=\count98
-\everyMPtoPDFconversion=\toks18
+\everyMPtoPDFconversion=\toks20
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 41.
  <Illustration/proj_irover.jpg, id=1, 722.7pt x 377.15906pt>
 File: Illustration/proj_irover.jpg Graphic file (type jpg)
 
 <use Illustration/proj_irover.jpg>
-Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 18.
+Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 45.
 (pdftex.def)             Requested size: 350.0pt x 182.6572pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 18--19
+Overfull \hbox (5.0pt too wide) in paragraph at lines 45--46
 [][] 
  []
 
@@ -371,50 +410,81 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 18--19
 {C:/Users/Joachim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Illustr
 ation/proj_irover.jpg>] (DocTechnique.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write3
- [2] [3]
+ [2]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 78.
 
-LaTeX Warning: Reference `pathfinding' on page 4 undefined on input line 79.
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 81--82
+[][][][][][] 
+ []
 
 
-Overfull \hbox (30.32867pt too wide) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 104--105
+[][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 116--118
+[][][][][][] 
+ []
+
+[3]
+
+LaTeX Warning: Reference `pathfinding' on page 4 undefined on input line 152.
+
+
+Overfull \hbox (30.32867pt too wide) in paragraph at lines 152--153
 []\T1/cmr/m/n/10 Le ro-bot se dé-place d'une cer-taines ma-nière, grâce à un al
 -go-rithme de pathfinding[]. 
  []
 
-[4] [5] [6] (DocTechnique.aux)
+[4] [5] [6] [7] (DocTechnique.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2631 strings out of 495235
- 33865 string characters out of 3179868
- 91153 words of memory out of 3000000
- 5874 multiletter control sequences out of 15000+200000
- 13125 words of font info for 32 fonts, out of 3000000 for 9000
+ 3156 strings out of 495235
+ 40559 string characters out of 3179868
+ 102218 words of memory out of 3000000
+ 6380 multiletter control sequences out of 15000+200000
+ 13438 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 28i,5n,30p,690b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,6n,35p,690b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\ecti1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecbx1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Joachim\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Joachi
-m\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\
-Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
-200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecrm1728.pk><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-
-Output written on DocTechnique.pdf (6 pages, 165786 bytes).
+pen\ec\dpi600\ectt1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Joachim\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Joachi
+m\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\
+Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1
+000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecrm1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files (x86)/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb>
+Output written on DocTechnique.pdf (7 pages, 178698 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
+ 355 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

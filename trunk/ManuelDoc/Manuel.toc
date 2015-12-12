@@ -7,6 +7,7 @@
 \contentsline {section}{\numberline {2}But du jeu}{8}
 \contentsline {section}{\numberline {3}Manuel d'installation}{9}
 \contentsline {subsection}{\numberline {3.1}makefile}{9}
+\contentsline {subsection}{\numberline {3.2}G\IeC {\'e}n\IeC {\'e}ration Doc Doxygen}{9}
 \contentsline {section}{\numberline {4}Documentation utilisateur}{10}
 \contentsline {subsection}{\numberline {4.1}Les personnages}{10}
 \contentsline {subsubsection}{\numberline {4.1.1}Le robot, Rover}{11}
