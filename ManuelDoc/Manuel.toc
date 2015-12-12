@@ -16,13 +16,13 @@
 \contentsline {subsection}{\numberline {4.2}Les coffres}{12}
 \contentsline {subsection}{\numberline {4.3}Les clefs}{12}
 \contentsline {subsection}{\numberline {4.4}L'environnement}{12}
-\contentsline {subsection}{\numberline {4.5}La gestion des \IeC {\'e}v\IeC {\`e}nements}{12}
+\contentsline {subsection}{\numberline {4.5}La gestion des \IeC {\'e}v\IeC {\`e}nements}{13}
 \contentsline {subsubsection}{\numberline {4.5.1}Rencontre avec un ennemi}{13}
 \contentsline {subsubsection}{\numberline {4.5.2}Ouverture d'un coffre}{13}
 \contentsline {subsubsection}{\numberline {4.5.3}Ramasser une cl\IeC {\'e}}{13}
 \contentsline {subsection}{\numberline {4.6}L'interface utilisateur}{13}
 \contentsline {subsection}{\numberline {4.7}IA}{13}
-\contentsline {subsubsection}{\numberline {4.7.1}Le Path Finding}{13}
+\contentsline {subsubsection}{\numberline {4.7.1}Le Path Finding}{14}
 \contentsline {subsubsection}{\numberline {4.7.2}La d\IeC {\'e}couverte de la carte}{14}
 \contentsline {subsection}{\numberline {4.8}Les conditions de fin du jeu}{14}
 \contentsline {section}{\numberline {5}tutoriel}{15}
