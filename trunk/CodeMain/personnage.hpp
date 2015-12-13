@@ -37,6 +37,7 @@ public:
 	void setPuissance(int puissance);
 	void setRobustesse(int robustesse);
         void setCollisionMap(vector<vector<int> > map);
+        vector<vector<int> > getCollisionMap();
         void setArme(Arme arme);
         void setArmure(Armure armure);
 	void deplacer(int x, int y);
