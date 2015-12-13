@@ -2,12 +2,21 @@
 \label{classPersonnage}\index{Personnage@{Personnage}}
 
 
-Graphe d\textquotesingle{}héritage de Personnage\+:
-\nopagebreak
+Graphe d\textquotesingle{}héritage de Personnage\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=192pt]{classPersonnage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Personnage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classPersonnage__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Fonctions membres publiques}
@@ -15,7 +24,7 @@ Graphe d\textquotesingle{}héritage de Personnage\+:
 \item 
 \hyperlink{classPersonnage_abec36eb0310adc71f3375297fc590c65}{Personnage} ()
 \item 
-\hyperlink{classPersonnage_a35385ac425d6818de9dec2d8128004a8}{Personnage} (int position\+X, int position\+Y, Arme arme, Armure armure, clan\+::\+Image sprite)
+\hyperlink{classPersonnage_a35385ac425d6818de9dec2d8128004a8}{Personnage} (int position\+X, int position\+Y, \hyperlink{classArme}{Arme} arme, \hyperlink{classArmure}{Armure} armure, clan\+::\+Image sprite)
 \item 
 int \hyperlink{classPersonnage_ab398b805fa9060fc10b5edb00685bbbb}{get\+Position\+X} ()
 \item 
@@ -25,9 +34,9 @@ int \hyperlink{classPersonnage_ac46ff9c905454f0e3b71097b8f75c5ea}{get\+Puissance
 \item 
 int \hyperlink{classPersonnage_a80ff0a5dc97749f73b84dd52a4185aa4}{get\+Robustesse} ()
 \item 
-Arme \hyperlink{classPersonnage_a5af967c395cfccb901fb44123c373dfa}{get\+Arme} ()
+\hyperlink{classArme}{Arme} \hyperlink{classPersonnage_a5af967c395cfccb901fb44123c373dfa}{get\+Arme} ()
 \item 
-Armure \hyperlink{classPersonnage_af0ef6f5bf22b2b471efefbd588bf4dd6}{get\+Armure} ()
+\hyperlink{classArmure}{Armure} \hyperlink{classPersonnage_af0ef6f5bf22b2b471efefbd588bf4dd6}{get\+Armure} ()
 \item 
 void \hyperlink{classPersonnage_ae065b66e67f3a6c5781453a156786d67}{set\+Position\+X} (int x)
 \item 
@@ -39,9 +48,12 @@ void \hyperlink{classPersonnage_a777c12bd052992cc9ccbf1f6317433c7}{set\+Robustes
 \item 
 void \hyperlink{classPersonnage_a332229cbb1b8e46808472c48e7c1f3f2}{set\+Collision\+Map} (vector$<$ vector$<$ int $>$ $>$ map)
 \item 
-void \hyperlink{classPersonnage_a20b675cc63e94015ddced4e7db6d9b56}{set\+Arme} (Arme arme)
+\hypertarget{classPersonnage_ab5b419f5228f8d31de209b0245ad0d64}{}vector$<$ vector$<$ int $>$ $>$ {\bfseries get\+Collision\+Map} ()\label{classPersonnage_ab5b419f5228f8d31de209b0245ad0d64}
+
 \item 
-void \hyperlink{classPersonnage_a331e0aeb7190a266cfb879acdd22e83a}{set\+Armure} (Armure armure)
+void \hyperlink{classPersonnage_a20b675cc63e94015ddced4e7db6d9b56}{set\+Arme} (\hyperlink{classArme}{Arme} arme)
+\item 
+void \hyperlink{classPersonnage_a331e0aeb7190a266cfb879acdd22e83a}{set\+Armure} (\hyperlink{classArmure}{Armure} armure)
 \item 
 void \hyperlink{classPersonnage_afc55c03d855c3f6caf71cdb061829a6d}{deplacer} (int x, int y)
 \item 
@@ -77,10 +89,10 @@ bool \hyperlink{classPersonnage_a5a95a7603154e30550bd67cf4bd4f990}{get\+Is\+Acti
 \hypertarget{classPersonnage_a5ab0e54e773a08c5efb042dfcbab9251}{}vector$<$ vector$<$ int $>$ $>$ {\bfseries collision\+\_\+map}\label{classPersonnage_a5ab0e54e773a08c5efb042dfcbab9251}
 
 \item 
-\hypertarget{classPersonnage_a538199d18a1705e6511c5f17013efd16}{}Arme {\bfseries arme}\label{classPersonnage_a538199d18a1705e6511c5f17013efd16}
+\hypertarget{classPersonnage_a538199d18a1705e6511c5f17013efd16}{}\hyperlink{classArme}{Arme} {\bfseries arme}\label{classPersonnage_a538199d18a1705e6511c5f17013efd16}
 
 \item 
-\hypertarget{classPersonnage_a0b1b3eaed5cd4f3721b22645db7833de}{}Armure {\bfseries armure}\label{classPersonnage_a0b1b3eaed5cd4f3721b22645db7833de}
+\hypertarget{classPersonnage_a0b1b3eaed5cd4f3721b22645db7833de}{}\hyperlink{classArmure}{Armure} {\bfseries armure}\label{classPersonnage_a0b1b3eaed5cd4f3721b22645db7833de}
 
 \end{DoxyCompactItemize}
 
@@ -107,8 +119,8 @@ Le constructeur d\textquotesingle{}un personnage par défaut.
 \begin{DoxyParamCaption}
 \item[{int}]{x, }
 \item[{int}]{y, }
-\item[{Arme}]{arme, }
-\item[{Armure}]{armure, }
+\item[{{\bf Arme}}]{arme, }
+\item[{{\bf Armure}}]{armure, }
 \item[{clan\+::\+Image}]{sprite}
 \end{DoxyParamCaption}
 )}\label{classPersonnage_a35385ac425d6818de9dec2d8128004a8}
@@ -215,7 +227,7 @@ Desinne un personnage sur la map.
 \end{DoxyParams}
 \hypertarget{classPersonnage_a5af967c395cfccb901fb44123c373dfa}{}\index{Personnage@{Personnage}!get\+Arme@{get\+Arme}}
 \index{get\+Arme@{get\+Arme}!Personnage@{Personnage}}
-\subsubsection[{get\+Arme}]{\setlength{\rightskip}{0pt plus 5cm}Arme Personnage\+::get\+Arme (
+\subsubsection[{get\+Arme}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arme} Personnage\+::get\+Arme (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -225,7 +237,7 @@ l\textquotesingle{}arme du personnage.
 \end{DoxyReturn}
 \hypertarget{classPersonnage_af0ef6f5bf22b2b471efefbd588bf4dd6}{}\index{Personnage@{Personnage}!get\+Armure@{get\+Armure}}
 \index{get\+Armure@{get\+Armure}!Personnage@{Personnage}}
-\subsubsection[{get\+Armure}]{\setlength{\rightskip}{0pt plus 5cm}Armure Personnage\+::get\+Armure (
+\subsubsection[{get\+Armure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Armure} Personnage\+::get\+Armure (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -299,7 +311,7 @@ passe la valeur à true de l\textquotesingle{}attribut is\+Active du personnage.
 \index{set\+Arme@{set\+Arme}!Personnage@{Personnage}}
 \subsubsection[{set\+Arme}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Arme (
 \begin{DoxyParamCaption}
-\item[{Arme}]{arme}
+\item[{{\bf Arme}}]{arme}
 \end{DoxyParamCaption}
 )}\label{classPersonnage_a20b675cc63e94015ddced4e7db6d9b56}
 Le setter de l\textquotesingle{}arme du personnage. Modifie l\textquotesingle{}arme du personnage. 
@@ -313,7 +325,7 @@ Le setter de l\textquotesingle{}arme du personnage. Modifie l\textquotesingle{}a
 \index{set\+Armure@{set\+Armure}!Personnage@{Personnage}}
 \subsubsection[{set\+Armure}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\+::set\+Armure (
 \begin{DoxyParamCaption}
-\item[{Armure}]{armure}
+\item[{{\bf Armure}}]{armure}
 \end{DoxyParamCaption}
 )}\label{classPersonnage_a331e0aeb7190a266cfb879acdd22e83a}
 Le setter de l\textquotesingle{}armure du personnage. Modifie l\textquotesingle{}armure du personnage. 

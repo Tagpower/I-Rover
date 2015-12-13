@@ -1,3 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classClef.html" title="Clef" alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node1" href="$classArme.html" title="Arme" alt="" coords="5,31,59,57"/>
+<area shape="rect" id="node2" href="$classBazooka.html" title="Bazooka" alt="" coords="107,5,180,32"/>
+<area shape="rect" id="node3" href="$classMine.html" title="Mine" alt="" coords="118,56,169,83"/>
 </map>

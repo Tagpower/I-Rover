@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['clef',['Clef',['../classClef.html',1,'']]],
-  ['coffre',['Coffre',['../classCoffre.html',1,'']]]
+  ['arme',['Arme',['../classArme.html',1,'']]],
+  ['armure',['Armure',['../classArmure.html',1,'']]]
 ];

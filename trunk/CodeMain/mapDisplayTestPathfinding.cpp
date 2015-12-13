@@ -166,7 +166,7 @@ void MapDisplayTestPathfinding::goTo(Personnage perso, std::string path){
  * @param [in] ennemi l'ennemi qui explore la carte de façon aléatoire
  */ 
 void MapDisplayTestPathfinding::explorationEnnemi(Ennemi ennemi){
-	while(ennemi.getIsActive()){
+	if(ennemi.getIsActive()){
 		int positionCibleX, positionCibleY;
 		int rangeX, rangeY;
 		rangeX = ennemi.getCollisionMap->size();
@@ -192,7 +192,7 @@ void MapDisplayTestPathfinding::explorationEnnemi(Ennemi ennemi){
  * @param [in] liste_coffres
  */
 void MapDisplayTestPathfinding::explorationRobot(Robot robot, vector<Clef> liste_clefs, vector<Coffre> liste_coffres  ){
-	while((robot.inventaire==0){
+	if((robot.inventaire==0){
 		Clef cibleClef= findNearestKey(robot, liste_clefs);
 		std::string path= astar::pathfind(robot.getPositionX(), robot.getPositionY(), cibleClef.getPositionX(), cibleClef.getPositionY(), robot.getCollisionMap());
 		goTo(robot, path);

@@ -3,30 +3,153 @@
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classnode_a802701cab6639590de6f16136184c2de}{}{\bfseries node} (int xp, int yp, int d, int p)\label{classnode_a802701cab6639590de6f16136184c2de}
+\hyperlink{classnode_a82669b7358b50bd8d7888d7df4ff8dfa}{node} ()
+\item 
+\hypertarget{classnode_a54d5a4fd2b5bff5b796318ff4d8fa9f1}{}{\bfseries node} (int xp, int yp, int l, int p)\label{classnode_a54d5a4fd2b5bff5b796318ff4d8fa9f1}
 
 \item 
-\hypertarget{classnode_a419596f9858640ee6d04b69b616b7cd2}{}int {\bfseries getx\+Pos} () const \label{classnode_a419596f9858640ee6d04b69b616b7cd2}
-
+int \hyperlink{classnode_a419596f9858640ee6d04b69b616b7cd2}{getx\+Pos} () const 
 \item 
-\hypertarget{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}{}int {\bfseries gety\+Pos} () const \label{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}
-
+int \hyperlink{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}{gety\+Pos} () const 
 \item 
-\hypertarget{classnode_a78c66d7badca074b6b34ec7eca4ab106}{}int {\bfseries get\+Level} () const \label{classnode_a78c66d7badca074b6b34ec7eca4ab106}
-
+int \hyperlink{classnode_a78c66d7badca074b6b34ec7eca4ab106}{get\+Level} () const 
 \item 
-\hypertarget{classnode_afebf5ef7f94fa7554890f03e97686de7}{}int {\bfseries get\+Priority} () const \label{classnode_afebf5ef7f94fa7554890f03e97686de7}
-
+int \hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{get\+Priority} () const 
 \item 
-\hypertarget{classnode_ad51b92de008bd5107a7b55cc61fc497b}{}void {\bfseries update\+Priority} (const int \&x\+Dest, const int \&y\+Dest)\label{classnode_ad51b92de008bd5107a7b55cc61fc497b}
-
+void \hyperlink{classnode_ad51b92de008bd5107a7b55cc61fc497b}{update\+Priority} (const int \&x\+Dest, const int \&y\+Dest)
 \item 
 \hypertarget{classnode_a04a186013c42fb942b6da90d2e98d4ed}{}void {\bfseries next\+Level} (const int \&i)\label{classnode_a04a186013c42fb942b6da90d2e98d4ed}
 
 \item 
-\hypertarget{classnode_a311569dff2e77c4c7953107333960a5d}{}const int \& {\bfseries estimate} (const int \&x\+Dest, const int \&y\+Dest) const \label{classnode_a311569dff2e77c4c7953107333960a5d}
-
+const int \& \hyperlink{classnode_a311569dff2e77c4c7953107333960a5d}{estimate} (const int \&x\+Dest, const int \&y\+Dest) const 
 \end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classnode_a82669b7358b50bd8d7888d7df4ff8dfa}{}\index{node@{node}!node@{node}}
+\index{node@{node}!node@{node}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}node\+::node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classnode_a82669b7358b50bd8d7888d7df4ff8dfa}
+Constructeur d\textquotesingle{}un objet node, utilisé pour calculer le chemin 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em xp} & valeur à donner à x\+Pos \\
+\hline
+\mbox{\tt in}  & {\em yp} & valeur à donner à y\+Pos \\
+\hline
+\mbox{\tt in}  & {\em l} & valeur à donner à level \\
+\hline
+\mbox{\tt in}  & {\em p} & valeur à donner à priorite \\
+\hline
+\mbox{\tt out}  & {\em x\+Pos} & position actuelle en abscisse \\
+\hline
+\mbox{\tt out}  & {\em y\+Pos} & position actuelle en ordonnée \\
+\hline
+\mbox{\tt out}  & {\em level} & valeur contenant la distance parcourue pour arriver ici \\
+\hline
+\mbox{\tt out}  & {\em priority} & distance déjà parcourue plus estimation de la distance restante, plus la valeur est faible plus la priorité est grande \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classnode_a311569dff2e77c4c7953107333960a5d}{}\index{node@{node}!estimate@{estimate}}
+\index{estimate@{estimate}!node@{node}}
+\subsubsection[{estimate}]{\setlength{\rightskip}{0pt plus 5cm}const int \& node\+::estimate (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{x\+Dest, }
+\item[{const int \&}]{y\+Dest}
+\end{DoxyParamCaption}
+) const}\label{classnode_a311569dff2e77c4c7953107333960a5d}
+Méthode estimant la distance restante avant l\textquotesingle{}arrivée en calculant la distance euclidienne 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x\+Dest} & La coordonnée en abscisse du point d\textquotesingle{}arrivée \\
+\hline
+\mbox{\tt in}  & {\em y\+Dest} & La coordonnée en ordonnée du point d\textquotesingle{}arrivée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+dist la distance calculée 
+\end{DoxyReturn}
+\hypertarget{classnode_a78c66d7badca074b6b34ec7eca4ab106}{}\index{node@{node}!get\+Level@{get\+Level}}
+\index{get\+Level@{get\+Level}!node@{node}}
+\subsubsection[{get\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::get\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classnode_a78c66d7badca074b6b34ec7eca4ab106}
+Getter pour obtenir la distance déjà parcourue 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+level 
+\end{DoxyReturn}
+\hypertarget{classnode_afebf5ef7f94fa7554890f03e97686de7}{}\index{node@{node}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!node@{node}}
+\subsubsection[{get\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::get\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classnode_afebf5ef7f94fa7554890f03e97686de7}
+Getter pour obtenir la priorite du node 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+priority 
+\end{DoxyReturn}
+\hypertarget{classnode_a419596f9858640ee6d04b69b616b7cd2}{}\index{node@{node}!getx\+Pos@{getx\+Pos}}
+\index{getx\+Pos@{getx\+Pos}!node@{node}}
+\subsubsection[{getx\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::getx\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classnode_a419596f9858640ee6d04b69b616b7cd2}
+Getter pour obtenir la position en x 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+x\+Pos 
+\end{DoxyReturn}
+\hypertarget{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}{}\index{node@{node}!gety\+Pos@{gety\+Pos}}
+\index{gety\+Pos@{gety\+Pos}!node@{node}}
+\subsubsection[{gety\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::gety\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}
+Getter pour obtenir la position en y 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+y\+Pos 
+\end{DoxyReturn}
+\hypertarget{classnode_ad51b92de008bd5107a7b55cc61fc497b}{}\index{node@{node}!update\+Priority@{update\+Priority}}
+\index{update\+Priority@{update\+Priority}!node@{node}}
+\subsubsection[{update\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}void node\+::update\+Priority (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{x\+Dest, }
+\item[{const int \&}]{y\+Dest}
+\end{DoxyParamCaption}
+)}\label{classnode_ad51b92de008bd5107a7b55cc61fc497b}
+Méthode mettant à jour la priorité d\textquotesingle{}un node 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x\+Dest} & La coordonnée en abscisse du point d\textquotesingle{}arrivée \\
+\hline
+\mbox{\tt in}  & {\em y\+Dest} & La coordonnée en ordonnée du point d\textquotesingle{}arrivée \\
+\hline
+\mbox{\tt out}  & {\em priority} & mis à jour en utilisant l\textquotesingle{}estimation \\
+\hline
+\end{DoxyParams}
 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}

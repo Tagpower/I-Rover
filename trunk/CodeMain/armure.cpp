@@ -1,12 +1,12 @@
 /*!
  * \brief Classe Armure.
- * \details Implémentation de la classe Armure et de ses méthodes.
+ * \details Implï¿½mentation de la classe Armure et de ses mï¿½thodes.
  * \author Geoffrey DESBROSSES
  * \version 1
  * \date 2015-12-10
  */
 
-#include "armure.h"
+#include "armure.hpp"
 using namespace std;
 
 /*!
@@ -15,7 +15,7 @@ using namespace std;
  * @param [in] nom Le nom de l'armure.
  * @param [out] robustesse La nouvelle robustesse de l'armure.
  * @param [out] nom Le nouveau nom de l'armure.
- * @return Armure L'armure créée.
+ * @return Armure L'armure crï¿½ï¿½e.
  */
 Armure::Armure(int robustesse, string nom){
 	this->robustesse = robustesse;
@@ -24,8 +24,8 @@ Armure::Armure(int robustesse, string nom){
 
 
 /*!
- * Le constructeur d'une armure par défaut.
- * @return Armure l'armure créée.
+ * Le constructeur d'une armure par dï¿½faut.
+ * @return Armure l'armure crï¿½ï¿½e.
  */
 Armure::Armure(){
 }
@@ -41,7 +41,7 @@ string Armure::getNom(){
 /*!
  * Le setter du nom de l'armure.
  * Modifie le nom de l'armure.
- * @param [in] nom Le nom à affecter à l'armure.
+ * @param [in] nom Le nom ï¿½ affecter ï¿½ l'armure.
  * @param [out] nom Le nouveau nom de l'armure.
  */
 void Armure::setNom(string nom){
@@ -59,7 +59,7 @@ int Armure::getRobustesse(){
 /*!
  * Le setter de la robustesse de l'armure.
  * Modifie la robustesse de l'armure.
- * @param [in] robustesse la robustesse à affecter à l'armure.
+ * @param [in] robustesse la robustesse ï¿½ affecter ï¿½ l'armure.
  * @param [out] robustesse La nouvelle robustesse de l'armure.
  */
 void Armure::setRobustesse(int robustesse){

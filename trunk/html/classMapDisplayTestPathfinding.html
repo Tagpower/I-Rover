@@ -94,15 +94,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 Graphe d'héritage de MapDisplayTestPathfinding:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMapDisplayTestPathfinding__inherit__graph.png" border="0" usemap="#MapDisplayTestPathfinding_inherit__map" alt="Inheritance graph"/></div>
-<map name="MapDisplayTestPathfinding_inherit__map" id="MapDisplayTestPathfinding_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de MapDisplayTestPathfinding:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMapDisplayTestPathfinding__coll__graph.png" border="0" usemap="#MapDisplayTestPathfinding_coll__map" alt="Collaboration graph"/></div>
-<map name="MapDisplayTestPathfinding_coll__map" id="MapDisplayTestPathfinding_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -111,6 +107,18 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:a97c5acec6743b1099a6e6827e0b77a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1286ccf10d21d40419ec5c900d3998f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapDisplayTestPathfinding.html#a1286ccf10d21d40419ec5c900d3998f3">update</a> () override</td></tr>
 <tr class="separator:a1286ccf10d21d40419ec5c900d3998f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7f5c72f302fa74bdee6702d497307b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapDisplayTestPathfinding.html#acf7f5c72f302fa74bdee6702d497307b">goTo</a> (<a class="el" href="classPersonnage.html">Personnage</a> perso, std::string path)</td></tr>
+<tr class="separator:acf7f5c72f302fa74bdee6702d497307b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544fd59caaae448044c21c8423da9a31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapDisplayTestPathfinding.html#a544fd59caaae448044c21c8423da9a31">explorationRobot</a> (<a class="el" href="classRobot.html">Robot</a> robot, vector&lt; <a class="el" href="classClef.html">Clef</a> &gt; liste_clefs, vector&lt; <a class="el" href="classCoffre.html">Coffre</a> &gt; liste_coffres)</td></tr>
+<tr class="separator:a544fd59caaae448044c21c8423da9a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04dc1aac567305afdd7ca99255127677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapDisplayTestPathfinding.html#a04dc1aac567305afdd7ca99255127677">explorationEnnemi</a> (<a class="el" href="classEnnemi.html">Ennemi</a> ennemi)</td></tr>
+<tr class="separator:a04dc1aac567305afdd7ca99255127677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2d2a8e916ce118217a5ee0b9ff47eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea2d2a8e916ce118217a5ee0b9ff47eb"></a>
+<a class="el" href="classCoffre.html">Coffre</a>&#160;</td><td class="memItemRight" valign="bottom"><b>findNearestChest</b> (<a class="el" href="classRobot.html">Robot</a> robot, vector&lt; <a class="el" href="classCoffre.html">Coffre</a> &gt; liste_coffres)</td></tr>
+<tr class="separator:aea2d2a8e916ce118217a5ee0b9ff47eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abefa4a37705752a473e412fb2ce6112b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abefa4a37705752a473e412fb2ce6112b"></a>
+<a class="el" href="classCoffre.html">Coffre</a>&#160;</td><td class="memItemRight" valign="bottom"><b>findNearestKey</b> (<a class="el" href="classRobot.html">Robot</a> robot, vector&lt; <a class="el" href="classClef.html">Clef</a> &gt; liste_clefs)</td></tr>
+<tr class="separator:abefa4a37705752a473e412fb2ce6112b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a97c5acec6743b1099a6e6827e0b77a78"></a>
@@ -130,6 +138,101 @@ Fonctions membres publiques</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a04dc1aac567305afdd7ca99255127677"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapDisplayTestPathfinding::explorationEnnemi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classEnnemi.html">Ennemi</a>&#160;</td>
+          <td class="paramname"><em>ennemi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Routine d'exploration d'un ennemi </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ennemi</td><td>l'ennemi qui explore la carte de façon aléatoire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a544fd59caaae448044c21c8423da9a31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapDisplayTestPathfinding::explorationRobot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a>&#160;</td>
+          <td class="paramname"><em>robot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classClef.html">Clef</a> &gt;&#160;</td>
+          <td class="paramname"><em>liste_clefs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classCoffre.html">Coffre</a> &gt;&#160;</td>
+          <td class="paramname"><em>liste_coffres</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Routine d'exploration du robot </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">robot,le</td><td>robot qui explore </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">liste_clefs</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">liste_coffres</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf7f5c72f302fa74bdee6702d497307b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapDisplayTestPathfinding::goTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPersonnage.html">Personnage</a>&#160;</td>
+          <td class="paramname"><em>perso</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode permattant à un personnage d'aller vers une direction en particulier. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">perso</td><td>Le personnage se déplaçant. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>le chemin est modifie </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a1286ccf10d21d40419ec5c900d3998f3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +264,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi 11 Décembre 2015 23:22:51 pour I-rover par &#160;<a href="http://www.doxygen.org/index.html">
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,12 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.14)  12 DEC 2015 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.12.13)  13 DEC 2015 22:55
 entering extended mode
-**C:/Users/Joachim/Desktop/depain/ManuelDoc/DocTechnique.tex
-(C:/Users/Joachim/Desktop/depain/ManuelDoc/DocTechnique.tex
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**DocTechnique.tex
+(./DocTechnique.tex
 LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 4 languages loaded.
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\article.cls"
+Babel <3.9l> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\size10.clo"
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,19 +23,19 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\inputenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\utf8.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -183,7 +185,7 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\ot1enc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -214,7 +216,7 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\omsenc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -238,39 +240,43 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\fontenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files (x86)\MiKTeX\tex\latex\babel\babel.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/09/25 3.9l The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX\tex\latex\babel-french\frenchb.ldf"
-Language: frenchb 2015/04/10 v3.1e French support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2015/06/26 v3.1g French support from the babel system
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\babel\babel.def"
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
+\l@french = a dialect from \language\l@nohyphenation 
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language `French' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=nohyphenation instead on input l
+ine 75.
+
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
 \FBcolonskip=\skip43
 \FBthinskip=\skip44
 \FB@interchartokenstateORI=\count88
-Package babel Info: Making : an active character on input line 371.
-Package babel Info: Making ; an active character on input line 372.
-Package babel Info: Making ! an active character on input line 373.
-Package babel Info: Making ? an active character on input line 374.
+Package babel Info: Making : an active character on input line 353.
+Package babel Info: Making ; an active character on input line 354.
+Package babel Info: Making ! an active character on input line 355.
+Package babel Info: Making ? an active character on input line 356.
 \FBguillskip=\skip45
 \FBguill@level=\count89
 \FB@Mht=\dimen104
@@ -280,33 +286,32 @@ Package babel Info: Making ? an active character on input line 374.
 \labelwidthFB=\skip47
 \leftmarginFB=\skip48
 \parindentFFN=\dimen105
-))
-("C:\Program Files (x86)\MiKTeX\tex\latex\carlisle\scalefnt.sty")
-("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\keyval.sty"
+)) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphicx.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphics.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count92
@@ -314,16 +319,16 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-("C:\Program Files (x86)\MiKTeX\tex\latex\tools\verbatim.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks17
 \verbatim@line=\toks18
 \verbatim@in@stream=\read1
 )
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\fontenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
@@ -334,157 +339,24 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: sty)
 
 Enter file name: 
-("C:\Program Files (x86)\MiKTeX\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)
-\BBbox=\box26
-
-
-LaTeX Warning: Unused global option(s):
-    [a4paper12pts].
-
-(DocTechnique.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Info: Redefining \degres on input line 39.
-LaTeX Info: Redefining \dots on input line 39.
-LaTeX Info: Redefining \up on input line 39.
-
-("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count93
-\scratchdimen=\dimen108
-\scratchbox=\box27
-\nofMPsegments=\count94
-\nofMParguments=\count95
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count96
-\MPscratchDim=\dimen109
-\MPnumerator=\count97
-\makeMPintoPDFobject=\count98
-\everyMPtoPDFconversion=\toks20
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
- <Illustration/proj_irover.jpg, id=1, 722.7pt x 377.15906pt>
-File: Illustration/proj_irover.jpg Graphic file (type jpg)
-
-<use Illustration/proj_irover.jpg>
-Package pdftex.def Info: Illustration/proj_irover.jpg used on input line 45.
-(pdftex.def)             Requested size: 350.0pt x 182.6572pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 45--46
-[][] 
- []
-
-[1
-
-{C:/Users/Joachim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Illustr
-ation/proj_irover.jpg>] (DocTechnique.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
-)
-\tf@toc=\write3
- [2]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 78.
-
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 81--82
-[][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 104--105
-[][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 116--118
-[][][][][][] 
- []
-
-[3]
-
-LaTeX Warning: Reference `pathfinding' on page 4 undefined on input line 152.
-
-
-Overfull \hbox (30.32867pt too wide) in paragraph at lines 152--153
-[]\T1/cmr/m/n/10 Le ro-bot se dé-place d'une cer-taines ma-nière, grâce à un al
--go-rithme de pathfinding[]. 
- []
-
-[4] [5] [6] [7] (DocTechnique.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+! Interruption.
+<to be read again> 
+                   }
+l.14 \usepackage
+                {xcolor}^^M
+? x
+ 
 Here is how much of TeX's memory you used:
- 3156 strings out of 495235
- 40559 string characters out of 3179868
- 102218 words of memory out of 3000000
- 6380 multiletter control sequences out of 15000+200000
- 13438 words of font info for 33 fonts, out of 3000000 for 9000
+ 2279 strings out of 495000
+ 29478 string characters out of 6181168
+ 87233 words of memory out of 5000000
+ 5533 multiletter control sequences out of 15000+600000
+ 4403 words of font info for 15 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 28i,6n,35p,690b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecti1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ectt1000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Joachim\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Joachi
-m\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\
-Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1
-000.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecrm1200.pk> <C:\Users\Joachim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files (x86)/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb>
-Output written on DocTechnique.pdf (7 pages, 178698 bytes).
+ 28i,0n,30p,245b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
+ 0 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
