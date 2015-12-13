@@ -50,20 +50,20 @@
 
 Le projet a pour objectif la création d'une application graphique où un petit personnage (robot) réaliserait une tache particulière.\\
 Pour cela nous avons imaginé un scénario de mini jeu semblable au jeux en deux dimensions où notre robot prendrait la forme d'un héros sans peur et sans reproche.\\
-L'autre aspect de ce projet est de pousser notre groupe à utiliser, comprendre et intégrer les autotools à savoir : 
+L'autre aspect de ce projet est de pousser notre groupe à utiliser, comprendre et intégrer certains outils de développement, à savoir : 
 
 \begin{enumerate}
 \item Utilisation des autotools.
 \item Génération d'une documentation technique avec Doxygen.
 \item Utilisation d'une platforme svn pour la réalisation de notre projet.
 \item Rédaction de documents avec \LaTeX .
-\item Réalisation de quelques test avec cppedit.
+\item Réalisation de quelques test avec CppUnit.
 
 \end{enumerate}
 
 \vspace{075 cm}
 
-\subsection{Membre du groupe et tâches de chacun}
+\subsection{Membres du groupe et tâches de chacun}
 
 
 \vspace{1 cm}
@@ -117,7 +117,7 @@ La définition des objets comprend la création de tous les objets Personnage, C
 \subsection{Les objets existants}
 Le robot possède une fonction pour se déplacer et modifier ses coordonnées. Il possède également une méthode \emph{Combattre} propre à notre sujet. Des actuateurs \emph{arme} et \emph{armure} ont été implémentés. Le robot peut intéragir avec d'autres objets tels que les ennemis, les clefs ou les coffres. Deux types d'armes ont également été créés (bazooka et mine) et les classes Arme et Armure permettent d'implémenter facilement de nouvelles armes et armures ayant leurs propres caractéristiques.
 
-\subsection{Les objets manquant}
+\subsection{Les objets manquants}
 Le robot ne possède pas de senseur. L'idée était d'implémenter un scanner qui pouvait scanner une carte et savoir quels étaient les cases du terrain où le robot pouvait aller. Aucun type d'armure n'a été implémenté, cependant les personnages peuvent tout de même avoir une armure par défaut avec une robustesse et un nom. Ainsi ça ne modifie pas le comportement des personnages.
 
 \subsection{Gestion des évênements}
@@ -135,21 +135,21 @@ Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser 
 
 \subsection{Path finding}
 Pour réaliser le pathfinding nous avons utilisé l'algorithme A*, que nous avons trouvé parfaitement adapté à notre projet. Nous avons choisi sa version la plus simple qui permet de trouver le chemin le plus court sur une carte 2D représentée par une matrice contenant les coordonnées accessibles et inaccessibles. Le coût de déplacement n'est pour l'instant pas intégré mais il pourrait être ajouté sans modification lourde.
-Pour plus d'information sur l'algorithme A*: \url{https://en.wikipedia.org/wiki/A*_search_algorithm}
-Pour plus d'information sur notre implémentation, veuillez consulter la documentation technique.
+Pour plus d'informations sur l'algorithme A*: \url{https://en.wikipedia.org/wiki/A*_search_algorithm}
+Pour plus d'informations sur notre implémentation, veuillez consulter la documentation technique.
 
 \subsection{Parcours de la carte}
 L'objectif initial était de doter les personnages de senseurs permettant de découvrir leur environnement et d'une mémoire pour stocker ces informations, au fur et à mesure de la découverte. Nous n'avons pas eu le temps d'intégrer cette fonctionnalité et en réalité chaque personnage a connaissance de l'entièreté de la carte.
 Les différents personnages sont donc dotés d'une IA de parcours, plutôt que d'exploration et de découverte.
 Les ennemis ont le comportement le plus simple: ils se déplacent constamment, à des coordonnées choisies aléatoirement.
-Le robot, quand à lui, suit une routine simple:
+Le robot, quant à lui, suit une routine simple:
 
 \begin{itemize}
-  \item Si il ne possède pas de clé, il va sur une case en contenant une.
-  \item Si il possède une clé, il va sur une case contenant un coffre. \ldots
+  \item S'il ne possède pas de clé, il va sur une case en contenant une.
+  \item S'il possède une clé, il va sur une case contenant un coffre. \ldots
 \end{itemize}  
 
-le robot pour l'instant n'évite pas les ennemis. 
+Le robot pour l'instant n'évite pas les ennemis. 
 \newpage
 
 \section{Documentation}
@@ -188,7 +188,7 @@ Nous aurions aimé rajouter d'autres options au makefile ou au .configure plutô
 
 \subsection{Documentation : FAQ}
 
-Nous avions pensée à ajouter une FAQ à nos documentation technique et utilisateur, pour permettre aux utilisateurs de ces documentations d'avoir des réponses aux question récurrante qui se posent aux prémiers abords d'une application de ce type.
+Nous avions pensé à ajouter une FAQ à nos documentations technique et utilisateur, pour permettre aux utilisateurs de ces documentations d'avoir des réponses aux questions récurrentes qui se posent aux premiers abords d'une application de ce type.
 
 \subsection{Documentation : bib}
 
