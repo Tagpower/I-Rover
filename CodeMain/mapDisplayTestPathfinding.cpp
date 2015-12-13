@@ -4,7 +4,7 @@
 clan::ApplicationInstance<MapDisplayTestPathfinding> clanapp;
 
 /*! Classe gérant l'affichage graphique du terrain et des éléments présents dessus.
- *
+ *	
  *
  *
  */
@@ -114,50 +114,25 @@ bool MapDisplayTestPathfinding::update()
         robot.draw(canvas, map_origin.x + (robot.getPositionX()*tileset.getTile_width()) ,
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
 
-		std::string pathRobot = pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
-		MapDisplayTestPathfinding::goTo(robot, pathRobot);
+		//std::string pathRobot = pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
+		//MapDisplayTestPathfinding::goTo(robot, pathRobot);
 
         //std::string pathEnnemi = this->pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
         //this->goTo(robot, pathEnnemi);
-
+		this->explorationRobot(this->robot, this->liste_clefs, this->liste_coffres);
+		this->explorationEnnemi(this->liste_ennemis[0]);
          //Afficher les changements du canvas
 	window.flip(1);
 
 	return !quit;
 }
 
-/** Gestion des évènements du clavier
- * Les touches reconnues sont uniquement echap, haut, bas, gauche et droite.
- * @param [in] key La touche pressée du clavier.
- */
-void MapDisplayTestPathfinding::on_input_up(const clan::InputEvent &key)
-{
-	if(key.id == clan::keycode_escape)
-	{
-		quit = true;
-	}
 
-	//Déplacement manuel du robot
-        switch (key.id) {
-            case clan::keycode_up :
-                this->robot.deplacer(0,-1);
-                break;
-            case clan::keycode_down :
-                this->robot.deplacer(0,1);
-                break;
-            case clan::keycode_left :
-                this->robot.deplacer(-1,0);
-                break;
-            case clan::keycode_right :
-                this->robot.deplacer(1,0);
-                break;
-        }
-}
 
 /**
  * Méthode permattant à un personnage d'aller vers une direction en particulier.
  * @param [in] perso Le personnage se déplaçant.
- * @param [in] path
+ * @param [in] path le chemin est modifie
  */
 void MapDisplayTestPathfinding::goTo(Personnage perso, std::string path){
 	while (path.length()>0){
@@ -186,3 +161,113 @@ void MapDisplayTestPathfinding::goTo(Personnage perso, std::string path){
 			}
 }
 }
+/*!
+ * Routine d'exploration d'un ennemi
+ * @param [in] ennemi l'ennemi qui explore la carte de façon aléatoire
+ */ 
+void MapDisplayTestPathfinding::explorationEnnemi(Ennemi ennemi){
+	while(ennemi.getIsActive()){
+		int positionCibleX, positionCibleY;
+		int rangeX, rangeY;
+		rangeX = ennemi.getCollisionMap->size();
+		rangeY = ennemi.getCollisionMap()->at(0)->size();
+		
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		
+		std::uniform_int_distribution<> distriX(0,rangeX);
+		std::uniform_int_distribution<> distriY(0,rangeY);
+		
+		positionCibleX= distriX(gen);
+		positionCibleY= distriY(gen);
+		
+		std::string path= astar::pathfind(ennemi.getPositionX(), ennemi.getPositionY(), positionCibleX, positionCibleY, ennemi->getCollisionMap());
+		goTo(ennemi, path);
+	}
+}
+/*!
+ * Routine d'exploration du robot
+ * @param [in] robot, le robot qui explore
+ * @param [in] liste_clefs
+ * @param [in] liste_coffres
+ */
+void MapDisplayTestPathfinding::explorationRobot(Robot robot, vector<Clef> liste_clefs, vector<Coffre> liste_coffres  ){
+	while((robot.inventaire==0){
+		Clef cibleClef= findNearestKey(robot, liste_clefs);
+		std::string path= astar::pathfind(robot.getPositionX(), robot.getPositionY(), cibleClef.getPositionX(), cibleClef.getPositionY(), robot.getCollisionMap());
+		goTo(robot, path);
+		}
+	if(robot.inventaire>0){
+		Coffre cibleCoffre = findNearestChest(robot,liste_coffres);
+		std::string path= astar::pathfind(robot.getPositionX(), robot.getPositionY(), cibleCoffre.getPositionX(), cibleCoffre.getPositionY(), robot.getCollisionMap());
+		goTo(robot, path);
+	}	
+}
+/*!
+ * Recherche de la clé la plus proche par distance euclidienne
+ * @param [in] robot, le robot qui explore
+ * @param [in] liste_clefs
+ * @return foundKey la clé la plus proche
+ */
+Clef findNearestKey(Robot robot, vector<Clef> liste_clefs ){
+Clef foundKey;
+int distMin;
+	if(liste_clefs.size()!=0){
+		foundKey=liste_clefs[0];
+			int xd, yd;
+            xd=robot.getPositionX() - foundKey.getPositionX();
+            yd=robot.getPositionY() - foundKey.getPositionY();         
+
+            distMin=<int>(sqrt(xd*xd+yd*yd));
+
+            return(dist);
+		for (int i =0;i<liste_clefs.size(), i++){
+			int xd, yd, dist;
+            xd=robot.getPositionX() - liste_clefs[i].getPositionX();
+            yd=robot.getPositionY() - liste_clefs[i].getPositionY();         
+
+            dist=<int>(sqrt(xd*xd+yd*yd));
+            if(dist<distMin){
+				foundKey=liste_clefs[i];
+				distMin=dist;
+			}
+		}
+	}
+	
+return	foundKey;
+}
+
+/*!
+ * Recherche de la clé la plus proche par distance euclidienne
+ * @param [in] robot, le robot qui explore
+ * @param [in] liste_coffres
+ * @return foundChest le coffre le plus proche
+ */
+Coffre findNearestChest(Robot robot, vector<Coffre> liste_coffres ){
+Coffre foundChest;
+int distMin;
+	if(liste_coffres.size()!=0){
+		foundChest=liste_coffres[0];
+			int xd, yd;
+            xd=robot.getPositionX() - foundChest.getPositionX();
+            yd=robot.getPositionY() - foundChest.getPositionY();         
+
+            distMin=<int>(sqrt(xd*xd+yd*yd));
+
+            return(dist);
+		for (int i =0;i<liste_coffres.size(), i++){
+			int xd, yd, dist;
+            xd=robot.getPositionX() - liste_coffres[i].getPositionX();
+            yd=robot.getPositionY() - liste_coffres[i].getPositionY();         
+
+            dist=<int>(sqrt(xd*xd+yd*yd));
+            if(dist<distMin){
+				foundChest=liste_coffres[i];
+				distMin=dist;
+			}
+		}
+	}
+	
+return	foundChest;
+}
+

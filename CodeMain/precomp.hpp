@@ -10,14 +10,14 @@
 
 #pragma once
 
-#include <ClanLib/core.h>
-#include <ClanLib/application.h>
-#include <ClanLib/display.h>
-#include <ClanLib/xml.h>
+#include <ClanLib-4.0/ClanLib/core.h>
+#include <ClanLib-4.0/ClanLib/application.h>
+#include <ClanLib-4.0/ClanLib/display.h>
+#include <ClanLib-4.0/ClanLib/xml.h>
 #ifdef WIN32
 #include <ClanLib/d3d.h>
 #endif
-#include <ClanLib/gl.h>
+#include <ClanLib-4.0/ClanLib/gl.h>
 #include <cmath>
 #include <vector>
 
