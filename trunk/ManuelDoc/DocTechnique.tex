@@ -209,7 +209,7 @@ La gestion des évênemments concerne toutes les actions que peuvent faire les p
 
 Lorsque le robot rencontre un ennemi, un combat se déclenche. Une des deux personnages en sort vainqueur, si le robot gagne alors la partie continue, sinon la partie s'arrête.
 
-\subsection {Ouvertude d'un coffre}
+\subsection {Ouverture d'un coffre}
 
 Lorsque le robot possède au moins une clef et qu'il se trouve à la même position qu'un coffre, alors il l'ouvre. Le statut ouvert du coffre passe donc à true.
 
@@ -222,9 +222,24 @@ Lorsque le robot est à la même position qu'une clef, celui-ci la ramasse autom
 \section{IA}
 
 \subsection{path finding}
+Le code responsable du pathfinding est contenu dans \emph{astar} défininissant la classe \emph{Node} et la méthode \emph{pathFind()}. Grâce à cette méthode on obtient le plus court chemin entre un objet et un couple de coordonnées sur la carte. Le chemin est obtenu sous la forme d'une chaîne de caractères, chaque caractère étant 0, 1 ,2 ou 3 et correspondant à un mouvement à effectuer comme suit:
+\begin{enumerate}
+\item 0:Le personnage se déplace d'une case à droite
+\item 1:Le personnage se déplace d'une case vers le bas
+\item 2:Le personnage se déplace d'une case à gauche
+\item 3:Le personnage se déplace d'une case vers le haut
+\end{enumerate}
 
+La fonction \emph{goTo()} lit cette chaîne de caractères et réalise les différents mouvements à l'aide de la fonction \emph{deplacer()};
 \subsection{découverte de la carte}
+L'exploration et le pathfinding sont testés dans la classe \emph{MapDisplayTestPathfinding}, qui est une modification de la classe \emph{MapDisplay}.
+\subsubsection{Exploration du robot}
+Le robot a accès aux coordonnées de l'ensemble des clefs et des coffres. Si il ne possède pas de clefs, il cherche la clef la plus proche avec la fonction \emph{findNearestKey()} et s'y dirige.
+Ensuite il cherche le coffre le plus proche avec la fonction \emph{findNearestChest()} et s'y dirige.
+La clef étant normalement détruite après avoir ouvert le coffre, le robot peut effectuer ces actions en boucle.
 
+\subsubsection{Exploration des ennemis}
+Un ennemi reçoit des coordonnées aléatoires(contenues dans la carte) et s'y déplace avec la fonction \emph{goTo()}.
 
 
 
