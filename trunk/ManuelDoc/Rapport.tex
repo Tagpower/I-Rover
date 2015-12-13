@@ -98,7 +98,7 @@ Joachim Clayton \> Documentation utilisateur \> Redaction de la documentation ut
 Pour commencer, il fallait générer un ou plusieurs terrains à l'aide du logiciel \emph{Tiled}, un éditeur de cartes. La carte est créée avec une certaine tilesheet (une image contenant le dessin de toutes les cases possibles), et enregistrée sous le format \textbf{.tmx}, un format de type XML.
 
 Pour pouvoir afficher le terrain dans notre application, nous avons d'abord fait appel au module \emph{ClanXML} de la bibliothèque \emph{ClanLib} qui est utilisée pour notre application, notamment pour l'affichage. Une classe \textbf{Map} a été créée, représentant le terrain et ses informations : les dimensions, les types de ses cases et la praticabilité de celles-ci par le robot ou d'autres entités. A la création d'une carte, ces informations sont récupérées directement depuis le fichier de carte .tmx fourni, en le parsant en tant que document DOM comme permis par \emph{ClanXML}. \\
-\emph{N.B. :} A l'heure actuelle, il n'est pas possible de déterminer par seule lecture du fichier .tmx quels types de cases sont praticables par le robot. Ceci est déterminé au cas par cas dans le code. De plus, la praticabilité des cases se résume simplement à la possibilité ou non d'aller dessus. Nous pourrions définir un coût de déplacement pour chaque type de case, qui serait alors pris en compte dans l'évaluation du chemin optimal du robot.
+\emph{N.B. :} A l'heure actuelle, il n'est pas possible de déterminer par seule lecture du fichier .tmx quels types de cases sont praticables par le robot. Ceci est déterminé au cas par cas dans le code. De plus, la praticabilité des cases se résume simplement à la possibilité ou non d'aller dessus. Nous pourrions définir un coût de déplacement pour chaque type de case, qui serait alors pris en compte dans l'évaluation du chemin optimal du robot.\\
 
 Une fois les données de la carte obtenues, il nous faut afficher cette dernière dans la fenêtre principale de l'application. Comme nous ne disposons que de données brutes sur les cases (un nombre indiquant quelle texture sera utilisée pour dessiner la case), nous avons créé une autre classe, \textbf{Tileset}, qui représente l'image regroupant toutes les textures utilisables pour dessiner les cases (la \emph{tilesheet} décrite précédemment), ainsi que ses informations : ses dimensions, la taille des cases en pixels et l'espace entre chaque texture dans l'image. Là encore, ces données peuvent être retrouvées directement depuis le même fichier \emph{.tmx} utilisé pour créer la carte.
 En connaissant le numéro d'une case de la carte, on peut alors retrouver quelle texture utiliser pour la dessiner. Il est donc désormais possible d'afficher toute la carte.
@@ -114,13 +114,13 @@ Une possibilté d'extension serait de permettre au robot d'interagir directement
 La définition des objets comprend la création de tous les objets Personnage, Coffre, Clef, Arme\ldots et toutes les actions entre ces objets.
 
 \subsection{Les objets existants}
-Le robot possède une fonction pour se déplacer et modifier ses coordonnées. Il possède également une méthode combattre propre à notre sujet. Des actuateurs arme et armure ont été implémentés. Le robot peut intéragir avec d'autres objets tels que les ennemis, les clefs ou les coffres. Deux types d'armes ont également été créé (bazooka et mine) et les classes Arme et Armures permettent d'implémenter facilement de nouvelles armes et armures ayant leurs propres caractéristiques.
+Le robot possède une fonction pour se déplacer et modifier ses coordonnées. Il possède également une méthode \emph{Combattre} propre à notre sujet. Des actuateurs \emph{arme} et \emph{armure} ont été implémentés. Le robot peut intéragir avec d'autres objets tels que les ennemis, les clefs ou les coffres. Deux types d'armes ont également été créés (bazooka et mine) et les classes Arme et Armure permettent d'implémenter facilement de nouvelles armes et armures ayant leurs propres caractéristiques.
 
 \subsection{Les objets manquant}
 Le robot ne possède pas de senseur. L'idée était d'implémenter un scanner qui pouvait scanner une carte et savoir quels étaient les cases du terrain où le robot pouvait aller. Aucun type d'armure n'a été implémenté, cependant les personnages peuvent tout de même avoir une armure par défaut avec une robustesse et un nom. Ainsi ça ne modifie pas le comportement des personnages.
 
 \subsection{gestion des évênements}
-Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser au contact d'un ennemi, deux personnages peuvent s'affronter, le robot peut ramasser des clefs et ouvrir des coffres. Cependant, ces actions ne sont pas visibles sur l'interface graphique, excepté le déplacement du robot.
+Certains objets peuvent intéragir entre eux, par exemple la mine peut exploser au contact d'un ennemi, deux personnages peuvent s'affronter, le robot peut ramasser des clefs et ouvrir des coffres. Cependant, ces actions ne sont pas encore visibles sur l'interface graphique, excepté le déplacement du robot.
 
 
 
@@ -149,18 +149,18 @@ La Documentation Utilisateur contient une approche scénaristique afin de donner
 afin de le divertir. Il est important dans un jeu de réfléchir à l'histoire qui entoure une application, un univers, une mythologie pour éventuellement
 faire évoluer et atteindre les générations.
 Toujours dans ce même document, la deuxieme grande partie est un descriptif explicatif destiné à l'utilisateur.
-Ce document doit être comprehensible par tous et reprendre les élements important dont à besoin un utilisateur.
+Ce document doit être comprehensible par tous et reprendre les élements important dont a besoin un utilisateur.
 
 \subsection{Documentation Technique}
 
-La Documentation Technique contient une approche comme son nom l'indique, beaucoup plus technique. Elle est destiné à un public programmeur,
-ou à des informaticiens dûs au nombre de termes techniques employés.
-Elle est illustré par la doxygen.
+La Documentation Technique contient une approche comme son nom l'indique, beaucoup plus technique. Elle est destiné à un public programmeur
+ou à des informaticiens, dû au nombre de termes techniques employés.
+Elle est illustré par Doxygen.
 
 \subsection{Le rapport}
 
-Le document rapport est le résumer de notre travail ayant pour lecteur notre professeur de module "Concept et Outils de développement".
-Nous avons souhaité chacun ajouter un descriptif de nos parties mais aussi faire part des problèmes rencontrés et des  améliorations que l'on souhaitait ajouter.
+Le document rapport est le résumé de notre travail ayant pour lecteur notre professeur de module "Concept et Outils de développement".
+Nous avons souhaité chacun ajouter un descriptif de nos parties mais aussi faire part des problèmes rencontrés et des améliorations que l'on souhaitait ajouter.
 
 \newpage
 \section{Problèmes rencontrés et idées non aboutis}
@@ -169,7 +169,7 @@ Nous avons souhaité chacun ajouter un descriptif de nos parties mais aussi fair
 Malgré un début difficile en raison de problèmes à la compilation et l'édition des liens de ClanLib, cette bibliothèque s'est avérée assez facile et intuitive à utiliser, ce qui a permis de vite obtenir un affichage de l'application.
 
 \subsection{makefile}
-Nous aurions aimé rajouter d'autre option au makefile ou au .configure plutôt pour fournir une partie plus complete sur ce sujet.
+Nous aurions aimé rajouter d'autres options au makefile ou au .configure plutôt pour fournir une partie plus complète sur ce sujet.
 
 \subsection{Documentation : FAQ}
 
@@ -177,25 +177,25 @@ Nous avions pensée à ajouter une FAQ à nos documentation technique et utilisa
 
 \subsection{Documentation : bib}
 
-Nous voulions également créer une bibliotheque de référence pour permettre un archivage et une indexation plus efficace de nos documents, sources, programmes et illustrations.
+Nous voulions également créer une bibliothèque de référence pour permettre un archivage et une indexation plus efficace de nos documents, sources, programmes et illustrations.
 
 \subsection{Svn}
 
-(commentaire personnel Joachim Clayton) 
+\emph{(commentaire personnel Joachim Clayton)}
 Je me suis souvent demandé s'il était nécessaire ou bon d'utiliser les branches et les tags et faire du vrai versioning. 
-Il est vrai que si le projet été arrivé à une version fini on aurait dû l'utiliser, pour pouvoir travailler sur une v2.0 et y rajouter des fonctionalités.
+Il est vrai que si le projet était arrivé à une version finie on aurait dû l'utiliser, pour pouvoir travailler sur une v2.0 et y rajouter des fonctionalités.
 
 
 
 \section{Conclusion}
 
-Notre objectif était de pouvoir créer une petite application mais et surtout l'utilisation des autotools linux, de la plateforme svn et la création de la documentation.
-Nous avons eu des difficultés mais avons pu dans l'ensemble utilisé ces outils : 
+Notre objectif était de pouvoir créer une petite application et surtout l'utilisation des autotools linux, de la plateforme svn et la création de la documentation.
+Nous avons eu des difficultés mais avons pu dans l'ensemble utiliser ces outils : 
 
 \begin{enumerate}
-\item Utilisation et redaction d'un makefile 
-\item Création d'une documentation Doxygen grâces aux commentaire dans le code.
-\item Utiliasation de svn via linux ou tortoise sur nos machines windows
+\item Utilisation et rédaction d'un makefile 
+\item Création d'une documentation Doxygen grâce aux commentaires dans le code.
+\item Utilisation de SVN via linux ou tortoise sur les machines Windows
 \item Rédaction de documents avec \LaTeX.
 \end{enumerate}
 
