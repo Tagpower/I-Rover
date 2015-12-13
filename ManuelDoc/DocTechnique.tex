@@ -1,4 +1,4 @@
-\documentclass[a4paper 12pts]{article}
+\documentclass[a4paper,12pts]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
@@ -8,9 +8,6 @@
 
 %macro
 
-
-
-\usepackage[T1]{fontenc}
 \usepackage{fancyvrb}
 \usepackage{xcolor}
 
@@ -199,7 +196,9 @@ Le robot possède un scanner. Celui-ci permet de scanner une map et de savoir qu
 
 Le terrain est représenté par la classe \textbf{Map}, qui contient les informations sur ce terrain (hauteur, largeur, taille des cases) et deux matrices contenant respectivement les types de cases de la carte, et la praticabilité de celles-ci. Cette dernière matrice est passée aux entités évoluant dans cette carte, pour connaître les cases passables ou non et adapter leurs algorithmes de recherche de chemin en conséquence.
 Une carte se construit à partir d'un fichier au format \emph{.tmx}, un format de carte géré par le logiciel \textbf{Tiled}, un éditeur de cartes libre. Ce fichier est alors traîté comme un document DOM, grâce au module \emph{ClanXML} de la bibliothèque \emph{ClanLib 4.0}, pour en extraire les informations et les numéros des cases.
+
 Pour gérer le dessin de la carte, la classe \textbf{Tileset} permet de représenter une feuille de textures consistant en une image regroupant toutes les textures des cases pouvant être dessinées. Ce tileset possède des métadonnées telles que le nombre de textures en lignes, colonnes, leur taille en pixels et l'espacement entre chacun dans l'image, métadonnées qui peut être récupérées également depuis le fichier de carte .tmx fourni. A partir d'un numéro de tile à une certaine position dans la carte, on peut alors déterminer quelle texture doit être dessinée à l'emplacement correspondant. 
+
 La classe \textbf{mapDisplay} est pour l'instant la classe principale de l'application, où sont affichés la carte et tous les éléments interagissant avec. Tout l'affichage est géré par le module \emph{ClanDisplay} de la bibliothèque \emph{ClanLib 4.0}, qui dessine au milieu de la fenêtre toute la carte case par case conformément au Tileset fourni, ainsi que tous les personnages et les objets.
 
 \section{La gestion des évênements}
@@ -235,7 +234,7 @@ La fonction \emph{goTo()} lit cette chaîne de caractères et réalise les diff�
 \subsection{découverte de la carte}
 L'exploration et le pathfinding sont testés dans la classe \emph{MapDisplayTestPathfinding}, qui est une modification de la classe \emph{MapDisplay}.
 \subsubsection{Exploration du robot}
-Le robot a accès aux coordonnées de l'ensemble des clefs et des coffres. Si il ne possède pas de clefs, il cherche la clef la plus proche avec la fonction \emph{findNearestKey()} et s'y dirige.
+Le robot a accès aux coordonnées de l'ensemble des clefs et des coffres. S'il ne possède pas de clef, il cherche la clef la plus proche avec la fonction \emph{findNearestKey()} et s'y dirige.
 Ensuite il cherche le coffre le plus proche avec la fonction \emph{findNearestChest()} et s'y dirige.
 La clef étant normalement détruite après avoir ouvert le coffre, le robot peut effectuer ces actions en boucle.
 
