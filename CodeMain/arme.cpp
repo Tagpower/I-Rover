@@ -1,12 +1,12 @@
 /*!
  * \brief Classe Arme.
- * \details Implémentation de la classe Arme et de ses méthodes.
+ * \details Implï¿½mentation de la classe Arme et de ses mï¿½thodes.
  * \author Geoffrey DESBROSSES
  * \version 1
  * \date 2015-12-10
  */
 
-#include "arme.h"
+#include "arme.hpp"
 using namespace std;
 
 
@@ -16,7 +16,7 @@ using namespace std;
  * @param [in] nom Le nom de l'arme.
  * @param [out] puissance La puissance de l'arme.
  * @param [out] nom Le nom de l'arme.
- * @return Arme L'arme créée.
+ * @return Arme L'arme crï¿½ï¿½e.
  */
 Arme::Arme(int puissance, string nom){
 	this->puissance = puissance;
@@ -25,8 +25,8 @@ Arme::Arme(int puissance, string nom){
 
 
 /*!
- * Le constructeur d'une arme par défaut.
- * @param [out] Arme l'arme créée.
+ * Le constructeur d'une arme par dï¿½faut.
+ * @param [out] Arme l'arme crï¿½ï¿½e.
  */
 Arme::Arme(){
 }
@@ -42,7 +42,7 @@ string Arme::getNom(){
 /*!
  * Le setter du nom de l'arme.
  * Modifie le nom de l'arme.
- * @param [in] la valeur à affecter au nom de l'arme.
+ * @param [in] la valeur ï¿½ affecter au nom de l'arme.
  * @param [out] nom le nouveau nom de l'arme.
  */
 void Arme::setNom(string nom){

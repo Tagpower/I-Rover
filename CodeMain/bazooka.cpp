@@ -1,20 +1,20 @@
 /*!
  * \brief Classe Bazooka.
- * \details Implémentation de la classe Bazooka et de ses méthodes.
+ * \details Implï¿½mentation de la classe Bazooka et de ses mï¿½thodes.
  * \author Geoffrey DESBROSSES
  * \version 1
  * \date 2015-12-09
  */
 
-#include "bazooka.h"
+#include "bazooka.hpp"
 using namespace std;
 
 
 /*!
  * Constructeur du bazooka.
- * @param [out] puissance La puissance du bazooka, 20 par défaut.
+ * @param [out] puissance La puissance du bazooka, 20 par dï¿½faut.
  * @param [out] nom Le nom du bazooka.
- * @return Bazooka le bazooka créé.
+ * @return Bazooka le bazooka crï¿½ï¿½.
  */
 Bazooka::Bazooka() : Arme(){
     this->puissance = 20;
@@ -27,7 +27,7 @@ Bazooka::Bazooka() : Arme(){
  * @param [in] nom Le nom du bazooka.
  * @param [out] puissance La puissance du bazooka.
  * @param [out] nom Le nom du bazooka.
- * @return Bazooka le bazooka créé.
+ * @return Bazooka le bazooka crï¿½ï¿½.
  */
 Bazooka::Bazooka(int puissance, string nom) : Arme(puissance, nom){
 }

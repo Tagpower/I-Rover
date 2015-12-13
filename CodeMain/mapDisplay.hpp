@@ -2,8 +2,8 @@
 #include "robot.hpp"
 #include "ennemi.hpp"
 #include "tileset.hpp"
-#include "mine.h"
-#include "armure.h"
+#include "mine.hpp"
+#include "armure.hpp"
 #include "map.hpp"
 
 #pragma once

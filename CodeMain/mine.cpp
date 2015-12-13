@@ -1,20 +1,20 @@
 /*!
  * \brief Classe Mine.
- * \details Implémentation de la classe Mine et de ses méthodes.
+ * \details Implï¿½mentation de la classe Mine et de ses mï¿½thodes.
  * \author Geoffrey DESBROSSES
  * \version 1
  * \date 2015-12-09
  */
 
-#include "mine.h"
+#include "mine.hpp"
 using namespace std;
 
 
 /*!
  * Constructeur de mine.
- * @param [out] puissance la puissance de la mine, 8 par défaut.
+ * @param [out] puissance la puissance de la mine, 8 par dï¿½faut.
  * @param [out] nom Le nom de la mine.
- * @return Mine la mine créée.
+ * @return Mine la mine crï¿½ï¿½e.
  */
 Mine::Mine() : Arme(){
     this->puissance = 8;
@@ -28,10 +28,10 @@ Mine::Mine() : Arme(){
  * @param [in] sprite L'image de la mine.
  * @param [out] positionX La position de la mine en x.
  * @param [out] positionY La position de la mine en y.
- * @param [out] puissance La puissance de la mine, 8 par défaut.
+ * @param [out] puissance La puissance de la mine, 8 par dï¿½faut.
  * @param [out] nom Le nom de la mine.
- * @param [out] sprite l'image de la mine créée.
- * @return Mine la mine créée.
+ * @param [out] sprite l'image de la mine crï¿½ï¿½e.
+ * @return Mine la mine crï¿½ï¿½e.
  */
 Mine::Mine(int x, int y, clan::Image sprite) : Arme(){
     this->positionX = x;
@@ -52,8 +52,8 @@ Mine::Mine(int x, int y, clan::Image sprite) : Arme(){
  * @param [out] positionY La position de la mine en y.
  * @param [out] puissance La puissance de la mine.
  * @param [out] nom Le nom de la mine.
- * @param [out] sprite l'image de la mine créée.
- * @return Mine la mine créée.
+ * @param [out] sprite l'image de la mine crï¿½ï¿½e.
+ * @return Mine la mine crï¿½ï¿½e.
  */
 Mine::Mine(int x, int y, int puissance, string nom, clan::Image sprite) : Arme(puissance, nom){
     this->positionX = x;
@@ -72,7 +72,7 @@ int Mine::getPositionX(){
 /*!
  * Le setter de la position en x de la mine.
  * Modifie la position de la mine en x.
- * @param [in] x la position à affecter à la mine en x.
+ * @param [in] x la position ï¿½ affecter ï¿½ la mine en x.
  * @param [out] positionX la nouvelle position de la mine.
  */
 void Mine::setPositionX(int x){
@@ -90,7 +90,7 @@ int Mine::getPositionY(){
 /*!
  * Le setter de la position en y de la mine.
  * Modifie la position de la mine en y.
- * @param [in] y la position à affecter à la mine en y.
+ * @param [in] y la position ï¿½ affecter ï¿½ la mine en y.
  * @param [out] positionY la nouvelle position de la mine.
  */
 void Mine::setPositionY(int y){
@@ -100,8 +100,8 @@ void Mine::setPositionY(int y){
 /*!
  * Fait exploser la mine lorsqu'un ennemi passe dessus qui l'affaiblit.
  * @param [in] ennemi L'ennemi qui marche sur la mine.
- * @param [out] robustesse La robustesse de l'ennemi qui passe à 0.
- * @param [out] puissance La puissance de l'ennemi affaibli qui est moins élevée.
+ * @param [out] robustesse La robustesse de l'ennemi qui passe ï¿½ 0.
+ * @param [out] puissance La puissance de l'ennemi affaibli qui est moins ï¿½levï¿½e.
  */
 void Mine::exploser(Ennemi* ennemi){
     if(this->positionX == ennemi->getPositionX() && this->positionY == ennemi->getPositionY()){
@@ -112,9 +112,9 @@ void Mine::exploser(Ennemi* ennemi){
 
 /*!
  * Desinne une mine sur la map.
- * @param [in] c L'image de la mine à dessiner.
- * @param [in] x L'endroit où dessiner la mine en x.
- * @param [in] y L'endroit où dessiner la mine en y.
+ * @param [in] c L'image de la mine ï¿½ dessiner.
+ * @param [in] x L'endroit oï¿½ dessiner la mine en x.
+ * @param [in] y L'endroit oï¿½ dessiner la mine en y.
  */
 void Mine::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);

@@ -92,45 +92,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;robot.hpp&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ennemi.hpp&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;tileset.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;map.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;astar.hpp&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classMapDisplayTestPathfinding.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMapDisplayTestPathfinding.html">MapDisplayTestPathfinding</a> : <span class="keyword">public</span> clan::Application</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classMapDisplayTestPathfinding.html#a97c5acec6743b1099a6e6827e0b77a78">MapDisplayTestPathfinding</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classMapDisplayTestPathfinding.html#a1286ccf10d21d40419ec5c900d3998f3">update</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> on_input_up(<span class="keyword">const</span> clan::InputEvent &amp;key);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> quit = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classTileset.html">Tileset</a> tileset;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classMap.html">Map</a> map;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classRobot.html">Robot</a> robot;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        vector&lt;Ennemi&gt; liste_ennemis;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        vector&lt;Coffre&gt; liste_coffres;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        vector&lt;Clef&gt; liste_clefs;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    clan::SlotContainer sc;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    clan::DisplayWindow window;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    clan::Canvas canvas;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        clan::Image tilesheet;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    clan::Font font;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    clan::GameTime game_time;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;mine.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;armure.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;map.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;astar.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;coffre.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;clef.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classMapDisplayTestPathfinding.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMapDisplayTestPathfinding.html">MapDisplayTestPathfinding</a> : <span class="keyword">public</span> clan::Application</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classMapDisplayTestPathfinding.html#a97c5acec6743b1099a6e6827e0b77a78">MapDisplayTestPathfinding</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classMapDisplayTestPathfinding.html#a1286ccf10d21d40419ec5c900d3998f3">update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span>  <a class="code" href="classMapDisplayTestPathfinding.html#acf7f5c72f302fa74bdee6702d497307b">goTo</a>(<a class="code" href="classPersonnage.html">Personnage</a> perso, std::string path);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMapDisplayTestPathfinding.html#a544fd59caaae448044c21c8423da9a31">explorationRobot</a>(<a class="code" href="classRobot.html">Robot</a> robot,vector&lt;Clef&gt; liste_clefs, vector&lt;Coffre&gt; liste_coffres);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMapDisplayTestPathfinding.html#a04dc1aac567305afdd7ca99255127677">explorationEnnemi</a>(<a class="code" href="classEnnemi.html">Ennemi</a> ennemi);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCoffre.html">Coffre</a> findNearestChest(<a class="code" href="classRobot.html">Robot</a> robot, vector&lt;Coffre&gt; liste_coffres);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCoffre.html">Coffre</a> findNearestKey(<a class="code" href="classRobot.html">Robot</a> robot, vector&lt;Clef&gt; liste_clefs);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> quit = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classTileset.html">Tileset</a> tileset;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classMap.html">Map</a> map;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classRobot.html">Robot</a> robot;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        vector&lt;Ennemi&gt; liste_ennemis;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        vector&lt;Coffre&gt; liste_coffres;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        vector&lt;Clef&gt; liste_clefs;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    clan::SlotContainer sc;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    clan::DisplayWindow window;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    clan::Canvas canvas;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        clan::Image tilesheet;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    clan::Font font;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    clan::GameTime game_time;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
 <div class="ttc" id="classTileset_html"><div class="ttname"><a href="classTileset.html">Tileset</a></div><div class="ttdef"><b>Definition:</b> tileset.hpp:15</div></div>
+<div class="ttc" id="classPersonnage_html"><div class="ttname"><a href="classPersonnage.html">Personnage</a></div><div class="ttdef"><b>Definition:</b> personnage.hpp:14</div></div>
 <div class="ttc" id="classRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdef"><b>Definition:</b> robot.hpp:10</div></div>
-<div class="ttc" id="classMapDisplayTestPathfinding_html"><div class="ttname"><a href="classMapDisplayTestPathfinding.html">MapDisplayTestPathfinding</a></div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.hpp:9</div></div>
-<div class="ttc" id="classMapDisplayTestPathfinding_html_a1286ccf10d21d40419ec5c900d3998f3"><div class="ttname"><a href="classMapDisplayTestPathfinding.html#a1286ccf10d21d40419ec5c900d3998f3">MapDisplayTestPathfinding::update</a></div><div class="ttdeci">bool update() override</div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.cpp:81</div></div>
+<div class="ttc" id="classEnnemi_html"><div class="ttname"><a href="classEnnemi.html">Ennemi</a></div><div class="ttdef"><b>Definition:</b> ennemi.hpp:9</div></div>
+<div class="ttc" id="classCoffre_html"><div class="ttname"><a href="classCoffre.html">Coffre</a></div><div class="ttdef"><b>Definition:</b> coffre.hpp:9</div></div>
+<div class="ttc" id="classMapDisplayTestPathfinding_html"><div class="ttname"><a href="classMapDisplayTestPathfinding.html">MapDisplayTestPathfinding</a></div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.hpp:14</div></div>
+<div class="ttc" id="classMapDisplayTestPathfinding_html_a544fd59caaae448044c21c8423da9a31"><div class="ttname"><a href="classMapDisplayTestPathfinding.html#a544fd59caaae448044c21c8423da9a31">MapDisplayTestPathfinding::explorationRobot</a></div><div class="ttdeci">void explorationRobot(Robot robot, vector&lt; Clef &gt; liste_clefs, vector&lt; Coffre &gt; liste_coffres)</div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.cpp:194</div></div>
+<div class="ttc" id="classMapDisplayTestPathfinding_html_a1286ccf10d21d40419ec5c900d3998f3"><div class="ttname"><a href="classMapDisplayTestPathfinding.html#a1286ccf10d21d40419ec5c900d3998f3">MapDisplayTestPathfinding::update</a></div><div class="ttdeci">bool update() override</div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.cpp:82</div></div>
 <div class="ttc" id="classMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdef"><b>Definition:</b> map.hpp:17</div></div>
 <div class="ttc" id="classMapDisplayTestPathfinding_html_a97c5acec6743b1099a6e6827e0b77a78"><div class="ttname"><a href="classMapDisplayTestPathfinding.html#a97c5acec6743b1099a6e6827e0b77a78">MapDisplayTestPathfinding::MapDisplayTestPathfinding</a></div><div class="ttdeci">MapDisplayTestPathfinding()</div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.cpp:11</div></div>
+<div class="ttc" id="classMapDisplayTestPathfinding_html_a04dc1aac567305afdd7ca99255127677"><div class="ttname"><a href="classMapDisplayTestPathfinding.html#a04dc1aac567305afdd7ca99255127677">MapDisplayTestPathfinding::explorationEnnemi</a></div><div class="ttdeci">void explorationEnnemi(Ennemi ennemi)</div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.cpp:168</div></div>
+<div class="ttc" id="classMapDisplayTestPathfinding_html_acf7f5c72f302fa74bdee6702d497307b"><div class="ttname"><a href="classMapDisplayTestPathfinding.html#acf7f5c72f302fa74bdee6702d497307b">MapDisplayTestPathfinding::goTo</a></div><div class="ttdeci">void goTo(Personnage perso, std::string path)</div><div class="ttdef"><b>Definition:</b> mapDisplayTestPathfinding.cpp:137</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi 11 Décembre 2015 23:22:51 pour I-rover par &#160;<a href="http://www.doxygen.org/index.html">
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

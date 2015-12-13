@@ -1,5 +1,5 @@
 #include "precomp.hpp"
-#include "arme.h"
+#include "arme.hpp"
 #include "ennemi.hpp"
 
 #pragma once

@@ -2,8 +2,7 @@
 \label{classMapDisplayTestPathfinding}\index{Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}}
 
 
-Graphe d\textquotesingle{}héritage de Map\+Display\+Test\+Pathfinding\+:
-\nopagebreak
+Graphe d\textquotesingle{}héritage de Map\+Display\+Test\+Pathfinding\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Graphe d\textquotesingle{}héritage de Map\+Display\+Test\+Pathfinding\+:
 \end{figure}
 
 
-Graphe de collaboration de Map\+Display\+Test\+Pathfinding\+:
-\nopagebreak
+Graphe de collaboration de Map\+Display\+Test\+Pathfinding\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,6 +24,18 @@ Graphe de collaboration de Map\+Display\+Test\+Pathfinding\+:
 \hyperlink{classMapDisplayTestPathfinding_a97c5acec6743b1099a6e6827e0b77a78}{Map\+Display\+Test\+Pathfinding} ()
 \item 
 bool \hyperlink{classMapDisplayTestPathfinding_a1286ccf10d21d40419ec5c900d3998f3}{update} () override
+\item 
+void \hyperlink{classMapDisplayTestPathfinding_acf7f5c72f302fa74bdee6702d497307b}{go\+To} (\hyperlink{classPersonnage}{Personnage} perso, std\+::string path)
+\item 
+void \hyperlink{classMapDisplayTestPathfinding_a544fd59caaae448044c21c8423da9a31}{exploration\+Robot} (\hyperlink{classRobot}{Robot} robot, vector$<$ \hyperlink{classClef}{Clef} $>$ liste\+\_\+clefs, vector$<$ \hyperlink{classCoffre}{Coffre} $>$ liste\+\_\+coffres)
+\item 
+void \hyperlink{classMapDisplayTestPathfinding_a04dc1aac567305afdd7ca99255127677}{exploration\+Ennemi} (\hyperlink{classEnnemi}{Ennemi} ennemi)
+\item 
+\hypertarget{classMapDisplayTestPathfinding_aea2d2a8e916ce118217a5ee0b9ff47eb}{}\hyperlink{classCoffre}{Coffre} {\bfseries find\+Nearest\+Chest} (\hyperlink{classRobot}{Robot} robot, vector$<$ \hyperlink{classCoffre}{Coffre} $>$ liste\+\_\+coffres)\label{classMapDisplayTestPathfinding_aea2d2a8e916ce118217a5ee0b9ff47eb}
+
+\item 
+\hypertarget{classMapDisplayTestPathfinding_abefa4a37705752a473e412fb2ce6112b}{}\hyperlink{classCoffre}{Coffre} {\bfseries find\+Nearest\+Key} (\hyperlink{classRobot}{Robot} robot, vector$<$ \hyperlink{classClef}{Clef} $>$ liste\+\_\+clefs)\label{classMapDisplayTestPathfinding_abefa4a37705752a473e412fb2ce6112b}
+
 \end{DoxyCompactItemize}
 
 
@@ -40,6 +50,51 @@ bool \hyperlink{classMapDisplayTestPathfinding_a1286ccf10d21d40419ec5c900d3998f3
 Classe gérant l\textquotesingle{}affichage graphique du terrain et des éléments présents dessus. 
 
 \subsection{Documentation des fonctions membres}
+\hypertarget{classMapDisplayTestPathfinding_a04dc1aac567305afdd7ca99255127677}{}\index{Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}!exploration\+Ennemi@{exploration\+Ennemi}}
+\index{exploration\+Ennemi@{exploration\+Ennemi}!Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}}
+\subsubsection[{exploration\+Ennemi}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Display\+Test\+Pathfinding\+::exploration\+Ennemi (
+\begin{DoxyParamCaption}
+\item[{{\bf Ennemi}}]{ennemi}
+\end{DoxyParamCaption}
+)}\label{classMapDisplayTestPathfinding_a04dc1aac567305afdd7ca99255127677}
+Routine d\textquotesingle{}exploration d\textquotesingle{}un ennemi 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ennemi} & l\textquotesingle{}ennemi qui explore la carte de façon aléatoire \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMapDisplayTestPathfinding_a544fd59caaae448044c21c8423da9a31}{}\index{Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}!exploration\+Robot@{exploration\+Robot}}
+\index{exploration\+Robot@{exploration\+Robot}!Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}}
+\subsubsection[{exploration\+Robot}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Display\+Test\+Pathfinding\+::exploration\+Robot (
+\begin{DoxyParamCaption}
+\item[{{\bf Robot}}]{robot, }
+\item[{vector$<$ {\bf Clef} $>$}]{liste\+\_\+clefs, }
+\item[{vector$<$ {\bf Coffre} $>$}]{liste\+\_\+coffres}
+\end{DoxyParamCaption}
+)}\label{classMapDisplayTestPathfinding_a544fd59caaae448044c21c8423da9a31}
+Routine d\textquotesingle{}exploration du robot 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em robot,le} & robot qui explore \\
+\hline
+\mbox{\tt in}  & {\em liste\+\_\+clefs} & \\
+\hline
+\mbox{\tt in}  & {\em liste\+\_\+coffres} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMapDisplayTestPathfinding_acf7f5c72f302fa74bdee6702d497307b}{}\index{Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}!go\+To@{go\+To}}
+\index{go\+To@{go\+To}!Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}}
+\subsubsection[{go\+To}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Display\+Test\+Pathfinding\+::go\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Personnage}}]{perso, }
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\label{classMapDisplayTestPathfinding_acf7f5c72f302fa74bdee6702d497307b}
+Méthode permattant à un personnage d\textquotesingle{}aller vers une direction en particulier. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em perso} & Le personnage se déplaçant. \\
+\hline
+\mbox{\tt in}  & {\em path} & le chemin est modifie \\
+\hline
+\end{DoxyParams}
 \hypertarget{classMapDisplayTestPathfinding_a1286ccf10d21d40419ec5c900d3998f3}{}\index{Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}!update@{update}}
 \index{update@{update}!Map\+Display\+Test\+Pathfinding@{Map\+Display\+Test\+Pathfinding}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+Display\+Test\+Pathfinding\+::update (
