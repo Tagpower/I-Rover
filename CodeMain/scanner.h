@@ -6,5 +6,5 @@ private:
 
 public:
 	Scanner();
-	scannerCarte();
+	void scannerCarte();
 };

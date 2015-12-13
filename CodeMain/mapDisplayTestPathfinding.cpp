@@ -28,7 +28,7 @@ MapDisplayTestPathfinding::MapDisplayTestPathfinding()
 	sc.connect(window.sig_window_close(), [&](){quit = true; });
 
 	//Détection du clavier
-	sc.connect(window.get_keyboard().sig_key_up(), clan::bind_member(this, &MapDisplay::on_input_up));
+	sc.connect(window.get_keyboard().sig_key_up(), clan::bind_member(this, &MapDisplayTestPathfinding::on_input_up));
 
 	//Charger l'image contenant les sprites des tiles
         tilesheet = clan::Image(canvas, "roguelikeSheet.png");
@@ -52,8 +52,9 @@ MapDisplayTestPathfinding::MapDisplayTestPathfinding()
         this->tileset = myTileset;
         this->map = terrain;
         this->map.setCollisionMap(vector<int>({6,1005})); //A changer en fonction de la map
-
-        this->robot = Robot(0,0, sprite_robot);
+        Mine mine(4,4,sprite_mine); 
+        Armure armure(5,"lol");
+        this->robot = Robot(0,0,mine, armure, sprite_robot);
         this->robot.setCollisionMap(this->map.getCollisionMap());
 
         this->liste_coffres = vector<Coffre>();
@@ -67,8 +68,8 @@ MapDisplayTestPathfinding::MapDisplayTestPathfinding()
 
 
         this->liste_ennemis = vector<Ennemi>();
-        this->liste_ennemis.push_back(Ennemi(14,10,sprite_ennemi_1));
-        this->liste_ennemis.push_back(Ennemi(8,14,sprite_ennemi_1));
+        this->liste_ennemis.push_back(Ennemi(14,10,mine, armure,sprite_ennemi_1));
+        this->liste_ennemis.push_back(Ennemi(8,14,mine, armure,sprite_ennemi_1));
 
 
 
@@ -114,7 +115,7 @@ bool MapDisplayTestPathfinding::update()
                                  map_origin.y + (robot.getPositionY()*tileset.getTile_height()));
 
 		std::string pathRobot = pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
-		goTo(robot, pathRobot);
+		MapDisplayTestPathfinding::goTo(robot, pathRobot);
 
         //std::string pathEnnemi = this->pathFind(robot.getPositionX(), robot.getPositionY(), 12, 4, robot.getCollisionMap());
         //this->goTo(robot, pathEnnemi);
@@ -158,30 +159,30 @@ void MapDisplayTestPathfinding::on_input_up(const clan::InputEvent &key)
  * @param [in] perso Le personnage se déplaçant.
  * @param [in] path
  */
-void goTo(Personnage perso, std::string path){
-	while (path::length()>0){
+void MapDisplayTestPathfinding::goTo(Personnage perso, std::string path){
+	while (path.length()>0){
 			int dirToGo= path.at(0);
 			switch(dirToGo){
 				case 0:
 					perso.deplacer(1,0);
 					sleep(1000);
-					break();
+					break;
 				case 1:
 					perso.deplacer(0,-1);
 					sleep(1000);
-					break();
+					break;
 				case 2:
 					perso.deplacer(-1,0);
 					sleep(1000);
-					break();
+					break;
 				case 3:
 					perso.deplacer(0,1);
 					sleep(1000);
-					break();
+					break;
 				default:
-					break();
+					break;
 
-				path::erase(0,1)
+				path.erase(0,1);
 			}
 }
 }

@@ -3,11 +3,11 @@
 
 /*!
  * Constructeur d'un scanner.
- * @return le scanner créé.
+ * @return le scanner crï¿½ï¿½.
  */
 Scanner::Scanner(){
 }
 
-scannerCarte(){
+void scannerCarte(){
 
 }

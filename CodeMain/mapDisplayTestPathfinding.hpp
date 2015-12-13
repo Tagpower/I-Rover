@@ -2,8 +2,11 @@
 #include "robot.hpp"
 #include "ennemi.hpp"
 #include "tileset.hpp"
+#include "mine.h"
+#include "armure.h"
 #include "map.hpp"
 #include "astar.hpp"
+
 #pragma once
 
 class MapDisplayTestPathfinding : public clan::Application
@@ -11,6 +14,7 @@ class MapDisplayTestPathfinding : public clan::Application
 public:
 	MapDisplayTestPathfinding();
 	bool update() override;
+        void  goTo(Personnage perso, std::string path);
 
 private:
 	void on_input_up(const clan::InputEvent &key);

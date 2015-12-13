@@ -9,7 +9,7 @@
 #include <vector>
 #include "robot.hpp"
 #include "ennemi.hpp"
- 
+#pragma once
 using namespace std;
 
 

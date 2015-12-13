@@ -261,4 +261,8 @@ void Personnage::draw(clan::Canvas c, int x, int y) {
     this->sprite.draw(c, x, y);
 }
 
+vector<vector<int> > Personnage::getCollisionMap(){
+    return this->collision_map;
+}
+
 
