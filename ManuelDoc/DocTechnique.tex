@@ -133,28 +133,28 @@ Le jeu possède des personnages. Ceux-ci sont représentés par la classe person
 
 Grâce à ces attributs, tous les personnages peuvent se déplacer d'une case grâce à la méthode deplacer(int x,int y). Les personnages peuvent aussi combattre d'autres personnages grâce à la méthode combattre(Personnage* personnage).
 
-Le vainqueur d'un combat est déterminé par le celui qui a la plus grande chance de gagner. Les deux adversaires tire un nombre déterminé par l'algorithme suivant :
+Le vainqueur d'un combat est déterminé par celui qui a la plus grande chance de gagner. Les deux adversaires tirent un nombre déterminé par l'algorithme suivant :
 
 \begin{equation}
     random() \times puissance \times robustesse 
     \label{combat}
 \end{equation}
 
-Ainsi on compare ces deux nombres. Celui qui a le plus grand gagner le duel.
+Ainsi on compare ces deux nombres. Celui qui a le plus grand gagne le duel.
 
 \subsection{Le robot, Rover}
 
-Le robot, en plus d'hériter des propriétés des personnages, possède un attribut inventaire qui représente le nombre de clefs qu'il possède.
+Le robot, en plus d'hériter des propriétés des personnages, possède un attribut \emph{inventaire} qui représente le nombre de clefs qu'il possède.
 
-L'objectif du robot est d'ouvrir tous les coffres de la carte et chaque coffre s'ouvre à l'aide d'une clef. Ainsi, le robot possède les méthode ramasser//
-(Clef* clef) ou ouvrir(Coffre* coffre).
+L'objectif du robot est d'ouvrir tous les coffres de la carte et chaque coffre s'ouvre à l'aide d'une clef. Ainsi, le robot possède les méthodes \emph{ramasser
+(Clef* clef)} ou \emph{ouvrir(Coffre* coffre)}.
 
-Le robot se déplace d'une certaines manière, grâce à un algorithme de pathfinding\ref{pathfinding}.
+Le robot se déplace d'une certaine manière, grâce à un algorithme de pathfinding\ref{pathfinding}.
 
 \subsection{Les ennemis}
 
 Un ennemi est un simple personnage qui a sa propre façon de se déplacer et de combattre. 
-Une ennemi se déplace aléatoirement sur la carte, et continue tant que la partie n'est pas finie ou tant qu'il est encore en vie.
+Un ennemi se déplace aléatoirement sur la carte, et continue tant que la partie n'est pas finie ou tant qu'il est encore en vie.
 
 Lorsqu'un ennemi est à une case du robot, alors celui-ci affronte le robot.
 
@@ -166,11 +166,11 @@ Les coffres sont de simples objets qui possèdent les propriétés suivantes:
 \begin{enumerate}
 	\item positionX: sa position sur l'axe x.
 	\item positionY: sa position sur l'axe y. 
-	\item ouvert: boolean qui permet de savoir si le coffre est ouvert ou fermé.
+	\item ouvert: booléen qui permet de savoir si le coffre est ouvert ou fermé.
 	\item sprite: l'image du coffre.
 \end{enumerate}
 
-Une fois le coffre ouvert, son parametre ouvert passe à true et ne peut donc plus s'ouvrir.
+Une fois le coffre ouvert, son paramètre ouvert passe à true et ne peut donc plus s'ouvrir.
 
 
 \section{Les clef}
@@ -191,7 +191,7 @@ Toutes les armes héritent de la classes Arme et les armures de la classe Armure
 
 \section{Les senseurs}
 
-Le robot possède un scanner. Celui-ci permet de scanner une map et de savoir quels sont les endroits où il peut aller et les endroits qu'ils lui sont impossible d'aller.
+Le robot possède un scanner. Celui-ci permet de scanner une map et de savoir quels sont les endroits où il peut aller et les endroits qui lui sont inacessibles.
 
 \newpage
 \section{L'environnement}
